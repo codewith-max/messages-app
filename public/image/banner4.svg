@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 520" fill="none">
+  <rect width="400" height="520" fill="#FCF5EB"/>
+  <!-- Phone frame -->
+  <rect x="72" y="24" width="256" height="472" rx="36" ry="36" fill="#111b21" stroke="#0b141a" stroke-width="3"/>
+  <rect x="84" y="44" width="232" height="432" rx="28" ry="28" fill="#0b141a"/>
+  <!-- Screen: video grid -->
+  <rect x="96" y="56" width="208" height="360" rx="20" fill="#1a282f"/>
+  <rect x="108" y="72" width="94" height="108" rx="12" fill="#2a3942"/>
+  <rect x="210" y="72" width="94" height="108" rx="12" fill="#2a3942"/>
+  <rect x="108" y="188" width="94" height="108" rx="12" fill="#2a3942"/>
+  <rect x="210" y="188" width="94" height="108" rx="12" fill="#2a3942"/>
+  <!-- Accent tiles (WhatsApp green hint) -->
+  <rect x="108" y="304" width="196" height="96" rx="12" fill="#25D366" opacity="0.35"/>
+  <!-- Simple "faces" circles -->
+  <circle cx="155" cy="126" r="22" fill="#3d4f58"/>
+  <circle cx="257" cy="126" r="22" fill="#3d4f58"/>
+  <circle cx="155" cy="242" r="22" fill="#3d4f58"/>
+  <circle cx="257" cy="242" r="22" fill="#3d4f58"/>
+  <!-- PiP -->
+  <rect x="248" y="312" width="48" height="36" rx="6" fill="#2a3942" stroke="#25D366" stroke-width="2"/>
+  <!-- Bottom call bar -->
+  <rect x="96" y="424" width="208" height="44" rx="14" fill="#202c33"/>
+  <circle cx="130" cy="446" r="14" fill="#8696a0"/>
+  <circle cx="200" cy="446" r="14" fill="#8696a0"/>
+  <circle cx="270" cy="446" r="14" fill="#8696a0"/>
+  <rect x="314" y="436" width="36" height="20" rx="10" fill="#ea4335"/>
+  <!-- Notch -->
+  <rect x="168" y="36" width="64" height="22" rx="11" fill="#111b21"/>
+</svg>
