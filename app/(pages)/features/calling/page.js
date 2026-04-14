@@ -1,8 +1,13 @@
-import Header from '../../../Components/Organisms/Header';
+import CallingAdvancedShowcase from '../../../Components/Organisms/CallingAdvancedShowcase';
+import CallingDiscoverMoreSection from '../../../Components/Organisms/CallingDiscoverMoreSection';
+import CallingEasilyHero from '../../../Components/Organisms/CallingEasilyHero';
 import CallingFeaturesShowcase from '../../../Components/Organisms/CallingFeaturesShowcase';
+import CallingKeepTalkingSection from '../../../Components/Organisms/CallingKeepTalkingSection';
+import CallingNeedHelpSection from '../../../Components/Organisms/CallingNeedHelpSection';
 import CallingTopHero from '../../../Components/Organisms/CallingTopHero';
-import SplitFeature from '../../../Components/Organisms/SplitFeature';
-import { CALLING_PAGE } from '../../../content/featureLandingPages';
+import Footer from '../../../Components/Organisms/Footer';
+import Header from '../../../Components/Organisms/Header';
+import CallingGroupsHero from './CallingGroupsHero';
 
 export const metadata = {
   title: 'Voice and Video Calls | WhatsApp Web Clone',
@@ -16,11 +21,16 @@ export default function CallingFeaturePage() {
       <Header />
       <main className="flex-1">
         <CallingTopHero />
+        <CallingEasilyHero />
         <CallingFeaturesShowcase />
-        <div id="download" className="scroll-mt-24">
-          <SplitFeature {...CALLING_PAGE} />
-        </div>
+        <CallingGroupsHero />
+        <CallingAdvancedShowcase />
+        <CallingKeepTalkingSection />
+        <CallingNeedHelpSection />
+        <CallingDiscoverMoreSection />
+        <div id="download" className="scroll-mt-24" />
       </main>
+      <Footer />
     </>
   );
 }

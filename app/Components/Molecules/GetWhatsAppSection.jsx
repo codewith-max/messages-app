@@ -20,7 +20,7 @@ export default function GetWhatsAppSection({
         </h2>
         <p className="mt-3 text-[17px] leading-relaxed text-[#111b21]/85">{description}</p>
         <div className="flex justify-center">
-          <WhatsAppDownloadLink href={downloadHref} variant="section" />
+          <WhatsAppDownloadLink href={downloadHref} />
         </div>
       </div>
     </section>

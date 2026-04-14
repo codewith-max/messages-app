@@ -8,21 +8,27 @@ export default function Header() {
   const pathname = usePathname();
   const isFeaturesPage = pathname === '/features' || pathname?.startsWith('/features/');
   const isPrivacyPage = pathname === '/privacy';
+  const isHelpCenterPage = pathname === '/help-center';
+  const isBlogPage = pathname === '/blog';
+  const isForBusinessPage = pathname === '/for-business';
+  const isAppsPage = pathname === '/apps';
   const isSecurityFeaturePage = pathname === '/features/security';
   const isDarkNav = isPrivacyPage || isSecurityFeaturePage;
   const { page } = useLocale();
   const h = page.header;
   const nav = [
     { label: h.privacy, href: '/privacy' },
-    { label: h.helpCenter, href: '#help-center' },
-    { label: h.blog, href: '#blog' },
-    { label: h.forBusiness, href: '#for-business' },
-    { label: h.apps, href: '#apps' },
+    { label: h.helpCenter, href: '/help-center' },
+    { label: h.blog, href: '/blog' },
+    { label: h.forBusiness, href: '/for-business' },
+    { label: h.apps, href: '/apps' },
   ];
 
   return (
     <header
-      className={`w-full py-4 sticky top-0 z-50 ${isDarkNav ? 'bg-[#111b21]' : 'bg-[#FCF5EB]'}`}
+      className={`w-full py-4 sticky top-0 z-50 ${
+        isDarkNav ? 'bg-[#111b21]' : isAppsPage ? 'bg-[#E7FCE3]' : 'bg-[#FCF5EB]'
+      }`}
     >
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-12">
@@ -56,12 +62,18 @@ export default function Header() {
             </Link>
             {nav.map((item) => {
               const isActivePrivacy = item.href === '/privacy' && isPrivacyPage;
+              const isActiveHelp = item.href === '/help-center' && isHelpCenterPage;
+              const isActiveBlog = item.href === '/blog' && isBlogPage;
+              const isActiveBusiness = item.href === '/for-business' && isForBusinessPage;
+              const isActiveApps = item.href === '/apps' && isAppsPage;
+              const isActive =
+                isActivePrivacy || isActiveHelp || isActiveBlog || isActiveBusiness || isActiveApps;
               return (
                 <Link
                   key={item.href}
                   href={item.href}
                   className={`text-[15px] transition-colors ${
-                    isActivePrivacy
+                    isActive
                       ? 'text-[#25D366]'
                       : isDarkNav
                         ? 'text-white hover:text-[#25D366]'
@@ -79,7 +91,9 @@ export default function Header() {
               href="#login"
               className={`hidden md:flex items-center gap-2 text-[15px] font-medium rounded-full px-5 py-2.5 transition-colors ${
                 isDarkNav
-                  ? 'border border-white bg-transparent text-white hover:bg-white/10'
+                  ? isPrivacyPage
+                    ? 'border-0 bg-white text-[#111b21] hover:bg-white/90'
+                    : 'border border-white bg-transparent text-white hover:bg-white/10'
                   : 'border border-[#111b21] bg-white text-[#111b21] hover:bg-gray-50'
               }`}
             >

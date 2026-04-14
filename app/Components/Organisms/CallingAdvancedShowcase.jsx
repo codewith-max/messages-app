@@ -2,11 +2,11 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import {
-  CALLING_SHOWCASE_SLIDE_MS,
-  CALLING_SHOWCASE_STEPS,
-} from '../../content/callingShowcaseSteps';
+  CALLING_ADVANCED_SHOWCASE_SLIDE_MS,
+  CALLING_ADVANCED_SHOWCASE_STEPS,
+} from '../../content/callingAdvancedShowcaseSteps';
 
 const TICK_MS = 48;
 
@@ -26,17 +26,26 @@ function PlayIcon() {
   );
 }
 
-export default function CallingFeaturesShowcase() {
+export default function CallingAdvancedShowcase() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [progress, setProgress] = useState(0);
   const [paused, setPaused] = useState(false);
-  const len = CALLING_SHOWCASE_STEPS.length;
+  const steps = CALLING_ADVANCED_SHOWCASE_STEPS;
+  const len = steps.length;
+
+  const goToStep = useCallback(
+    (index) => {
+      setActiveIndex(((index % len) + len) % len);
+      setProgress(0);
+    },
+    [len],
+  );
 
   useEffect(() => {
     if (paused) return undefined;
     const id = window.setInterval(() => {
       setProgress((prev) => {
-        const next = prev + TICK_MS / CALLING_SHOWCASE_SLIDE_MS;
+        const next = prev + TICK_MS / CALLING_ADVANCED_SHOWCASE_SLIDE_MS;
         if (next >= 1) {
           setActiveIndex((i) => (i + 1) % len);
           return 0;
@@ -47,16 +56,16 @@ export default function CallingFeaturesShowcase() {
     return () => window.clearInterval(id);
   }, [paused, activeIndex, len]);
 
-  const active = CALLING_SHOWCASE_STEPS[activeIndex];
+  const active = steps[activeIndex];
 
   return (
     <section
-      className="border-y border-[#cfe5dc] bg-[#E7F3EF] px-4 py-14 sm:px-6 md:py-20 lg:px-8 lg:py-24"
-      aria-label="WhatsApp calling features"
+      className="border-b border-[#cfe5dc] bg-[#E7F3EF] px-4 py-14 sm:px-6 md:py-20 lg:px-8 lg:py-24"
+      aria-label="More WhatsApp calling features"
     >
       <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2 lg:gap-16 xl:gap-20">
         <div className="min-w-0">
-          {CALLING_SHOWCASE_STEPS.map((step, i) => {
+          {steps.map((step, i) => {
             const isOpen = activeIndex === i;
             return (
               <div key={step.id} className="border-b border-[#b8d4c9]/90 last:border-b-0">
@@ -76,7 +85,13 @@ export default function CallingFeaturesShowcase() {
                         {paused ? <PlayIcon /> : <PauseIcon />}
                       </button>
                     </div>
-                    <p className="mt-4 max-w-[480px] text-[16px] leading-[1.55] text-[#111b21]/85 md:text-[17px]">
+                    <div className="mt-4 h-[3px] w-full overflow-hidden rounded-full bg-[#111b21]/10">
+                      <div
+                        className="h-full rounded-full bg-[#25D366] transition-[width] duration-75 ease-linear"
+                        style={{ width: `${progress * 100}%` }}
+                      />
+                    </div>
+                    <p className="mt-5 max-w-[480px] text-[16px] leading-[1.55] text-[#111b21]/85 md:text-[17px]">
                       {step.description}
                     </p>
                     <Link
@@ -88,21 +103,12 @@ export default function CallingFeaturesShowcase() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                       </svg>
                     </Link>
-                    <div className="mt-6 h-[3px] w-full overflow-hidden rounded-full bg-[#111b21]/10">
-                      <div
-                        className="h-full rounded-full bg-[#25D366] transition-[width] duration-75 ease-linear"
-                        style={{ width: `${progress * 100}%` }}
-                      />
-                    </div>
                   </div>
                 ) : (
                   <button
                     type="button"
-                    onClick={() => {
-                      setActiveIndex(i);
-                      setProgress(0);
-                    }}
-                    className="w-full py-5 text-left transition-opacity hover:opacity-80 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 focus-visible:ring-offset-[#E7F3EF] rounded-sm"
+                    onClick={() => goToStep(i)}
+                    className="w-full rounded-sm py-5 text-left transition-opacity hover:opacity-80 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 focus-visible:ring-offset-[#E7F3EF]"
                   >
                     <span className="block text-[22px] font-bold leading-tight text-[#111b21] sm:text-[24px] md:text-[26px]">
                       {step.title}

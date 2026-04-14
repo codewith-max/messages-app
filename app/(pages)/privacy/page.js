@@ -1,12 +1,17 @@
 import Header from '../../Components/Organisms/Header';
+import Footer from '../../Components/Organisms/Footer';
 import PrivacyHero from '../../Components/Organisms/PrivacyHero';
 import PrivacyInfoSection from '../../Components/Organisms/PrivacyInfoSection';
+import PrivacySplitFeatures from '../../Components/Organisms/PrivacySplitFeatures';
+import PrivacyExploreSection from '../../Components/Organisms/PrivacyExploreSection';
+import PrivacyFaqSection from '../../Components/Organisms/PrivacyFaqSection';
+import PrivacyDiscoverSection from '../../Components/Organisms/PrivacyDiscoverSection';
 import PrivacyChatLockSection from '../../Components/Organisms/PrivacyChatLockSection';
 
 export const metadata = {
-  title: 'Privacy | WhatsApp Web Clone',
+  title: 'Privacy',
   description:
-    'Your privacy is our priority. With end-to-end encryption on WhatsApp, your personal messages stay between you and the people you choose.',
+    'Your privacy matters. Learn how WhatsApp protects your messages with end-to-end encryption and controls you can customize.',
 };
 
 export default function PrivacyPage() {
@@ -16,8 +21,13 @@ export default function PrivacyPage() {
       <main className="flex-1">
         <PrivacyHero />
         <PrivacyInfoSection />
+        <PrivacySplitFeatures />
+        <PrivacyExploreSection />
+        <PrivacyFaqSection />
+        <PrivacyDiscoverSection />
         <PrivacyChatLockSection />
       </main>
+      <Footer />
     </div>
   );
 }

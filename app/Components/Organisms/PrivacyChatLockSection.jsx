@@ -1,7 +1,5 @@
-import Image from 'next/image';
 import Link from 'next/link';
-
-const IMAGE_SRC = '/image/banner14.webp';
+import PrivacyLockedChatsMockup from '../Molecules/privacy/PrivacyLockedChatsMockup';
 
 export default function PrivacyChatLockSection() {
   return (
@@ -10,22 +8,8 @@ export default function PrivacyChatLockSection() {
       aria-labelledby="privacy-chat-lock-heading"
     >
       <div className="mx-auto flex max-w-[1280px] flex-col items-center gap-14 lg:flex-row lg:items-center lg:justify-between lg:gap-12 xl:gap-16">
-        {/* Left: phone — aligned like WhatsApp privacy (mockup in soft dark panel) */}
         <div className="flex w-full flex-1 justify-center lg:w-auto lg:max-w-[52%] lg:justify-start">
-          <div className="w-full max-w-[min(100%,400px)] sm:max-w-[440px] lg:max-w-[460px]">
-            <div className="rounded-[2rem] bg-[#1a2329] p-4 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.5)] sm:rounded-[2.25rem] sm:p-5 md:p-6">
-              {/* Zoom + clip from top-left to crop Meta AI orb / FAB baked into banner14.webp */}
-              <div className="relative aspect-[9/17.2] w-full max-h-[min(78vh,640px)] overflow-hidden rounded-[1.375rem] bg-[#0d1216] sm:rounded-[1.5rem]">
-                <Image
-                  src={IMAGE_SRC}
-                  alt="Locked chats list on WhatsApp"
-                  fill
-                  sizes="(max-width: 1024px) min(100vw - 2.5rem, 440px), 460px"
-                  className="object-cover object-left object-top origin-top-left scale-[1.14] sm:scale-[1.11]"
-                />
-              </div>
-            </div>
-          </div>
+          <PrivacyLockedChatsMockup />
         </div>
 
         {/* Right: copy */}
