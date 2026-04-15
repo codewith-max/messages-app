@@ -73,7 +73,7 @@ export const alreadyDownloadedCards = [
   {
     id: 'groups',
     title: 'Groups',
-    href: '/features/groups',
+    href: '/groups',
     visualClass: 'bg-gradient-to-br from-[#1e2d4a] to-[#121a2e]',
   },
 ];

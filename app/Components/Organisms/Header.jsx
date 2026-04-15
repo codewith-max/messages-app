@@ -12,6 +12,7 @@ export default function Header() {
   const isBlogPage = pathname === '/blog';
   const isForBusinessPage = pathname === '/for-business';
   const isAppsPage = pathname === '/apps';
+  const isMetaAiPage = pathname === '/features/meta-ai';
   const isSecurityFeaturePage = pathname === '/features/security';
   const isDarkNav = isPrivacyPage || isSecurityFeaturePage;
   const { page } = useLocale();
@@ -27,7 +28,7 @@ export default function Header() {
   return (
     <header
       className={`w-full py-4 sticky top-0 z-50 ${
-        isDarkNav ? 'bg-[#111b21]' : isAppsPage ? 'bg-[#E7FCE3]' : 'bg-[#FCF5EB]'
+        isDarkNav ? 'bg-[#111b21]' : isAppsPage ? 'bg-[#E7FCE3]' : isMetaAiPage ? 'bg-[#F7F3ED]' : 'bg-[#FCF5EB]'
       }`}
     >
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">

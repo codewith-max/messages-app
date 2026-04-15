@@ -33,6 +33,48 @@ export const CALLING_HELP_FAQ = [
   { id: '5', question: 'How do I use WhatsApp on other devices?' },
 ];
 
+/** Interactive “Discover more features” block on the Calling page (autoplay + synced image) */
+export const CALLING_DISCOVER_AUTOPLAY_MS = 8500;
+
+export const CALLING_DISCOVER_AUTOPLAY_STEPS = [
+  {
+    id: 'privacy',
+    title: 'Privacy',
+    description:
+      'End-to-end encryption and privacy controls help you choose who reaches you — for calls, chats, and your profile.',
+    href: '/privacy',
+    imageSrc: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=960&h=1200&fit=crop&q=80',
+    imageAlt: 'Privacy and security on a smartphone',
+  },
+  {
+    id: 'calling',
+    title: 'Calling',
+    description:
+      'Crystal-clear voice and video with the people who matter — on Wi‑Fi or mobile data, with encryption you can trust.',
+    href: '/features/calling',
+    imageSrc: 'https://images.unsplash.com/photo-1606761568499-6d2451b23e66?w=960&h=1200&fit=crop&q=80',
+    imageAlt: 'Relaxed video call at home',
+  },
+  {
+    id: 'meta-ai',
+    title: 'Meta AI',
+    description:
+      'Get quick answers, ideas, and help right in WhatsApp when you need it — with safety built in.',
+    href: '/features/meta-ai',
+    imageSrc: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=960&h=1200&fit=crop&q=80',
+    imageAlt: 'Using AI assistance on a phone',
+  },
+  {
+    id: 'groups',
+    title: 'Groups',
+    description:
+      'Plan together, share updates, and start group voice or video calls with up to 32 people in one tap.',
+    href: '/groups',
+    imageSrc: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=960&h=1200&fit=crop&q=80',
+    imageAlt: 'Friends gathered outdoors',
+  },
+];
+
 export const CALLING_DISCOVER_CARDS = [
   {
     id: 'private',
@@ -44,7 +86,7 @@ export const CALLING_DISCOVER_CARDS = [
   {
     id: 'community',
     title: 'Build community',
-    href: '/features/groups',
+    href: '/groups',
     imageSrc: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=640&h=480&fit=crop&q=80',
     imageAlt: 'Group of people',
   },

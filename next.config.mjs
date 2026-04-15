@@ -8,11 +8,6 @@ const nextConfig = {
         permanent: false,
       },
       {
-        source: '/groups',
-        destination: '/features/groups',
-        permanent: false,
-      },
-      {
         source: '/channels',
         destination: '/features/channels',
         permanent: false,

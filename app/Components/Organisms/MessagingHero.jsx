@@ -43,17 +43,22 @@ function ReactionBar() {
 
 function ChatPhoto() {
   return (
-    <div className="relative z-10 mb-3 overflow-hidden rounded-xl">
-      <div className="relative aspect-[4/3] w-full bg-[#cfd8dc]">
-        <Image
-          src="https://images.unsplash.com/photo-1520637836862-4d197d17c93a?w=400&h=300&fit=crop"
-          alt=""
-          width={400}
-          height={300}
-          className="h-full w-full object-cover"
-          unoptimized
-        />
-        <ReactionBar />
+    <div className="relative z-10 mb-3">
+      <div className="mb-2 flex items-center gap-2 px-0.5">
+        <div className="h-7 w-7 shrink-0 overflow-hidden rounded-full bg-[#cfd8dc] ring-1 ring-black/5" aria-hidden />
+        <span className="text-[14px] font-medium text-[#c35a6e]">Emiko</span>
+      </div>
+      <div className="relative overflow-hidden rounded-xl">
+        <div className="relative aspect-[4/3] w-full bg-[#cfd8dc]">
+          <Image
+            src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=450&fit=crop&q=80"
+            alt=""
+            fill
+            className="object-cover object-center"
+            sizes="(max-width: 400px) 100vw, 360px"
+          />
+          <ReactionBar />
+        </div>
       </div>
     </div>
   );
@@ -86,7 +91,7 @@ function VoiceBubble() {
             </div>
           </div>
           <div className="mt-1 flex items-center justify-end gap-1 text-[11px] text-[#667781]">
-            <span>0:20</span>
+            <span>0:05 / 0:20</span>
             <span className="text-[#53bdeb]" aria-hidden>
               ✓✓
             </span>
@@ -148,7 +153,7 @@ export default function MessagingHero() {
         <div className="w-full flex-1 text-center md:text-start">
           <h1
             id="messaging-hero-heading"
-            className="font-serif text-[40px] font-normal leading-[1.08] tracking-tight text-[#111b21] sm:text-[52px] md:text-[64px] lg:text-[72px]"
+            className="text-[40px] font-semibold leading-[1.08] tracking-tight text-[#111b21] sm:text-[48px] md:text-[56px] lg:text-[64px]"
           >
             Connect your way
           </h1>
@@ -173,7 +178,7 @@ export default function MessagingHero() {
         <div className="relative flex w-full flex-1 justify-center md:justify-end">
           <div className="pointer-events-none absolute -inset-6 rounded-[2.75rem] bg-[#ece5dd]/90 blur-sm md:-inset-10" aria-hidden />
           <div className="relative w-full max-w-[min(100%,360px)]">
-            <div className="relative overflow-hidden rounded-[2rem] bg-[#FCF5EB] p-3 shadow-[0_32px_60px_-28px_rgba(17,27,33,0.45)] ring-1 ring-black/5">
+            <div className="relative overflow-hidden rounded-[2rem] border border-white/80 bg-[#f6f0ea] p-3 shadow-[0_32px_60px_-28px_rgba(17,27,33,0.45)] ring-1 ring-[#e8e4dc]">
               <div className="relative overflow-hidden rounded-[1.45rem] px-3 pb-3 pt-3">
                 <ChatWallpaper />
                 <div className="relative z-10">

@@ -1,5 +1,5 @@
 import CallingAdvancedShowcase from '../../../Components/Organisms/CallingAdvancedShowcase';
-import CallingDiscoverMoreSection from '../../../Components/Organisms/CallingDiscoverMoreSection';
+import CallingDiscoverAutoplaySection from '../../../Components/Organisms/CallingDiscoverAutoplaySection';
 import CallingEasilyHero from '../../../Components/Organisms/CallingEasilyHero';
 import CallingFeaturesShowcase from '../../../Components/Organisms/CallingFeaturesShowcase';
 import CallingKeepTalkingSection from '../../../Components/Organisms/CallingKeepTalkingSection';
@@ -7,6 +7,9 @@ import CallingNeedHelpSection from '../../../Components/Organisms/CallingNeedHel
 import CallingTopHero from '../../../Components/Organisms/CallingTopHero';
 import Footer from '../../../Components/Organisms/Footer';
 import Header from '../../../Components/Organisms/Header';
+import CallingGroupsAutoplaySection from '../../../Components/Organisms/CallingGroupsAutoplaySection';
+import CallingChannelsAutoplaySection from '../../../Components/Organisms/CallingChannelsAutoplaySection';
+import CallingMetaAiAutoplaySection from '../../../Components/Organisms/CallingMetaAiAutoplaySection';
 import CallingGroupsHero from './CallingGroupsHero';
 
 export const metadata = {
@@ -24,10 +27,13 @@ export default function CallingFeaturePage() {
         <CallingEasilyHero />
         <CallingFeaturesShowcase />
         <CallingGroupsHero />
+        <CallingGroupsAutoplaySection />
+        <CallingChannelsAutoplaySection />
+        <CallingMetaAiAutoplaySection />
         <CallingAdvancedShowcase />
         <CallingKeepTalkingSection />
         <CallingNeedHelpSection />
-        <CallingDiscoverMoreSection />
+        <CallingDiscoverAutoplaySection />
         <div id="download" className="scroll-mt-24" />
       </main>
       <Footer />

@@ -1,4 +1,5 @@
 import Header from '../../../Components/Organisms/Header';
+import Footer from '../../../Components/Organisms/Footer';
 import MetaAiHero from '../../../Components/Organisms/MetaAiHero';
 import Link from 'next/link';
 
@@ -38,6 +39,7 @@ export default function MetaAiFeaturePage() {
           </div>
         </section>
       </main>
+      <Footer />
     </>
   );
 }

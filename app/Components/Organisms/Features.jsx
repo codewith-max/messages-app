@@ -3,7 +3,7 @@ import Link from 'next/link';
 const FEATURE_CARDS = [
   { title: 'Calling', description: 'Stay connected with voice and video.', href: '/features/calling' },
   { title: 'Messaging', description: 'Say it with stickers, voice, GIFs and more.', href: '/features/messaging' },
-  { title: 'Groups', description: 'Messaging features you need to connect in groups.', href: '/features/groups' },
+  { title: 'Groups', description: 'Messaging features you need to connect in groups.', href: '/groups' },
   { title: 'Channels', description: 'Stay updated on topics you care about.', href: '/features/channels' },
   { title: 'Meta AI', description: 'Get help with anything, all with the safety and privacy on WhatsApp.', href: '/features/meta-ai' },
   { title: 'Status', description: 'Share your everyday with photos, videos and voice notes.', href: '/features/status' },

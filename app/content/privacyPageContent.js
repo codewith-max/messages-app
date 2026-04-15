@@ -155,7 +155,7 @@ export const discoverCards = [
     id: 'groups',
     title: 'Groups',
     subtitle: 'Learn more',
-    href: '/features/groups',
+    href: '/groups',
     visualClass: 'bg-gradient-to-br from-[#2d2419] to-[#1a1510]',
   },
   {

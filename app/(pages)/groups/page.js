@@ -1,4 +1,4 @@
-import GroupsMarketingPage from '../../../Components/Templates/GroupsMarketingPage';
+import GroupsMarketingPage from '../../Components/Templates/GroupsMarketingPage';
 
 export const metadata = {
   title: 'Groups | WhatsApp Web Clone',
@@ -6,6 +6,6 @@ export const metadata = {
     'Stay in sync with WhatsApp groups. Plan together, share updates, and keep conversations private with end-to-end encryption.',
 };
 
-export default function GroupsFeaturePage() {
+export default function GroupsPage() {
   return <GroupsMarketingPage />;
 }
