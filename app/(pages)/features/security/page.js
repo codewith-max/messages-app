@@ -1,6 +1,6 @@
-import FeaturePageLayout from '../../../Components/Templates/FeaturePageLayout';
-import GetWhatsAppSection from '../../../Components/Molecules/GetWhatsAppSection';
-import SecurityHero from '../../../Components/Organisms/SecurityHero';
+import Footer from '../../../Components/Organisms/Footer';
+import Header from '../../../Components/Organisms/Header';
+import SecurityPageBody from '../../../Components/Organisms/SecurityPageBody';
 
 export const metadata = {
   title: 'Security | WhatsApp Web Clone',
@@ -10,12 +10,12 @@ export const metadata = {
 
 export default function SecurityFeaturePage() {
   return (
-    <FeaturePageLayout>
-      <SecurityHero />
-      <GetWhatsAppSection
-        headingId="security-download-heading"
-        description="Get the latest WhatsApp with the newest safety and privacy protections for your chats and calls."
-      />
-    </FeaturePageLayout>
+    <>
+      <Header />
+      <main className="flex-1">
+        <SecurityPageBody />
+      </main>
+      <Footer />
+    </>
   );
 }

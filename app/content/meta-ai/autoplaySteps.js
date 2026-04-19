@@ -1,15 +1,15 @@
-/** Meta AI–style autoplay FAQ on the Calling page */
+/** Meta AI feature carousel copy + mockup keys (Calling + Meta AI marketing pages). */
 
-export const CALLING_META_AI_AUTOPLAY_MS = 9000;
+export const META_AI_FEATURE_AUTOPLAY_MS = 9000;
 
-export const CALLING_META_AI_AUTOPLAY_STEPS = [
+export const META_AI_FEATURE_AUTOPLAY_STEPS = [
   {
     id: 'get-things-done',
     mockup: 'travel-club-ai',
     title: 'Get things done',
     description:
       'Get help with Meta AI, whether you prefer text or voice—from solving a math problem, to editing a photo or finding a restaurant everyone in the group chat can agree on.',
-    learnMoreHref: '#',
+    learnMoreHref: '/help-center',
   },
   {
     id: 'create-imagine',
@@ -17,7 +17,7 @@ export const CALLING_META_AI_AUTOPLAY_STEPS = [
     title: 'Create what you imagine',
     description:
       'Describe an idea and get images, captions, or edits you can drop straight into the chat—great for invites, memes, or quick visuals without leaving WhatsApp.',
-    learnMoreHref: '#',
+    learnMoreHref: '/help-center',
   },
   {
     id: 'connect-easily',
@@ -25,6 +25,6 @@ export const CALLING_META_AI_AUTOPLAY_STEPS = [
     title: 'Connect more easily',
     description:
       'Turn long threads into short summaries, catch up after a missed call, and keep plans moving with suggestions everyone can see in one place.',
-    learnMoreHref: '#',
+    learnMoreHref: '/help-center',
   },
 ];

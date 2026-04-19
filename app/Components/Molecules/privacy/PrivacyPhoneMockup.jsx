@@ -51,7 +51,7 @@ function EncryptedOverlay() {
   return (
     <div className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center px-4 py-12">
       <p
-        className="max-w-[16ch] text-center text-[clamp(1.35rem,4.2vw,2.35rem)] font-bold leading-[1.08] tracking-[0.02em] text-[#25D366]/[0.22]"
+        className="max-w-[16ch] text-center text-[clamp(1.35rem,4.2vw,2.35rem)] font-bold leading-[1.08] tracking-[0.02em] text-wa-bg/[0.22]"
         style={{ textShadow: '0 0 40px rgba(37,211,102,0.15)' }}
       >
         encrypted
@@ -70,7 +70,7 @@ function ComposerBar() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.6} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
         </span>
-        <div className="flex min-h-[40px] flex-1 items-center rounded-full bg-[#2a3942] px-3 py-1">
+        <div className="flex min-h-[40px] flex-1 items-center rounded-full bg-wa-muted px-3 py-1">
           <span className="text-[15px] text-[#8696a0]">Exciting news…</span>
         </div>
         <span className="hidden text-[#8696a0] sm:block" aria-hidden>
@@ -86,7 +86,7 @@ function ComposerBar() {
         </span>
         <button
           type="button"
-          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#25D366] text-[#111b21] shadow-md"
+          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-wa-bg text-white shadow-md"
           aria-label="Record voice message"
         >
           <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden>
@@ -102,7 +102,7 @@ export default function PrivacyPhoneMockup() {
   return (
     <div className="w-full max-w-[min(100%,380px)] lg:max-w-[400px]">
       <div className="rounded-[2rem] bg-[#1c2830] p-3 shadow-[0_36px_72px_-24px_rgba(0,0,0,0.65)] ring-1 ring-white/[0.07] sm:p-4">
-        <div className="flex h-[min(520px,68vh)] max-h-[580px] min-h-[480px] flex-col overflow-hidden rounded-[1.35rem] bg-[#0b141a] ring-1 ring-black/30 sm:rounded-[1.5rem]">
+        <div className="flex h-[min(520px,68vh)] max-h-[580px] min-h-[480px] flex-col overflow-hidden rounded-[1.35rem] bg-wa-bg ring-1 ring-black/30 sm:rounded-[1.5rem]">
           <ChatHeader />
           <div className="relative min-h-0 flex-1">
             <Wallpaper />

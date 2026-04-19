@@ -10,15 +10,15 @@ export default function LearnMoreLink({
 }) {
   const base =
     variant === 'green'
-      ? 'text-[#25D366] hover:text-[#20bd5a]'
+      ? 'text-wa-muted hover:text-white'
       : variant === 'onLight'
-        ? 'text-[#111b21] hover:text-[#25D366]'
-        : 'text-white hover:text-[#25D366]';
+        ? 'text-wa-bg hover:text-wa-muted'
+        : 'text-white hover:text-wa-muted';
 
   return (
     <Link
       href={href}
-      className={`group inline-flex items-center gap-2 text-[15px] font-medium underline decoration-1 underline-offset-[6px] transition-colors hover:decoration-[#25D366] ${
+      className={`group inline-flex items-center gap-2 text-[15px] font-medium underline decoration-1 underline-offset-[6px] transition-colors hover:decoration-wa-muted ${
         variant === 'onLight' ? 'decoration-black/25' : 'decoration-white/40'
       } ${base} ${className}`}
     >

@@ -39,7 +39,7 @@ export default function AccordionMediaShowcase({
 
   const imageBlock = (
     <div className="relative mx-auto w-full max-w-[560px] lg:sticky lg:top-28 lg:mx-0 lg:max-w-none">
-      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[20px] bg-[#1a2329] shadow-[0_28px_60px_-24px_rgba(17,27,33,0.45)] ring-1 ring-black/10 sm:rounded-[24px] md:aspect-[16/11]">
+      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[20px] bg-wa-muted shadow-[0_28px_60px_-24px_rgba(11,34,42,0.45)] ring-1 ring-black/10 sm:rounded-[24px] md:aspect-[16/11]">
         <Image
           key={active.id}
           src={active.imageSrc}
@@ -63,31 +63,31 @@ export default function AccordionMediaShowcase({
             {isOpen ? (
               <div className="py-5 pr-1 sm:pr-2">
                 <div className="flex items-start justify-between gap-4">
-                  <h3 className="text-[24px] font-bold leading-[1.15] text-[#111b21] sm:text-[28px] md:text-[30px]">
+                  <h3 className="text-[24px] font-bold leading-[1.15] text-wa-bg sm:text-[28px] md:text-[30px]">
                     {step.title}
                   </h3>
                   <button
                     type="button"
                     onClick={() => setPaused((p) => !p)}
-                    className={`mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#111b21]/15 bg-white text-[#111b21] shadow-sm transition-colors hover:bg-white/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 ${focusRingOffsetClass}`}
+                    className={`mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-wa-bg/15 bg-white text-wa-bg shadow-sm transition-colors hover:bg-white/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-wa-muted focus-visible:ring-offset-2 ${focusRingOffsetClass}`}
                     aria-pressed={paused}
                     aria-label={paused ? 'Resume slideshow' : 'Pause slideshow'}
                   >
                     {paused ? <PlayIcon /> : <PauseIcon />}
                   </button>
                 </div>
-                <div className="mt-4 h-[3px] w-full overflow-hidden rounded-full bg-[#111b21]/10">
+                <div className="mt-4 h-[3px] w-full overflow-hidden rounded-full bg-wa-bg/10">
                   <div
-                    className="h-full rounded-full bg-[#25D366] transition-[width] duration-75 ease-linear"
+                    className="h-full rounded-full bg-wa-bg transition-[width] duration-75 ease-linear"
                     style={{ width: `${progress * 100}%` }}
                   />
                 </div>
-                <p className="mt-5 max-w-[480px] text-[16px] leading-[1.55] text-[#111b21]/85 md:text-[17px]">{step.description}</p>
+                <p className="mt-5 max-w-[480px] text-[16px] leading-[1.55] text-wa-bg/85 md:text-[17px]">{step.description}</p>
                 {Array.isArray(step.bullets) && step.bullets.length > 0 ? (
-                  <ul className="mt-5 max-w-[520px] list-none space-y-3 text-[16px] leading-[1.55] text-[#111b21]/85 md:text-[17px]">
+                  <ul className="mt-5 max-w-[520px] list-none space-y-3 text-[16px] leading-[1.55] text-wa-bg/85 md:text-[17px]">
                     {step.bullets.map((b) => (
                       <li key={b.label}>
-                        <strong className="text-[#111b21]">{b.label}</strong> {b.text}
+                        <strong className="text-wa-bg">{b.label}</strong> {b.text}
                       </li>
                     ))}
                   </ul>
@@ -95,7 +95,7 @@ export default function AccordionMediaShowcase({
                 {ctaVariant === 'download' ? (
                   <Link
                     href="#download"
-                    className="mt-5 inline-flex items-center gap-1.5 text-[15px] font-semibold text-[#111b21] underline decoration-[#25D366] decoration-2 underline-offset-[5px] transition-colors hover:text-[#25D366]"
+                    className="mt-5 inline-flex items-center gap-1.5 text-[15px] font-semibold text-wa-bg underline decoration-wa-muted decoration-2 underline-offset-[5px] transition-colors hover:text-wa-muted"
                   >
                     Download
                     <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
@@ -105,7 +105,7 @@ export default function AccordionMediaShowcase({
                 ) : ctaVariant === 'help' ? (
                   <Link
                     href={step.ctaHref ?? '/help-center'}
-                    className="mt-5 inline-flex items-center gap-1 text-[15px] font-semibold text-[#25D366] transition hover:text-[#20bd5c]"
+                    className="mt-5 inline-flex items-center gap-1 text-[15px] font-semibold text-wa-muted transition hover:text-wa-muted"
                   >
                     Learn more
                     <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
@@ -115,7 +115,7 @@ export default function AccordionMediaShowcase({
                 ) : (
                   <Link
                     href="#download"
-                    className="mt-5 inline-flex items-center gap-1 text-[15px] font-semibold text-[#25D366] transition hover:text-[#20bd5c]"
+                    className="mt-5 inline-flex items-center gap-1 text-[15px] font-semibold text-wa-muted transition hover:text-wa-muted"
                   >
                     Learn how
                     <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
@@ -128,9 +128,9 @@ export default function AccordionMediaShowcase({
               <button
                 type="button"
                 onClick={() => goToStep(i)}
-                className={`w-full rounded-sm py-5 text-left transition-opacity hover:opacity-80 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 ${focusRingOffsetClass}`}
+                className={`w-full rounded-sm py-5 text-left transition-opacity hover:opacity-80 focus:outline-none focus-visible:ring-2 focus-visible:ring-wa-muted focus-visible:ring-offset-2 ${focusRingOffsetClass}`}
               >
-                <span className="block text-[22px] font-bold leading-tight text-[#111b21] sm:text-[24px] md:text-[26px]">
+                <span className="block text-[22px] font-bold leading-tight text-wa-bg sm:text-[24px] md:text-[26px]">
                   {step.title}
                 </span>
               </button>
@@ -160,14 +160,14 @@ export default function AccordionMediaShowcase({
             >
               <h2
                 id={header.id}
-                className={`text-[32px] font-semibold leading-tight tracking-tight text-[#111b21] sm:text-[38px] md:text-[42px] ${header.link ? 'text-left' : ''}`}
+                className={`text-[32px] font-semibold leading-tight tracking-tight text-wa-bg sm:text-[38px] md:text-[42px] ${header.link ? 'text-left' : ''}`}
               >
                 {header.title}
               </h2>
               {header.link ? (
                 <Link
                   href={header.link.href}
-                  className="inline-flex shrink-0 items-center gap-1 text-[15px] font-semibold text-[#25D366] transition hover:text-[#20bd5c] sm:text-[16px]"
+                  className="inline-flex shrink-0 items-center gap-1 text-[15px] font-semibold text-wa-muted transition hover:text-wa-muted sm:text-[16px]"
                   {...(header.link.external
                     ? { target: '_blank', rel: 'noopener noreferrer' }
                     : {})}
@@ -181,7 +181,7 @@ export default function AccordionMediaShowcase({
             </div>
             {header.subtitle ? (
               <p
-                className={`mt-4 text-[17px] leading-relaxed text-[#111b21]/85 md:text-[18px] ${header.link ? 'max-w-2xl text-left' : ''}`}
+                className={`mt-4 text-[17px] leading-relaxed text-wa-bg/85 md:text-[18px] ${header.link ? 'max-w-2xl text-left' : ''}`}
               >
                 {header.subtitle}
               </p>

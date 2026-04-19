@@ -9,7 +9,7 @@ export default function HelpCenterSidebar() {
   const [openId, setOpenId] = useState('download');
 
   return (
-    <aside className="w-full shrink-0 border-b border-black/[0.08] bg-[#f0f2f5] md:w-[280px] md:border-b-0 md:border-r lg:sticky lg:top-14 lg:max-h-[calc(100vh-3.5rem)] lg:self-start lg:overflow-y-auto lg:border-r lg:border-black/[0.08]">
+    <aside className="w-full shrink-0 border-b border-black/[0.08] shadow-[4px_0_4px_rgba(11,34,42,0.08)] md:w-[400px] md:border-b-0 md:border-r lg:sticky lg:top-20 lg:max-h-[calc(100vh-5rem)] lg:self-start lg:overflow-y-auto lg:border-r lg:border-black/[0.08]">
       <nav className="p-2 md:p-3" aria-label="Help topics">
         <ul className="space-y-0.5">
           {sidebarCategories.map((cat) => {
@@ -19,17 +19,17 @@ export default function HelpCenterSidebar() {
                 <button
                   type="button"
                   onClick={() => setOpenId(isOpen ? '' : cat.id)}
-                  className={`flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-left text-[14px] font-medium text-[#111b21] transition hover:bg-black/[0.04] ${
+                  className={`flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-left text-[20px] font-medium text-wa-bg ${
                     isOpen ? 'bg-[#e5e7ea]' : ''
                   }`}
                   aria-expanded={isOpen}
                 >
-                  <span className="shrink-0 text-[#3b4a54]">
+                  <span className="shrink-0 text-black">
                     <HelpCategoryIcon name={cat.icon} />
                   </span>
                   <span className="min-w-0 flex-1 leading-snug">{cat.label}</span>
                   <svg
-                    className={`h-4 w-4 shrink-0 text-[#667781] transition-transform ${isOpen ? 'rotate-180' : ''}`}
+                    className={`h-4 w-4 shrink-0 text-black transition-transform ${isOpen ? 'rotate-180' : ''}`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -39,12 +39,12 @@ export default function HelpCenterSidebar() {
                   </svg>
                 </button>
                 {isOpen && cat.articles?.length ? (
-                  <ul className="border-l-2 border-[#25D366]/40 py-1 pl-4 ml-4 mr-1 mb-2 space-y-0.5">
+                  <ul className="border-l-2 border-wa-muted/40 py-1 pl-4 ml-4 mr-1 mb-2 space-y-0.5">
                     {cat.articles.map((a) => (
                       <li key={a.title}>
                         <Link
                           href={a.href}
-                          className="block rounded-md px-2 py-1.5 text-[13px] leading-snug text-[#111b21] hover:bg-white/80 hover:text-[#25D366]"
+                          className="block rounded-md px-2 py-1.5 text-[16px] font-semibold leading-snug text-wa-bg"
                         >
                           {a.title}
                         </Link>

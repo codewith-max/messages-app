@@ -16,7 +16,7 @@ export const metadata = {
 
 export default function PrivacyPage() {
   return (
-    <div className="min-h-screen bg-[#111b21]">
+    <div className="min-h-screen bg-wa-bg">
       <Header />
       <main className="flex-1">
         <PrivacyHero />

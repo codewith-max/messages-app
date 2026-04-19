@@ -6,7 +6,7 @@ export default function MessagingFaqListSection() {
 
   return (
     <section
-      className="border-t border-[#e8e4dc] bg-white px-4 py-12 sm:px-6 md:py-16 lg:px-8"
+      className="border-t border-wa-muted/15 bg-white px-4 py-12 sm:px-6 md:py-16 lg:px-8"
       aria-labelledby="messaging-faq-list-heading"
     >
       <div className="mx-auto max-w-3xl">
@@ -18,10 +18,10 @@ export default function MessagingFaqListSection() {
             <li key={item.id}>
               <Link
                 href={item.href}
-                className="group flex items-center justify-between gap-4 py-5 text-left text-[17px] font-normal text-[#111b21] transition hover:text-[#25D366] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2"
+                className="group flex items-center justify-between gap-4 py-5 text-left text-[17px] font-normal text-wa-bg transition hover:text-wa-muted focus:outline-none focus-visible:ring-2 focus-visible:ring-wa-muted focus-visible:ring-offset-2"
               >
                 <span className="min-w-0 leading-snug">{item.question}</span>
-                <span className="shrink-0 text-[#111b21]/50 transition group-hover:text-[#25D366]" aria-hidden>
+                <span className="shrink-0 text-wa-bg/50 transition group-hover:text-wa-muted" aria-hidden>
                   ›
                 </span>
               </Link>

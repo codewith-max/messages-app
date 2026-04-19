@@ -29,7 +29,7 @@ export default function StoreDownloadButton({ store, href = '#download' }) {
     return (
       <Link
         href={href}
-        className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-black/15 bg-white px-4 py-2.5 text-[#111b21] shadow-sm transition hover:bg-gray-50 sm:w-auto"
+        className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-black/15 bg-white px-4 py-2.5 text-wa-bg shadow-sm transition hover:bg-gray-50 sm:w-auto"
       >
         <svg className="h-8 w-8 shrink-0" viewBox="0 0 24 24" aria-hidden>
           <path

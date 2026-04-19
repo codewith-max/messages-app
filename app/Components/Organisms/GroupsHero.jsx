@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 function collageShadow() {
-  return 'shadow-[0_16px_40px_-12px_rgba(17,27,33,0.22)] ring-1 ring-black/[0.04]';
+  return 'shadow-[0_16px_40px_-12px_rgba(11,34,42,0.22)] ring-1 ring-black/[0.04]';
 }
 
 function MegaphoneIcon({ className = 'h-5 w-5' }) {
@@ -21,12 +21,12 @@ function NeighboursNotificationCard() {
     <div
       className={`flex items-start gap-3 rounded-[1.25rem] bg-white p-3.5 sm:p-4 ${collageShadow()}`}
     >
-      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#e8f5eb] text-[#25D366]">
+      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#e8f5eb] text-wa-muted">
         <MegaphoneIcon className="h-5 w-5" />
       </span>
       <div className="min-w-0 flex-1">
-        <p className="text-[13px] font-semibold leading-tight text-[#111b21] sm:text-[14px]">8 Main St. Neighbours</p>
-        <p className="mt-0.5 text-[12px] font-medium text-[#25D366] sm:text-[13px]">Alex added You</p>
+        <p className="text-[13px] font-semibold leading-tight text-wa-bg sm:text-[14px]">8 Main St. Neighbours</p>
+        <p className="mt-0.5 text-[12px] font-medium text-wa-muted sm:text-[13px]">Alex added You</p>
       </div>
       <span className="shrink-0 text-[11px] tabular-nums text-[#8696a0]">13:37</span>
     </div>
@@ -40,12 +40,12 @@ function AnniversaryCard() {
         {[0, 1, 2].map((i) => (
           <span
             key={i}
-            className="inline-block h-9 w-9 rounded-full border-2 border-white bg-gradient-to-br from-[#7dd3a8] to-[#25D366]"
+            className="inline-block h-9 w-9 rounded-full border-2 border-white bg-gradient-to-br from-wa-muted to-wa-bg"
           />
         ))}
       </div>
       <div className="min-w-0 flex-1">
-        <p className="text-[13px] font-semibold text-[#111b21] sm:text-[14px]">Neighborhood Anniversary</p>
+        <p className="text-[13px] font-semibold text-wa-bg sm:text-[14px]">Neighborhood Anniversary</p>
         <p className="mt-0.5 text-[12px] leading-snug text-[#667781] sm:text-[13px]">
           Michael, Dwight, Erin &amp; 40 others
         </p>
@@ -66,16 +66,16 @@ function AnniversaryCard() {
 function BestFriendsPhoneMockup() {
   return (
     <div
-      className={`relative mx-auto flex h-full min-h-[280px] w-full max-w-[200px] flex-col overflow-hidden rounded-[1.75rem] bg-[#efeae2] sm:max-w-[220px] sm:min-h-[320px] lg:max-w-[240px] lg:min-h-[360px] ${collageShadow()}`}
+      className={`relative mx-auto flex h-full min-h-[280px] w-full max-w-[200px] flex-col overflow-hidden rounded-[1.75rem] bg-[#eef2f4] sm:max-w-[220px] sm:min-h-[320px] lg:max-w-[240px] lg:min-h-[360px] ${collageShadow()}`}
     >
-      <div className="flex items-center gap-2 border-b border-black/[0.06] bg-[#f0f2f5] px-3 py-2.5">
+      <div className="flex items-center gap-2 border-b border-black/[0.06] bg-[#eef2f4] px-3 py-2.5">
         <span className="text-[#54656f]">
           <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden>
             <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" />
           </svg>
         </span>
         <div className="min-w-0 flex-1 text-center">
-          <p className="truncate text-[13px] font-semibold text-[#111b21]">Best Friends Group</p>
+          <p className="truncate text-[13px] font-semibold text-wa-bg">Best Friends Group</p>
         </div>
         <span className="w-5 shrink-0" aria-hidden />
       </div>
@@ -90,13 +90,13 @@ function BestFriendsPhoneMockup() {
           />
         </div>
         <div className="rounded-lg bg-white px-2.5 py-2 shadow-sm">
-          <p className="text-[12px] text-[#111b21]">
+          <p className="text-[12px] text-wa-bg">
             Adopted a kitten! <span aria-hidden>😻</span>
           </p>
           <p className="mt-1 text-right text-[10px] text-[#667781]">10:42</p>
         </div>
         <div className="ms-auto max-w-[85%] rounded-lg rounded-tr-sm bg-[#d9fdd3] px-2.5 py-2">
-          <p className="text-[12px] text-[#111b21]">So cute!!</p>
+          <p className="text-[12px] text-wa-bg">So cute!!</p>
           <p className="mt-0.5 text-right text-[10px] text-[#667781]">10:43</p>
         </div>
       </div>
@@ -113,7 +113,7 @@ export default function GroupsHero() {
       <div className="mx-auto max-w-[1240px]">
         <h1
           id="groups-hero-heading"
-          className="mx-auto max-w-[920px] text-center text-[28px] font-semibold leading-[1.15] tracking-tight text-[#111b21] sm:text-[36px] md:text-[42px] lg:text-[44px]"
+          className="mx-auto max-w-[920px] text-center text-[28px] font-semibold leading-[1.15] tracking-tight text-wa-bg sm:text-[36px] md:text-[42px] lg:text-[44px]"
         >
           WhatsApp group messaging brings everyone together, whether you&apos;re planning a wedding, doing a group
           project, or just catching up.

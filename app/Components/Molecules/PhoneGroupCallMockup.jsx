@@ -11,8 +11,8 @@ const G4 = 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h
 
 function ParticipantTile({ src, name, speaking }) {
   return (
-    <div className={`relative rounded-md ${speaking ? 'bg-[#ff6b9d] p-[2px]' : 'bg-[#1a2329]'}`}>
-      <div className="relative aspect-square w-full overflow-hidden rounded-[5px] bg-[#1a2329]">
+    <div className={`relative rounded-md ${speaking ? 'bg-[#ff6b9d] p-[2px]' : 'bg-wa-muted'}`}>
+      <div className="relative aspect-square w-full overflow-hidden rounded-[5px] bg-wa-muted">
         <Image src={src} alt="" fill className="object-cover" sizes="120px" />
         <p className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-1 py-1 text-center text-[8px] font-medium text-white sm:text-[9px]">
           {name}
@@ -25,8 +25,8 @@ function ParticipantTile({ src, name, speaking }) {
 export default function PhoneGroupCallMockup() {
   return (
     <div className="relative mx-auto w-full max-w-[320px] sm:max-w-[340px]">
-      <div className="relative rounded-[2.35rem] border-[11px] border-[#1b2329] bg-[#1b2329] shadow-[0_36px_72px_-16px_rgba(17,27,33,0.55)]">
-        <div className="relative aspect-[9/18.2] overflow-hidden rounded-[1.65rem] bg-[#0b141a]">
+      <div className="relative rounded-[2.35rem] border-[11px] border-wa-muted bg-wa-muted shadow-[0_36px_72px_-16px_rgba(11,34,42,0.55)]">
+        <div className="relative aspect-[9/18.2] overflow-hidden rounded-[1.65rem] bg-wa-bg">
           <div className="absolute inset-x-0 top-0 z-20 flex items-center justify-between px-3 pt-2.5 text-white">
             <button
               type="button"
@@ -46,7 +46,7 @@ export default function PhoneGroupCallMockup() {
 
           <div className="absolute inset-x-0 bottom-0 top-0 flex flex-col pt-14 pb-[4.5rem]">
             <div className="relative min-h-0 flex-[1.15] px-1.5">
-              <div className="relative h-full min-h-[120px] overflow-hidden rounded-lg bg-[#1a2329]">
+              <div className="relative h-full min-h-[120px] overflow-hidden rounded-lg bg-wa-muted">
                 <Image src={MAIN_HERO} alt="" fill className="object-cover object-[center_25%]" sizes="300px" />
                 <div
                   className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/25 to-transparent"

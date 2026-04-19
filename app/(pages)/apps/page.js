@@ -11,7 +11,7 @@ export const metadata = {
 
 export default function AppsPage() {
   return (
-    <div className="min-h-screen bg-[#F9F4EE] text-[#111b21]">
+    <div className="min-h-screen bg-[#ffffff] text-wa-bg">
       <Header />
       <main>
         <AppsOtherDownloadsSection />

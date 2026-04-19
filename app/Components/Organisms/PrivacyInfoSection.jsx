@@ -22,7 +22,7 @@ const COLUMNS = [
 export default function PrivacyInfoSection() {
   return (
     <section
-      className="bg-[#111b21] px-4 pb-20 pt-10 sm:px-6 sm:pb-24 sm:pt-12 md:px-8 md:pt-14 lg:pb-28"
+      className="bg-wa-bg px-4 pb-20 pt-10 sm:px-6 sm:pb-24 sm:pt-12 md:px-8 md:pt-14 lg:pb-28"
       aria-labelledby="privacy-info-heading"
     >
       <div className="mx-auto max-w-[1100px]">

@@ -8,7 +8,7 @@ export default function Hero() {
   const { hero: H } = page;
 
   return (
-    <section className="bg-[#FCF5EB] px-4 sm:px-6 lg:px-8 pb-4 pt-4">
+    <section className="bg-[#ffffff] px-4 sm:px-6 lg:px-8 pb-4 pt-4">
       <div className="max-w-[1440px] mx-auto">
         <div className="relative bg-black rounded-[2.5rem] overflow-hidden min-h-[600px] flex items-center">
           <div
@@ -25,7 +25,7 @@ export default function Hero() {
               <p className="text-lg sm:text-xl text-white/90 mb-10 max-w-md font-medium leading-snug">{H.sub}</p>
               <Link
                 href="#download"
-                className="inline-flex flex-col sm:flex-row items-center gap-2 text-[15px] font-medium rounded-full bg-[#25D366] border border-transparent text-[#111b21] px-8 py-3.5 hover:bg-[#20bd5a] transition-all hover:scale-105 inline-block"
+                className="inline-flex flex-col sm:flex-row items-center gap-2 text-[15px] font-medium rounded-full bg-wa-bg border border-transparent px-8 py-3.5 text-white transition-all hover:scale-105 hover:bg-wa-muted inline-block"
               >
                 <div className="flex items-center gap-2">
                   <span>{H.download}</span>

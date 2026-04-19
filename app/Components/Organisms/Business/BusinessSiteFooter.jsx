@@ -5,7 +5,7 @@ function SocialIcon({ children, label }) {
   return (
     <Link
       href="#"
-      className="flex h-10 w-10 items-center justify-center rounded-full border border-white/40 text-white transition hover:bg-[#25D366] hover:text-[#073321]"
+      className="flex h-10 w-10 items-center justify-center rounded-full border border-white/40 text-white transition hover:bg-wa-bg hover:text-[#073321]"
       aria-label={label}
     >
       {children}
@@ -51,7 +51,7 @@ export default function BusinessSiteFooter() {
             <ul className="mt-4 space-y-3">
               {businessFooter.privacy.map((link) => (
                 <li key={link}>
-                  <Link href="#" className="text-[15px] text-white/85 transition hover:text-[#25D366]">
+                  <Link href="#" className="text-[15px] text-white/85 transition hover:text-wa-muted">
                     {link}
                   </Link>
                 </li>
@@ -64,7 +64,7 @@ export default function BusinessSiteFooter() {
             <ul className="mt-4 space-y-3">
               {businessFooter.resources.map((link) => (
                 <li key={link}>
-                  <Link href={link === 'Help Center' ? '/help-center' : '#'} className="text-[15px] text-white/85 transition hover:text-[#25D366]">
+                  <Link href={link === 'Help Center' ? '/help-center' : '#'} className="text-[15px] text-white/85 transition hover:text-wa-muted">
                     {link}
                   </Link>
                 </li>

@@ -8,6 +8,9 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  /** Site-wide brand neutrals (WhatsApp-style marketing UI) */
+  --color-wa-bg: #0b222a;
+  --color-wa-muted: #2a3e47;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }

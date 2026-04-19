@@ -6,7 +6,7 @@ export default function BusinessHero() {
     <section className="bg-[#073321] px-4 py-14 sm:px-6 md:py-20 lg:px-8 lg:py-24" aria-labelledby="business-hero-title">
       <div className="mx-auto grid max-w-[1440px] items-center gap-12 lg:grid-cols-2 lg:gap-16">
         <div className="max-w-xl">
-          <h1 id="business-hero-title" className="text-[36px] font-semibold leading-[1.1] tracking-tight text-[#25D366] sm:text-[44px] md:text-[52px] lg:text-[56px]">
+          <h1 id="business-hero-title" className="text-[36px] font-semibold leading-[1.1] tracking-tight text-wa-muted sm:text-[44px] md:text-[52px] lg:text-[56px]">
             {hero.title}
           </h1>
           <p className="mt-6 text-[17px] leading-relaxed text-white/92 md:text-[18px]">{hero.subtitle}</p>

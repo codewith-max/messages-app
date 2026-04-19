@@ -1,6 +1,6 @@
 /** Small green line icons for business nav mega menus */
 
-export function NavIcon({ name, className = 'h-6 w-6 shrink-0 text-[#25D366]' }) {
+export function NavIcon({ name, className = 'h-6 w-6 shrink-0 text-wa-muted' }) {
   switch (name) {
     case 'briefcase':
       return (

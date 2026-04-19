@@ -2,7 +2,7 @@ import Link from 'next/link';
 import DownloadIcon from './DownloadIcon';
 
 const BASE =
-  'inline-flex items-center rounded-full bg-[#25D366] text-base font-medium text-white transition-colors hover:bg-[#20bd5c] focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2 mt-8 px-8 py-3.5';
+  'inline-flex items-center rounded-full bg-wa-bg text-base font-medium text-white transition-colors hover:bg-wa-muted focus:outline-none focus:ring-2 focus:ring-wa-muted focus:ring-offset-2 focus:ring-offset-white mt-8 px-8 py-3.5';
 
 export default function WhatsAppDownloadLink({ href = '#', children = 'Download' }) {
   return (

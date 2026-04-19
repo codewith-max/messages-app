@@ -10,7 +10,7 @@ import {
 export default function SecurityHero() {
   return (
     <section
-      className="border-b border-[#1f2b31] bg-[#111b21] px-4 pb-16 pt-10 sm:px-6 sm:pb-20 sm:pt-12 md:px-8 lg:pb-28 lg:pt-14"
+      className="border-b border-wa-muted bg-wa-bg px-4 pb-16 pt-10 sm:px-6 sm:pb-20 sm:pt-12 md:px-8 lg:pb-28 lg:pt-14"
       aria-labelledby="security-hero-heading"
     >
       <div className="mx-auto max-w-7xl">
@@ -20,8 +20,8 @@ export default function SecurityHero() {
               id="security-hero-heading"
               className="text-[42px] font-semibold leading-[1.05] tracking-tight sm:text-[52px] md:text-[60px] lg:text-[64px]"
             >
-              <span className="text-[#25D366]">Secure</span>
-              <span className="text-white"> by design</span>
+              <span className="font-semibold text-white">Secure</span>
+              <span className="text-white/85"> by design</span>
             </h1>
             <p className="mx-auto mt-6 max-w-[540px] text-[17px] leading-[1.55] text-[#e9edef]/95 md:mx-0 md:text-[18px]">
               To keep you safe, we&apos;ve designed a messaging and calling experience with world-class security,
@@ -30,7 +30,7 @@ export default function SecurityHero() {
             <div className="mt-10 flex justify-center lg:justify-start">
               <Link
                 href="#download"
-                className="inline-flex items-center rounded-full bg-[#25D366] px-7 py-3.5 text-[15px] font-semibold text-[#111b21] shadow-[0_4px_14px_rgba(37,211,102,0.35)] transition-colors hover:bg-[#20bd5c] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 focus-visible:ring-offset-[#111b21]"
+                className="inline-flex items-center rounded-full bg-wa-bg px-7 py-3.5 text-[15px] font-semibold text-white shadow-[0_4px_14px_rgba(11,34,42,0.35)] transition-colors hover:bg-wa-muted focus:outline-none focus-visible:ring-2 focus-visible:ring-wa-muted focus-visible:ring-offset-2 focus-visible:ring-offset-wa-bg"
               >
                 Download
                 <svg className="ms-2 h-[18px] w-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
@@ -68,7 +68,7 @@ export default function SecurityHero() {
                 <IncomingTextBubble
                   time="11:59"
                   footer={
-                    <span className="inline-flex items-center justify-center rounded-full bg-[#2a3942] px-2 py-0.5 text-[12px] text-[#ff6b9d]" aria-hidden>
+                    <span className="inline-flex items-center justify-center rounded-full bg-wa-muted px-2 py-0.5 text-[12px] text-[#ff6b9d]" aria-hidden>
                       ❤️
                     </span>
                   }

@@ -48,7 +48,7 @@ export default function BlogSocialShare() {
           key={item.label}
           href={item.href}
           aria-label={item.label}
-          className="flex h-8 w-8 items-center justify-center rounded-full border border-[#cfd4d6] text-[#3b4a54] transition hover:border-[#25D366] hover:text-[#25D366]"
+          className="flex h-8 w-8 items-center justify-center rounded-full border border-[#cfd4d6] text-[#3b4a54] transition hover:border-wa-bg hover:text-wa-muted"
         >
           <Icon name={item.icon} />
         </a>

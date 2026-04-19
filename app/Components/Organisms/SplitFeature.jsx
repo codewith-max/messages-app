@@ -10,13 +10,13 @@ export default function SplitFeature({
   imageSrc,
   imageAlt,
   reverse = false,
-  backgroundColor = "bg-[#FCF5EB]",
+  backgroundColor = "bg-[#ffffff]",
   imageAsMockup = false,
   buttonStyle = "link",
-  titleClassName = "text-[32px] sm:text-[40px] md:text-[48px] font-normal leading-[1.2] text-[#1c1e21] mb-6 tracking-tight",
-  descriptionClassName = "text-lg md:text-[20px] text-[#1c1e21] leading-relaxed mb-6",
-  linkClassName = "text-[#1c1e21] focus:ring-[#1c1e21] hover:text-[#25d366]",
-  linkBorderClassName = "border-[#1c1e21] group-hover:border-[#25d366]",
+  titleClassName = "text-[32px] sm:text-[40px] md:text-[48px] font-normal leading-[1.2] text-wa-bg mb-6 tracking-tight",
+  descriptionClassName = "text-lg md:text-[20px] text-wa-bg leading-relaxed mb-6",
+  linkClassName = "text-wa-bg focus:ring-wa-muted hover:text-wa-muted",
+  linkBorderClassName = "border-wa-bg group-hover:border-wa-muted",
   imageContainerClassName = "max-w-[320px] lg:max-w-[380px]",
   backgroundImageSrc = null,
   foregroundImageClassName = null,
@@ -51,7 +51,7 @@ export default function SplitFeature({
               </Link>
             )}
             {linkText && linkHref && buttonStyle === 'primary' && (
-              <Link href={linkHref} className="inline-flex items-center bg-[#25D366] hover:bg-[#20bd5c] text-white font-medium text-base px-6 py-3 rounded-full transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#25D366]">
+              <Link href={linkHref} className="inline-flex items-center rounded-full bg-wa-muted px-6 py-3 text-base font-medium text-white transition-colors duration-300 hover:bg-wa-bg focus:outline-none focus:ring-2 focus:ring-wa-muted focus:ring-offset-2">
                 <span>{linkText}</span>
                 <svg className="w-5 h-5 ms-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
@@ -62,7 +62,7 @@ export default function SplitFeature({
 
           {/* Image/Mockup Content */}
           <div className="flex-1 w-full flex justify-center">
-            <div className={`relative isolate w-full ${imageContainerClassName} ${imageAsMockup ? 'rounded-[2.5rem] border-[8px] border-slate-900 shadow-2xl overflow-hidden' : ''}`}>
+            <div className={`relative isolate w-full ${imageContainerClassName} ${imageAsMockup ? 'rounded-[2.5rem] border-[8px] border-wa-bg shadow-2xl overflow-hidden' : ''}`}>
               {backgroundImageSrc && foregroundImageClassName ? (
                 <>
                   <Image

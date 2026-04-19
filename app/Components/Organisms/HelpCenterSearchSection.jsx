@@ -1,7 +1,7 @@
 export default function HelpCenterSearchSection() {
   return (
     <div className="border-b border-black/[0.06] bg-white px-4 py-10 sm:px-8 sm:py-12">
-      <h1 className="text-[28px] font-bold tracking-tight text-[#111b21] sm:text-[32px] md:text-[36px]">How can we help you?</h1>
+      <h1 className="text-[28px] font-bold tracking-tight text-wa-bg sm:text-[32px] md:text-[36px]">How can we help you?</h1>
       <label className="mt-6 block max-w-2xl">
         <span className="sr-only">Search help articles</span>
         <div className="relative">
@@ -17,7 +17,7 @@ export default function HelpCenterSearchSection() {
           <input
             type="search"
             placeholder="Search help articles..."
-            className="w-full rounded-2xl border-0 bg-[#f0f2f5] py-3.5 pl-12 pr-4 text-[15px] text-[#111b21] placeholder:text-[#667781] outline-none ring-1 ring-transparent transition focus:bg-white focus:ring-2 focus:ring-[#25D366]/40"
+            className="w-full rounded-2xl border-0 bg-[#eef2f4] py-3.5 pl-12 pr-4 text-[15px] text-wa-bg placeholder:text-[#667781] outline-none ring-1 ring-transparent transition focus:bg-white focus:ring-2 focus:ring-wa-muted/40"
           />
         </div>
       </label>

@@ -19,7 +19,7 @@ function StatusBar() {
 function Row({ children, border = true }) {
   return (
     <div
-      className={`flex items-center justify-between gap-2 px-4 py-3.5 text-[13px] text-[#111b21] ${border ? 'border-b border-black/[0.06]' : ''}`}
+      className={`flex items-center justify-between gap-2 px-4 py-3.5 text-[13px] text-wa-bg ${border ? 'border-b border-black/[0.06]' : ''}`}
     >
       {children}
     </div>
@@ -30,7 +30,7 @@ function Toggle({ on }) {
   return (
     <button
       type="button"
-      className={`relative h-[26px] w-[46px] rounded-full transition-colors ${on ? 'bg-[#25D366]' : 'bg-[#e9edef]'}`}
+      className={`relative h-[26px] w-[46px] rounded-full transition-colors ${on ? 'bg-wa-bg' : 'bg-[#e9edef]'}`}
       aria-hidden
     >
       <span
@@ -55,13 +55,13 @@ export function MockupGroupInfo() {
     <PhoneFrame>
       <StatusBar />
       <div className="flex items-center gap-2 border-b border-black/[0.06] px-3 py-2.5">
-        <span className="text-[#111b21]" aria-hidden>
+        <span className="text-wa-bg" aria-hidden>
           <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
         </span>
         <div>
-          <p className="text-[15px] font-semibold text-[#111b21]">Group info</p>
+          <p className="text-[15px] font-semibold text-wa-bg">Group info</p>
           <p className="text-[12px] text-[#667781]">Breakfast Club</p>
         </div>
       </div>
@@ -109,17 +109,17 @@ export function MockupCallsSilence() {
     <PhoneFrame>
       <StatusBar />
       <div className="flex items-center gap-2 border-b border-black/[0.06] px-3 py-2.5">
-        <span className="text-[#111b21]">
+        <span className="text-wa-bg">
           <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
         </span>
-        <p className="text-[16px] font-semibold text-[#111b21]">Calls</p>
+        <p className="text-[16px] font-semibold text-wa-bg">Calls</p>
       </div>
       <div className="space-y-1 bg-white px-4 pb-6 pt-4">
         <div className="flex items-start justify-between gap-3">
           <div>
-            <p className="text-[15px] font-semibold text-[#111b21]">Silence unknown callers</p>
+            <p className="text-[15px] font-semibold text-wa-bg">Silence unknown callers</p>
             <p className="mt-2 text-[12px] leading-relaxed text-[#667781]">
               Calls from unknown numbers will be silenced and shown in your calls list and notifications.
             </p>
@@ -139,27 +139,27 @@ export function MockupBackupEncryption() {
     <PhoneFrame>
       <StatusBar />
       <div className="flex items-center gap-2 border-b border-black/[0.06] px-3 py-2.5">
-        <span className="text-[#111b21]">
+        <span className="text-wa-bg">
           <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
         </span>
-        <p className="text-[15px] font-semibold text-[#111b21]">Chat backup</p>
+        <p className="text-[15px] font-semibold text-wa-bg">Chat backup</p>
       </div>
       <div className="bg-[#f7f8fa] px-4 pb-5 pt-6 text-center">
         <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-2xl bg-[#d9fdd3]">
           <div className="relative">
-            <svg className="h-14 w-14 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24" aria-hidden>
+            <svg className="h-14 w-14 text-wa-muted" fill="currentColor" viewBox="0 0 24 24" aria-hidden>
               <path d="M10 4H4c-1.11 0-2 .89-2 2v12a2 2 0 002 2h16a2 2 0 002-2V8a2 2 0 00-2-2h-8l-2-2z" />
             </svg>
             <span className="absolute -bottom-1 -right-1 flex h-7 w-7 items-center justify-center rounded-full bg-white shadow">
-              <svg className="h-4 w-4 text-[#111b21]" fill="currentColor" viewBox="0 0 24 24">
+              <svg className="h-4 w-4 text-wa-bg" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z" />
               </svg>
             </span>
           </div>
         </div>
-        <p className="mt-4 text-[15px] font-bold leading-snug text-[#111b21]">
+        <p className="mt-4 text-[15px] font-bold leading-snug text-wa-bg">
           Protect your backup with end-to-end encryption
         </p>
         <ul className="mt-3 space-y-1.5 text-left text-[11px] leading-snug text-[#3b4a54]">
@@ -170,7 +170,7 @@ export function MockupBackupEncryption() {
         <p className="mt-3 text-[10px] text-[#8696a0]">Your current backup size is 376 MB including 361 MB media.</p>
         <button
           type="button"
-          className="mt-4 w-full rounded-lg bg-[#25D366] py-3 text-[14px] font-semibold text-white"
+          className="mt-4 w-full rounded-lg bg-wa-bg py-3 text-[14px] font-semibold text-white"
         >
           Turn on
         </button>
@@ -181,13 +181,13 @@ export function MockupBackupEncryption() {
 
 function Radio({ selected, label }) {
   return (
-    <label className="flex cursor-pointer items-center gap-3 py-2 text-[13px] text-[#111b21]">
+    <label className="flex cursor-pointer items-center gap-3 py-2 text-[13px] text-wa-bg">
       <span
         className={`flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-full border-2 ${
-          selected ? 'border-[#25D366]' : 'border-[#cfd4d6]'
+          selected ? 'border-wa-bg' : 'border-[#cfd4d6]'
         }`}
       >
-        {selected ? <span className="h-2.5 w-2.5 rounded-full bg-[#25D366]" /> : null}
+        {selected ? <span className="h-2.5 w-2.5 rounded-full bg-wa-bg" /> : null}
       </span>
       {label}
     </label>
@@ -199,12 +199,12 @@ export function MockupLastSeenOnline() {
     <PhoneFrame>
       <StatusBar />
       <div className="flex items-center gap-2 border-b border-black/[0.06] px-3 py-2.5">
-        <span className="text-[#111b21]">
+        <span className="text-wa-bg">
           <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
         </span>
-        <p className="text-[15px] font-semibold text-[#111b21]">Last seen and online</p>
+        <p className="text-[15px] font-semibold text-wa-bg">Last seen and online</p>
       </div>
       <div className="bg-[#f7f8fa] px-4 pb-4 pt-2">
         <p className="text-[12px] font-semibold uppercase tracking-wide text-[#667781]">Who can see my last seen</p>
@@ -231,7 +231,7 @@ export function MockupSecurityStack() {
   return (
     <div className="relative mx-auto h-[min(420px,58vh)] w-full max-w-[min(100%,340px)] sm:h-[460px] sm:max-w-[360px]">
       {/* Back cards */}
-      <div className="absolute left-1/2 top-4 z-0 w-[88%] -translate-x-1/2 rounded-[1.75rem] bg-[#2a3942] p-4 shadow-lg ring-1 ring-white/5 opacity-80">
+      <div className="absolute left-1/2 top-4 z-0 w-[88%] -translate-x-1/2 rounded-[1.75rem] bg-wa-muted p-4 shadow-lg ring-1 ring-white/5 opacity-80">
         <div className="h-40 rounded-xl bg-[#1f2c34]" />
       </div>
       <div className="absolute left-1/2 top-12 z-[1] w-[92%] -translate-x-1/2 rounded-[1.75rem] bg-[#34444f] p-3 shadow-xl ring-1 ring-white/8 opacity-95">
@@ -239,16 +239,16 @@ export function MockupSecurityStack() {
       </div>
       {/* Front modal */}
       <div className="absolute bottom-0 left-1/2 z-10 w-full max-w-[300px] -translate-x-1/2 rounded-[1.5rem] bg-white p-5 shadow-[0_24px_60px_rgba(0,0,0,0.45)] ring-1 ring-black/10 sm:max-w-[310px]">
-        <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-[#f0f2f5]">
+        <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-[#eef2f4]">
           <svg className="h-7 w-7 text-[#667781]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 14H5.236a2 2 0 01-1.789-2.894l3.5-7A2 2 0 018.736 3h4.018a2 2 0 01.485.06l3.76.94m-7 10v5a2 2 0 002 2h.096c.5 0 .905-.405.905-.904 0-.715.211-1.413.608-2.008L17 13V4m-7 10h2m5-10h2a2 2 0 012 2v6a2 2 0 01-2 2h-2m-4 0h2" />
           </svg>
         </div>
-        <p className="text-center text-[16px] font-bold text-[#111b21]">Report to WhatsApp</p>
+        <p className="text-center text-[16px] font-bold text-wa-bg">Report to WhatsApp</p>
         <p className="mt-2 text-center text-[11px] leading-relaxed text-[#667781]">
           The last 5 messages will be forwarded to WhatsApp.
         </p>
-        <label className="mt-4 flex items-start gap-2 rounded-lg border border-black/[0.08] p-3 text-[12px] text-[#111b21]">
+        <label className="mt-4 flex items-start gap-2 rounded-lg border border-black/[0.08] p-3 text-[12px] text-wa-bg">
           <input type="checkbox" className="mt-0.5" readOnly defaultChecked />
           <span>
             <span className="font-medium">Block contact</span>
@@ -259,7 +259,7 @@ export function MockupSecurityStack() {
           <button type="button" className="text-[#027eb5]">
             Cancel
           </button>
-          <button type="button" className="text-[#25D366]">
+          <button type="button" className="text-wa-muted">
             Report
           </button>
         </div>

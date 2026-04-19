@@ -16,30 +16,38 @@ export default function MessagingKeepConversationSection() {
   const scrollerRef = useRef(null);
 
   useEffect(() => {
-    const el = scrollerRef.current?.children?.[activeIndex];
-    el?.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    const scroller = scrollerRef.current;
+    const el = scroller?.children?.[activeIndex];
+    if (!scroller || !el) return;
+
+    // Keep carousel movement horizontal-only to avoid page jump on autoplay.
+    const targetLeft = el.offsetLeft - (scroller.clientWidth - el.clientWidth) / 2;
+    const maxLeft = scroller.scrollWidth - scroller.clientWidth;
+    const clampedLeft = Math.max(0, Math.min(targetLeft, maxLeft));
+
+    scroller.scrollTo({ left: clampedLeft, behavior: 'smooth' });
   }, [activeIndex]);
 
   return (
     <section
-      className="border-b border-[#e8e4dc] bg-[#F9F5EF] px-4 py-14 sm:px-6 md:py-20 lg:px-8 lg:py-24"
+      className="border-b border-wa-muted/15 bg-[#ffffff] px-4 py-14 sm:px-6 md:py-20 lg:px-8 lg:py-24"
       aria-labelledby="messaging-keep-heading"
     >
       <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] lg:gap-14 xl:gap-16">
         <div>
           <h2
             id="messaging-keep-heading"
-            className="text-[34px] font-semibold leading-[1.12] tracking-tight text-[#111b21] sm:text-[40px] md:text-[44px] lg:text-[48px]"
+            className="text-[34px] font-semibold leading-[1.12] tracking-tight text-wa-bg sm:text-[40px] md:text-[44px] lg:text-[48px]"
           >
             Keep the conversation going
           </h2>
-          <p className="mt-5 max-w-[520px] text-[17px] leading-[1.55] text-[#111b21]/88 md:text-[18px]">
+          <p className="mt-5 max-w-[520px] text-[17px] leading-[1.55] text-wa-bg/88 md:text-[18px]">
             Stay connected anytime, anywhere on your preferred device by downloading our apps. Calling and messaging are
             available on iOS, Android, Mac, iPad and Windows devices.
           </p>
           <Link
             href="#download"
-            className="mt-8 inline-flex items-center rounded-full bg-[#25D366] px-7 py-3.5 text-base font-medium text-white shadow-sm transition-colors hover:bg-[#20bd5c] focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2 focus:ring-offset-[#F9F5EF]"
+            className="mt-8 inline-flex items-center rounded-full bg-wa-bg px-7 py-3.5 text-base font-medium text-white shadow-sm transition-colors hover:bg-wa-muted focus:outline-none focus:ring-2 focus:ring-wa-muted focus:ring-offset-2 focus:ring-offset-white"
           >
             Download
             <svg className="ms-2 h-5 w-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
@@ -51,7 +59,7 @@ export default function MessagingKeepConversationSection() {
             <button
               type="button"
               onClick={() => goToStep(activeIndex - 1)}
-              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#111b21] bg-transparent text-[#111b21] transition hover:bg-[#111b21] hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 focus-visible:ring-offset-[#F9F5EF]"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-wa-bg bg-transparent text-wa-bg transition hover:bg-wa-bg hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-wa-muted focus-visible:ring-offset-2 focus-visible:ring-offset-[#ffffff]"
               aria-label="Previous"
             >
               <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
@@ -61,7 +69,7 @@ export default function MessagingKeepConversationSection() {
             <button
               type="button"
               onClick={() => goToStep(activeIndex + 1)}
-              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#111b21] bg-transparent text-[#111b21] transition hover:bg-[#111b21] hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 focus-visible:ring-offset-[#F9F5EF]"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-wa-bg bg-transparent text-wa-bg transition hover:bg-wa-bg hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-wa-muted focus-visible:ring-offset-2 focus-visible:ring-offset-[#ffffff]"
               aria-label="Next"
             >
               <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
@@ -83,7 +91,7 @@ export default function MessagingKeepConversationSection() {
                 key={c.id}
                 className="w-[min(100%,340px)] shrink-0 snap-center sm:w-[min(100%,360px)]"
               >
-                <div className="overflow-hidden rounded-2xl bg-[#25D366] shadow-[0_20px_50px_-20px_rgba(17,27,33,0.35)] ring-1 ring-black/5">
+                <div className="overflow-hidden rounded-2xl bg-wa-bg shadow-[0_20px_50px_-20px_rgba(11,34,42,0.35)] ring-1 ring-black/5">
                   <div className="relative aspect-[16/11] w-full">
                     <Image
                       src={c.imageSrc}
@@ -95,8 +103,8 @@ export default function MessagingKeepConversationSection() {
                     />
                   </div>
                   <div className="rounded-b-2xl bg-white px-5 py-5 sm:px-6 sm:py-6">
-                    <h3 className="text-lg font-bold leading-snug text-[#111b21] sm:text-xl">{c.cardTitle}</h3>
-                    <p className="mt-2 text-[15px] leading-relaxed text-[#111b21]/85">{c.cardDescription}</p>
+                    <h3 className="text-lg font-bold leading-snug text-wa-bg sm:text-xl">{c.cardTitle}</h3>
+                    <p className="mt-2 text-[15px] leading-relaxed text-wa-bg/85">{c.cardDescription}</p>
                   </div>
                 </div>
               </article>

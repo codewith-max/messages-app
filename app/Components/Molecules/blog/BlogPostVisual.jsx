@@ -8,7 +8,7 @@ function BeigeCard({ children, className = '' }) {
       className={`relative flex min-h-[220px] w-full items-center justify-center overflow-hidden rounded-[1.75rem] bg-[#f5ebe0] p-6 ring-1 ring-black/[0.06] sm:min-h-[260px] ${className}`}
     >
       <svg
-        className="absolute bottom-3 left-3 h-7 w-7 text-[#25D366]"
+        className="absolute bottom-3 left-3 h-7 w-7 text-wa-muted"
         fill="currentColor"
         viewBox="0 0 24 24"
         aria-hidden
@@ -29,7 +29,7 @@ export default function BlogPostVisual({ variant, pills = [] }) {
             ? pills.map((p) => (
                 <span
                   key={p}
-                  className="rounded-full bg-[#25D366] px-3 py-1.5 text-center text-[11px] font-semibold text-white shadow-sm"
+                  className="rounded-full bg-wa-bg px-3 py-1.5 text-center text-[11px] font-semibold text-white shadow-sm"
                 >
                   {p}
                 </span>
@@ -47,12 +47,12 @@ export default function BlogPostVisual({ variant, pills = [] }) {
   if (variant === 'parentPhones') {
     return (
       <BeigeCard>
-        <p className="absolute left-6 top-6 max-w-[120px] text-[13px] font-bold leading-snug text-[#111b21]">Parent-managed accounts</p>
+        <p className="absolute left-6 top-6 max-w-[120px] text-[13px] font-bold leading-snug text-wa-bg">Parent-managed accounts</p>
         <div className="flex gap-2 pl-16">
           {[0, 1, 2].map((i) => (
             <div
               key={i}
-              className="h-40 w-[72px] rounded-xl border-4 border-[#1f2c34] bg-[#0b141a] shadow-lg"
+              className="h-40 w-[72px] rounded-xl border-4 border-[#1f2c34] bg-wa-bg shadow-lg"
               style={{ transform: `rotate(${-6 + i * 6}deg) translateY(${i * 4}px)` }}
             />
           ))}
@@ -66,16 +66,16 @@ export default function BlogPostVisual({ variant, pills = [] }) {
       <BeigeCard>
         <div className="w-full max-w-[240px] rounded-2xl border border-black/10 bg-white p-3 shadow-md">
           <div className="flex gap-2 border-b border-black/5 pb-2">
-            <div className="h-9 w-9 rounded-full bg-[#25D366]/30" />
+            <div className="h-9 w-9 rounded-full bg-wa-bg/30" />
             <div>
               <div className="h-2 w-24 rounded bg-[#e5e7ea]" />
-              <div className="mt-1 h-2 w-16 rounded bg-[#f0f2f5]" />
+              <div className="mt-1 h-2 w-16 rounded bg-[#eef2f4]" />
             </div>
           </div>
           <div className="mt-2 space-y-1.5">
-            <div className="ml-auto max-w-[85%] rounded-lg rounded-tr-sm bg-[#d9fdd3] px-2 py-1.5 text-[10px] text-[#111b21]">New messages while you were away…</div>
-            <div className="h-2 w-full rounded bg-[#f0f2f5]" />
-            <div className="h-2 w-[80%] rounded bg-[#f0f2f5]" />
+            <div className="ml-auto max-w-[85%] rounded-lg rounded-tr-sm bg-[#d9fdd3] px-2 py-1.5 text-[10px] text-wa-bg">New messages while you were away…</div>
+            <div className="h-2 w-full rounded bg-[#eef2f4]" />
+            <div className="h-2 w-[80%] rounded bg-[#eef2f4]" />
           </div>
         </div>
       </BeigeCard>
@@ -86,13 +86,13 @@ export default function BlogPostVisual({ variant, pills = [] }) {
     return (
       <BeigeCard>
         <div className="h-48 w-28 rounded-[1.25rem] border-[6px] border-[#1f2c34] bg-white p-2 shadow-xl">
-          <p className="text-[9px] font-bold text-[#111b21]">Strict account settings</p>
+          <p className="text-[9px] font-bold text-wa-bg">Strict account settings</p>
           <div className="mt-2 space-y-1.5">
-            <div className="flex items-center justify-between rounded-lg bg-[#f0f2f5] px-2 py-1 text-[8px]">
+            <div className="flex items-center justify-between rounded-lg bg-[#eef2f4] px-2 py-1 text-[8px]">
               <span>2FA</span>
-              <span className="h-3 w-6 rounded-full bg-[#25D366]" />
+              <span className="h-3 w-6 rounded-full bg-wa-bg" />
             </div>
-            <div className="h-8 rounded-lg bg-[#f0f2f5]" />
+            <div className="h-8 rounded-lg bg-[#eef2f4]" />
           </div>
         </div>
       </BeigeCard>
@@ -102,8 +102,8 @@ export default function BlogPostVisual({ variant, pills = [] }) {
   if (variant === 'tagsMock') {
     return (
       <BeigeCard className="bg-[#e8f5e9]">
-        <div className="relative h-44 w-32 rounded-2xl border-4 border-[#1f2c34] bg-[#efeae2] p-2 shadow-lg">
-          <span className="absolute -right-2 -top-2 rounded-full bg-[#25D366] px-2 py-0.5 text-[8px] font-bold text-white">@member</span>
+        <div className="relative h-44 w-32 rounded-2xl border-4 border-[#1f2c34] bg-[#eef2f4] p-2 shadow-lg">
+          <span className="absolute -right-2 -top-2 rounded-full bg-wa-bg px-2 py-0.5 text-[8px] font-bold text-white">@member</span>
           <div className="mt-6 h-6 w-full rounded bg-white/90 shadow-inner" />
           <div className="mt-2 flex gap-1">
             <span className="rounded bg-[#d9fdd3] px-1.5 py-0.5 text-[7px]">Sticker</span>
@@ -118,7 +118,7 @@ export default function BlogPostVisual({ variant, pills = [] }) {
       <BeigeCard>
         <div className="flex flex-wrap justify-center gap-2">
           {['NYE Pack', 'Calling FX', 'Status'].map((t) => (
-            <span key={t} className="rounded-lg border border-[#25D366]/40 bg-white px-2 py-1 text-[10px] font-medium text-[#111b21] shadow-sm">
+            <span key={t} className="rounded-lg border border-wa-muted/40 bg-white px-2 py-1 text-[10px] font-medium text-wa-bg shadow-sm">
               {t}
             </span>
           ))}
@@ -133,7 +133,7 @@ export default function BlogPostVisual({ variant, pills = [] }) {
         <div className="flex gap-3">
           <div className="h-36 w-20 rounded-xl border-4 border-[#1f2c34] bg-gradient-to-b from-[#7b5cbf] to-[#4a2c8a]" />
           <div className="flex flex-col justify-center gap-2">
-            <div className="h-10 w-10 rounded-full bg-[#25D366]/30" />
+            <div className="h-10 w-10 rounded-full bg-wa-bg/30" />
             <div className="h-10 w-10 rounded-full bg-[#ffd166]/40" />
           </div>
         </div>
@@ -146,11 +146,11 @@ export default function BlogPostVisual({ variant, pills = [] }) {
       <BeigeCard>
         <div className="flex flex-col items-center">
           <div className="relative h-24 w-24 rounded-full border-[10px] border-[#333] bg-black shadow-xl ring-4 ring-[#555]">
-            <div className="absolute inset-2 rounded-full bg-[#0b141a] p-1">
-              <div className="h-full w-full rounded-full bg-[#25D366]/20" />
+            <div className="absolute inset-2 rounded-full bg-wa-bg p-1">
+              <div className="h-full w-full rounded-full bg-wa-bg/20" />
             </div>
           </div>
-          <p className="mt-3 text-center text-[12px] font-bold text-[#111b21]">WhatsApp on Apple Watch</p>
+          <p className="mt-3 text-center text-[12px] font-bold text-wa-bg">WhatsApp on Apple Watch</p>
         </div>
       </BeigeCard>
     );
@@ -158,7 +158,7 @@ export default function BlogPostVisual({ variant, pills = [] }) {
 
   return (
     <BeigeCard>
-      <div className="h-36 w-28 rounded-2xl border-4 border-[#1f2c34] bg-[#0b141a] shadow-lg" />
+      <div className="h-36 w-28 rounded-2xl border-4 border-[#1f2c34] bg-wa-bg shadow-lg" />
     </BeigeCard>
   );
 }

@@ -15,7 +15,7 @@ function StickerEmoji({ children, className = '' }) {
 export default function StatusHero() {
   return (
     <section
-      className="border-b border-[#e8e4dc] bg-[#FCF5EB] px-4 pb-14 pt-8 sm:px-6 sm:pb-16 sm:pt-10 md:px-8 lg:pb-20 lg:pt-12"
+      className="border-b border-wa-muted/10 bg-[#FCF5EB] px-4 pb-14 pt-8 sm:px-6 sm:pb-16 sm:pt-10 md:px-8 lg:pb-20 lg:pt-12"
       aria-labelledby="status-hero-heading"
     >
       <div className="mx-auto max-w-7xl">
@@ -23,18 +23,18 @@ export default function StatusHero() {
           <div className="w-full max-w-xl flex-1 text-center lg:text-start">
             <h1
               id="status-hero-heading"
-              className="text-[36px] font-semibold leading-[1.1] tracking-tight text-[#111b21] sm:text-[44px] md:text-[52px] lg:text-[56px]"
+              className="text-[36px] font-semibold leading-[1.1] tracking-tight text-wa-bg sm:text-[44px] md:text-[52px] lg:text-[56px]"
             >
               Stay in touch with Status
             </h1>
-            <p className="mx-auto mt-6 max-w-[540px] text-[17px] leading-[1.55] text-[#111b21]/85 md:mx-0 md:text-[18px]">
+            <p className="mx-auto mt-6 max-w-[540px] text-[17px] leading-[1.55] text-wa-bg/85 md:mx-0 md:text-[18px]">
               Share photos, videos, voice notes, and text with your people on WhatsApp Status. Personalize them by
               adding stickers, GIFs, and more. They&apos;ll disappear from view after 24 hours.
             </p>
             <div className="mt-8 flex justify-center lg:justify-start">
               <Link
                 href="#download"
-                className="inline-flex items-center rounded-full bg-[#25D366] px-7 py-3.5 text-base font-medium text-white shadow-sm transition-colors hover:bg-[#20bd5c] focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2 focus:ring-offset-[#FCF5EB]"
+                className="inline-flex items-center rounded-full bg-wa-bg px-7 py-3.5 text-base font-medium text-white shadow-sm transition-colors hover:bg-wa-muted focus:outline-none focus:ring-2 focus:ring-wa-muted focus:ring-offset-2 focus:ring-offset-[#FCF5EB]"
               >
                 <span>Download</span>
                 <svg className="ms-2 h-5 w-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
@@ -45,7 +45,7 @@ export default function StatusHero() {
           </div>
 
           <div className="relative w-full max-w-[min(100%,360px)] flex-1 lg:max-w-[400px]">
-            <div className="relative mx-auto aspect-[9/16] w-full overflow-hidden rounded-[2rem] shadow-[0_32px_55px_-28px_rgba(17,27,33,0.42)] ring-1 ring-black/[0.06] sm:rounded-[2.25rem] lg:mx-0 lg:ms-auto">
+            <div className="relative mx-auto aspect-[9/16] w-full overflow-hidden rounded-[2rem] shadow-[0_32px_55px_-28px_rgba(11,34,42,0.42)] ring-1 ring-black/[0.06] sm:rounded-[2.25rem] lg:mx-0 lg:ms-auto">
               <Image
                 src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800&h=1422&fit=crop"
                 alt="Person sharing a selfie for Status"
@@ -81,7 +81,7 @@ export default function StatusHero() {
                   <div className="h-8 w-8 shrink-0 overflow-hidden rounded-full border-2 border-white/90 bg-[#cfd8dc]" />
                   <button
                     type="button"
-                    className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white text-[#111b21] shadow"
+                    className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white text-wa-bg shadow"
                     aria-label="Play voice status"
                   >
                     <svg className="ms-0.5 h-3.5 w-3.5" fill="currentColor" viewBox="0 0 24 24">
@@ -101,7 +101,7 @@ export default function StatusHero() {
                 </div>
 
                 <div className="flex items-center gap-2 rounded-full bg-white/95 px-2 py-2 shadow-lg ring-1 ring-black/10 sm:px-3">
-                  <div className="h-7 w-7 shrink-0 rounded-full bg-gradient-to-br from-[#25D366] to-[#128c7e]" />
+                  <div className="h-7 w-7 shrink-0 rounded-full bg-gradient-to-br from-wa-muted to-wa-bg" />
                   <span className="flex-1 truncate ps-1 text-[14px] text-[#8696a0]">Reply…</span>
                   <button
                     type="button"

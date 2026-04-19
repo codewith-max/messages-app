@@ -18,7 +18,7 @@ export default function AppsAlreadyDownloadedSection() {
       <div className="mx-auto max-w-[1280px]">
         <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-14 xl:gap-16">
           <div className="max-w-md shrink-0 lg:pt-2">
-            <h2 id="already-downloaded-heading" className="text-[32px] font-bold leading-tight tracking-tight text-[#111b21] sm:text-[38px] lg:text-[42px]">
+            <h2 id="already-downloaded-heading" className="text-[32px] font-bold leading-tight tracking-tight text-wa-bg sm:text-[38px] lg:text-[42px]">
               {alreadyDownloadedIntro.title}
             </h2>
             <p className="mt-4 text-[16px] leading-relaxed text-[#3b4a54] sm:text-[17px]">{alreadyDownloadedIntro.subtitle}</p>
@@ -26,7 +26,7 @@ export default function AppsAlreadyDownloadedSection() {
               <button
                 type="button"
                 onClick={() => scrollByDir('prev')}
-                className="flex h-11 w-11 items-center justify-center rounded-full border border-[#111b21]/25 text-[#111b21] transition hover:bg-black/[0.04] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366]"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-wa-bg/25 text-wa-bg transition hover:bg-black/[0.04] focus:outline-none focus-visible:ring-2 focus-visible:ring-wa-muted"
                 aria-label="Previous feature cards"
               >
                 <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -36,7 +36,7 @@ export default function AppsAlreadyDownloadedSection() {
               <button
                 type="button"
                 onClick={() => scrollByDir('next')}
-                className="flex h-11 w-11 items-center justify-center rounded-full border border-[#111b21]/25 text-[#111b21] transition hover:bg-black/[0.04] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366]"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-wa-bg/25 text-wa-bg transition hover:bg-black/[0.04] focus:outline-none focus-visible:ring-2 focus-visible:ring-wa-muted"
                 aria-label="Next feature cards"
               >
                 <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -57,12 +57,12 @@ export default function AppsAlreadyDownloadedSection() {
               <Link
                 key={card.id}
                 href={card.href}
-                className="group w-[min(100%,280px)] shrink-0 overflow-hidden rounded-[1.35rem] ring-1 ring-black/[0.06] transition hover:ring-[#25D366]/40 sm:w-[280px]"
+                className="group w-[min(100%,280px)] shrink-0 overflow-hidden rounded-[1.35rem] ring-1 ring-black/[0.06] transition hover:ring-wa-muted/40 sm:w-[280px]"
               >
                 <div className={`aspect-[4/5] w-full ${card.visualClass}`} />
                 <div className="bg-white px-5 pb-5 pt-4">
-                  <h3 className="text-[20px] font-bold text-[#111b21]">{card.title}</h3>
-                  <span className="mt-2 inline-flex items-center gap-1 text-[14px] font-semibold text-[#25D366]">
+                  <h3 className="text-[20px] font-bold text-wa-bg">{card.title}</h3>
+                  <span className="mt-2 inline-flex items-center gap-1 text-[14px] font-semibold text-wa-muted">
                     Learn more
                     <svg className="h-4 w-4 transition-transform group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

@@ -4,7 +4,7 @@ import PrivacyLockedChatsMockup from '../Molecules/privacy/PrivacyLockedChatsMoc
 export default function PrivacyChatLockSection() {
   return (
     <section
-      className="bg-[#111b21] px-4 pb-20 pt-8 sm:px-6 sm:pb-24 md:px-8 md:pt-10 lg:pb-28"
+      className="bg-wa-bg px-4 pb-20 pt-8 sm:px-6 sm:pb-24 md:px-8 md:pt-10 lg:pb-28"
       aria-labelledby="privacy-chat-lock-heading"
     >
       <div className="mx-auto flex max-w-[1280px] flex-col items-center gap-14 lg:flex-row lg:items-center lg:justify-between lg:gap-12 xl:gap-16">
@@ -19,7 +19,7 @@ export default function PrivacyChatLockSection() {
             className="text-[38px] font-semibold leading-[1.12] tracking-tight text-white sm:text-[44px] md:text-[48px] lg:text-[52px]"
           >
             <span className="text-white">Chat </span>
-            <span className="text-[#25D366]">lock</span>
+            <span className="text-wa-muted">lock</span>
           </h2>
           <p className="mx-auto mt-6 max-w-[520px] text-[17px] leading-[1.65] text-white/90 lg:mx-0 md:text-[18px]">
             Password protect your most personal chats so you can help keep them private and secure. Locked chats
@@ -29,7 +29,7 @@ export default function PrivacyChatLockSection() {
           <div className="mt-8 flex justify-center lg:justify-start">
             <Link
               href="#learn-more-chat-lock"
-              className="group inline-flex items-center gap-2 text-[15px] font-medium text-white underline decoration-[#25D366] decoration-1 underline-offset-[6px] transition-colors hover:text-[#25D366]"
+              className="group inline-flex items-center gap-2 text-[15px] font-medium text-white underline decoration-wa-muted decoration-1 underline-offset-[6px] transition-colors hover:text-wa-muted"
             >
               Learn more
               <svg

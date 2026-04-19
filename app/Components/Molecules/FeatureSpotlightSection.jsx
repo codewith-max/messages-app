@@ -6,7 +6,7 @@ export default function FeatureSpotlightSection({
   description,
   className = '',
   borderClassName = 'border-[#e5e2db]',
-  bgClassName = 'bg-[#FCF5EB]',
+  bgClassName = 'bg-[#ffffff]',
   bodyClassName = 'text-[#54656f]',
 }) {
   return (
@@ -16,7 +16,7 @@ export default function FeatureSpotlightSection({
       aria-labelledby={headingId}
     >
       <div className="mx-auto max-w-2xl text-center">
-        <h2 id={headingId} className="text-2xl font-semibold text-[#111b21]">
+        <h2 id={headingId} className="text-2xl font-semibold text-wa-bg">
           {title}
         </h2>
         <p className={`mt-3 text-[17px] leading-relaxed ${bodyClassName}`}>{description}</p>

@@ -12,7 +12,7 @@ const FEATURE_CARDS = [
 
 function CardIcon() {
   return (
-    <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-[#25D366] text-white">
+    <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-wa-bg text-white transition-colors group-hover:bg-white group-hover:text-wa-bg">
       <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.2} d="M5 12h14m0 0-5-5m5 5-5 5" />
       </svg>
@@ -21,33 +21,27 @@ function CardIcon() {
 }
 
 function FeatureCard({ title, description, href }) {
-  const body = (
-    <>
+  const cardClass =
+    'group w-full max-w-[260px] min-h-[220px] rounded-3xl border border-[#d9dde1] bg-white p-4 md:p-5 transition-all duration-200 hover:border-wa-bg hover:bg-wa-bg block cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-wa-muted focus-visible:ring-offset-2';
+
+  return (
+    <Link href={href} className={cardClass}>
       <span className="transition-transform duration-200 group-hover:scale-105">
         <CardIcon />
       </span>
-      <h3 className="mt-4 text-[34px] leading-[1.1] font-normal text-[#111b21]">{title}</h3>
-      <p className="mt-3 text-[15px] leading-[1.45] text-[#111b21]/85">{description}</p>
-      <span className="mt-4 inline-flex items-center text-[#111b21] transition-colors">
+      <h3 className="mt-4 text-[34px] leading-[1.1] font-normal text-wa-bg transition-colors group-hover:text-white">
+        {title}
+      </h3>
+      <p className="mt-3 text-[15px] leading-[1.45] text-wa-bg/85 transition-colors group-hover:text-white/90">
+        {description}
+      </p>
+      <span className="mt-4 inline-flex items-center text-wa-bg transition-colors group-hover:text-white">
         <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14m0 0-5-5m5 5-5 5" />
         </svg>
       </span>
-    </>
+    </Link>
   );
-
-  const cardClass =
-    'group w-full max-w-[260px] min-h-[220px] rounded-3xl border border-[#d9dde1] bg-white p-4 md:p-5 transition-all duration-200 hover:border-[#111b21] hover:bg-[#25D366]';
-
-  if (href !== '#') {
-    return (
-      <Link href={href} className={`${cardClass} block cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2`}>
-        {body}
-      </Link>
-    );
-  }
-
-  return <article className={cardClass}>{body}</article>;
 }
 
 export default function Features() {

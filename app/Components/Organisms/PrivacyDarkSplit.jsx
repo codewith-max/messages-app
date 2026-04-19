@@ -14,7 +14,7 @@ export default function PrivacyDarkSplit({
   return (
     <section
       id={id}
-      className="border-t border-white/[0.06] bg-[#111b21] px-4 py-16 sm:px-6 sm:py-20 md:px-8 lg:py-24"
+      className="border-t border-white/[0.06] bg-wa-bg px-4 py-16 sm:px-6 sm:py-20 md:px-8 lg:py-24"
       aria-labelledby={`${id}-heading`}
     >
       <div className="mx-auto flex max-w-[1280px] flex-col items-center gap-12 lg:gap-16 xl:gap-20 lg:flex-row lg:items-center lg:justify-between">
@@ -24,7 +24,7 @@ export default function PrivacyDarkSplit({
           <h2 id={`${id}-heading`} className="text-[38px] font-semibold leading-[1.1] tracking-tight text-white sm:text-[44px] md:text-[52px]">
             {titleLines.map((line, i) => (
               <span key={i} className={i > 0 ? 'mt-1 block' : 'block'}>
-                <span className={line.accent ? 'text-[#25D366]' : 'text-white'}>{line.text}</span>
+                <span className={line.accent ? 'text-wa-muted' : 'text-white'}>{line.text}</span>
               </span>
             ))}
           </h2>

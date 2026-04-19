@@ -18,7 +18,7 @@ export default function AppsOtherDownloadsSection() {
       <div className="mx-auto max-w-[1280px]">
         <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-14 xl:gap-20">
           <div className="max-w-md shrink-0 lg:pt-2">
-            <h2 id="other-downloads-heading" className="text-[32px] font-bold leading-tight tracking-tight text-[#111b21] sm:text-[38px] lg:text-[42px]">
+            <h2 id="other-downloads-heading" className="text-[32px] font-bold leading-tight tracking-tight text-wa-bg sm:text-[38px] lg:text-[42px]">
               {otherDownloadIntro.title}
             </h2>
             <p className="mt-4 text-[16px] leading-relaxed text-[#3b4a54] sm:text-[17px]">{otherDownloadIntro.subtitle}</p>
@@ -26,7 +26,7 @@ export default function AppsOtherDownloadsSection() {
               <button
                 type="button"
                 onClick={() => scrollByDir('prev')}
-                className="flex h-11 w-11 items-center justify-center rounded-full border border-[#111b21]/25 text-[#111b21] transition hover:bg-black/[0.04] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366]"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-wa-bg/25 text-wa-bg transition hover:bg-black/[0.04] focus:outline-none focus-visible:ring-2 focus-visible:ring-wa-muted"
                 aria-label="Scroll download options left"
               >
                 <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -36,7 +36,7 @@ export default function AppsOtherDownloadsSection() {
               <button
                 type="button"
                 onClick={() => scrollByDir('next')}
-                className="flex h-11 w-11 items-center justify-center rounded-full border border-[#111b21]/25 text-[#111b21] transition hover:bg-black/[0.04] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366]"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-wa-bg/25 text-wa-bg transition hover:bg-black/[0.04] focus:outline-none focus-visible:ring-2 focus-visible:ring-wa-muted"
                 aria-label="Scroll download options right"
               >
                 <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -60,7 +60,7 @@ export default function AppsOtherDownloadsSection() {
               >
                 <div className="flex min-h-[1.5rem] items-center gap-2">
                   {card.tag ? (
-                    <span className="rounded-md bg-[#25D366] px-2 py-0.5 text-[11px] font-bold uppercase tracking-wide text-white">
+                    <span className="rounded-md bg-wa-bg px-2 py-0.5 text-[11px] font-bold uppercase tracking-wide text-white">
                       {card.tag}
                     </span>
                   ) : (
@@ -68,7 +68,7 @@ export default function AppsOtherDownloadsSection() {
                   )}
                 </div>
                 <p className="mt-3 text-[12px] font-medium uppercase tracking-wide text-[#667781]">{card.platformLabel}</p>
-                <h3 className="mt-1 text-[22px] font-bold text-[#111b21]">{card.title}</h3>
+                <h3 className="mt-1 text-[22px] font-bold text-wa-bg">{card.title}</h3>
                 <p className="mt-3 text-[14px] leading-relaxed text-[#3b4a54]">{card.description}</p>
                 <p className="mt-4 text-[11px] leading-snug text-[#8696a0]">{card.requirements}</p>
                 <div className="mt-6">

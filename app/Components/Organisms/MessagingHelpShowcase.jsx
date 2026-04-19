@@ -17,7 +17,7 @@ export default function MessagingHelpShowcase() {
       }}
       ctaVariant="help"
       focusRingOffsetClass="focus-visible:ring-offset-white"
-      sectionClassName="border-t border-[#e8e4dc] bg-white px-4 py-14 sm:px-6 md:py-20 lg:px-8 lg:py-24"
+      sectionClassName="border-t border-wa-muted/15 bg-white px-4 py-14 sm:px-6 md:py-20 lg:px-8 lg:py-24"
       ariaLabel="Messaging help topics"
     />
   );

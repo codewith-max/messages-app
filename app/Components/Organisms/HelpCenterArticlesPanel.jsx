@@ -9,11 +9,11 @@ export default function HelpCenterArticlesPanel() {
         <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-12">
           <div className="min-w-0 flex-1 space-y-8">
             <div>
-              <h2 className="text-[20px] font-bold text-[#111b21] sm:text-[22px]">Popular Articles</h2>
+              <h2 className="text-[20px] font-bold text-wa-bg sm:text-[22px]">Popular Articles</h2>
               <ul className="mt-4 space-y-2">
                 {popularArticlesShort.map((a) => (
                   <li key={a.title}>
-                    <Link href={a.href} className="text-[15px] font-medium text-[#25D366] hover:underline">
+                    <Link href={a.href} className="text-[15px] font-medium text-wa-muted hover:underline">
                       {a.title}
                     </Link>
                   </li>
@@ -21,11 +21,11 @@ export default function HelpCenterArticlesPanel() {
               </ul>
             </div>
             <div>
-              <h2 className="text-[18px] font-semibold text-[#111b21] sm:text-[20px]">Help articles</h2>
+              <h2 className="text-[18px] font-semibold text-wa-bg sm:text-[20px]">Help articles</h2>
               <ul className="mt-4 space-y-3">
                 {highlightedArticles.map((a) => (
                   <li key={a.title}>
-                    <Link href={a.href} className="text-[15px] text-[#25D366] hover:underline">
+                    <Link href={a.href} className="text-[15px] text-wa-muted hover:underline">
                       {a.title}
                     </Link>
                   </li>

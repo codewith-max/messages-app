@@ -15,21 +15,21 @@ export default function PrivacyDiscoverSection() {
 
   return (
     <section
-      className="border-t border-white/[0.06] bg-[#0b141a] px-4 py-16 sm:px-6 sm:py-20 md:px-8 lg:py-28"
+      className="border-t border-white/[0.06] bg-wa-bg px-4 py-16 sm:px-6 sm:py-20 md:px-8 lg:py-28"
       aria-labelledby="discover-features-heading"
     >
       <div className="mx-auto max-w-[1280px]">
         <div className="max-w-xl">
           <h2 id="discover-features-heading" className="text-[38px] font-semibold leading-[1.1] tracking-tight sm:text-[44px] md:text-[52px]">
             <span className="block text-white">{discoverIntro.lines[0].text}</span>
-            <span className="mt-1 block text-[#25D366]">{discoverIntro.lines[1].text}</span>
+            <span className="mt-1 block text-wa-muted">{discoverIntro.lines[1].text}</span>
           </h2>
           <p className="mt-6 text-[17px] leading-relaxed text-white/88 md:text-[18px]">{discoverIntro.body}</p>
           <div className="mt-8 flex gap-3">
             <button
               type="button"
               onClick={() => scrollByDir('prev')}
-              className="flex h-12 w-12 items-center justify-center rounded-full border border-white/35 text-white transition hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366]"
+              className="flex h-12 w-12 items-center justify-center rounded-full border border-white/35 text-white transition hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-wa-muted"
               aria-label="Previous"
             >
               <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -39,7 +39,7 @@ export default function PrivacyDiscoverSection() {
             <button
               type="button"
               onClick={() => scrollByDir('next')}
-              className="flex h-12 w-12 items-center justify-center rounded-full border border-white/35 text-white transition hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366]"
+              className="flex h-12 w-12 items-center justify-center rounded-full border border-white/35 text-white transition hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-wa-muted"
               aria-label="Next"
             >
               <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -60,7 +60,7 @@ export default function PrivacyDiscoverSection() {
             <Link
               key={card.id}
               href={card.href}
-              className="group relative w-[min(100%,280px)] shrink-0 overflow-hidden rounded-[1.35rem] ring-1 ring-white/10 transition hover:ring-[#25D366]/50 sm:w-[300px]"
+              className="group relative w-[min(100%,280px)] shrink-0 overflow-hidden rounded-[1.35rem] ring-1 ring-white/10 transition hover:ring-wa-muted/50 sm:w-[300px]"
             >
               <div className={`aspect-[4/5] w-full ${card.visualClass}`} />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />

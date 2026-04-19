@@ -26,8 +26,8 @@ export default function BlogPagination() {
                 onClick={() => setPage(n)}
                 className={`flex h-10 min-w-[2.5rem] items-center justify-center rounded-full px-3 text-[14px] font-medium transition ${
                   page === n
-                    ? 'bg-[#25D366] text-white'
-                    : 'border border-[#cfd4d6] bg-white text-[#111b21] hover:border-[#25D366]'
+                    ? 'bg-wa-bg text-white'
+                    : 'border border-[#cfd4d6] bg-white text-wa-bg hover:border-wa-bg'
                 }`}
                 aria-current={page === n ? 'page' : undefined}
               >
@@ -38,7 +38,7 @@ export default function BlogPagination() {
         </ul>
         <button
           type="button"
-          className="text-[14px] font-medium text-[#25D366] transition hover:text-[#128C7E]"
+          className="text-[14px] font-medium text-wa-muted transition hover:text-[#128C7E]"
         >
           Next &gt;
         </button>

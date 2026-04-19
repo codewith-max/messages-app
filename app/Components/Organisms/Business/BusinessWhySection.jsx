@@ -20,10 +20,10 @@ export default function BusinessWhySection() {
           />
         </div>
         <div>
-          <h2 id="why-whatsapp-heading" className="text-[32px] font-semibold leading-tight text-[#111b21] sm:text-[38px] md:text-[42px]">
+          <h2 id="why-whatsapp-heading" className="text-[32px] font-semibold leading-tight text-wa-bg sm:text-[38px] md:text-[42px]">
             {whySection.title}
           </h2>
-          <ul className="mt-8 divide-y divide-[#111b21]/12 border-t border-[#111b21]/12" role="list">
+          <ul className="mt-8 divide-y divide-wa-bg/12 border-t border-wa-bg/12" role="list">
             {whySection.items.map((item) => {
               const open = openId === item.id;
               return (
@@ -31,12 +31,12 @@ export default function BusinessWhySection() {
                   <button
                     type="button"
                     onClick={() => setOpenId(open ? null : item.id)}
-                    className="flex w-full items-start justify-between gap-4 py-5 text-left transition hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 focus-visible:ring-offset-[#F4EFE9]"
+                    className="flex w-full items-start justify-between gap-4 py-5 text-left transition hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-wa-muted focus-visible:ring-offset-2 focus-visible:ring-offset-[#F4EFE9]"
                     aria-expanded={open}
                   >
-                    <span className="text-[18px] font-semibold text-[#111b21] md:text-[20px]">{item.title}</span>
+                    <span className="text-[18px] font-semibold text-wa-bg md:text-[20px]">{item.title}</span>
                     <span
-                      className={`mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-[#25D366] text-[#25D366] transition ${open ? 'rotate-45' : ''}`}
+                      className={`mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-wa-bg text-wa-muted transition ${open ? 'rotate-45' : ''}`}
                       aria-hidden
                     >
                       <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -45,7 +45,7 @@ export default function BusinessWhySection() {
                     </span>
                   </button>
                   {open ? (
-                    <p className="pb-5 text-[16px] leading-relaxed text-[#111b21]/85">{item.body}</p>
+                    <p className="pb-5 text-[16px] leading-relaxed text-wa-bg/85">{item.body}</p>
                   ) : null}
                 </li>
               );

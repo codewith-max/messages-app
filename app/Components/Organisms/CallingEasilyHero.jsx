@@ -9,7 +9,7 @@ const IMG_FRONT_PIP = 'https://images.unsplash.com/photo-1507003211169-0a1dd7228
 export default function CallingEasilyHero() {
   return (
     <section
-      className="border-b border-[#e8e4dc] bg-[#FCF5EB] px-4 pb-16 pt-10 sm:px-6 md:pb-24 md:pt-14 lg:px-8"
+      className="border-b border-wa-muted/15 bg-[#ffffff] px-4 pb-16 pt-10 sm:px-6 md:pb-24 md:pt-14 lg:px-8"
       aria-labelledby="calling-easily-heading"
     >
       <div className="mx-auto flex max-w-7xl flex-col items-center gap-12 md:flex-row md:items-center md:gap-14 lg:gap-20">
@@ -21,9 +21,9 @@ export default function CallingEasilyHero() {
               className="absolute left-[2%] top-8 w-[46%] max-w-[200px] -rotate-[8deg] sm:left-4 sm:top-10 sm:max-w-[220px]"
               style={{ zIndex: 1 }}
             >
-              <div className="rounded-[1.85rem] border-[9px] border-[#1b2329] bg-[#1b2329] shadow-[0_24px_48px_-12px_rgba(0,0,0,0.4)]">
-                <div className="relative aspect-[9/17] overflow-hidden rounded-[1.2rem] bg-[#0b141a]">
-                  <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-b from-[#1a2630] to-[#0b141a] px-3">
+              <div className="rounded-[1.85rem] border-[9px] border-wa-muted bg-wa-muted shadow-[0_24px_48px_-12px_rgba(0,0,0,0.4)]">
+                <div className="relative aspect-[9/17] overflow-hidden rounded-[1.2rem] bg-wa-bg">
+                  <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-b from-[#1a2630] to-wa-bg px-3">
                     <div className="relative h-28 w-28 overflow-hidden rounded-full ring-4 ring-white/15 sm:h-32 sm:w-32">
                       <Image src={IMG_BACK} alt="" fill className="object-cover" sizes="140px" />
                     </div>
@@ -55,7 +55,7 @@ export default function CallingEasilyHero() {
               className="absolute right-0 top-0 w-[58%] max-w-[260px] rotate-[4deg] sm:max-w-[280px]"
               style={{ zIndex: 2 }}
             >
-              <div className="rounded-[1.95rem] border-[10px] border-[#1b2329] bg-[#1b2329] shadow-[0_32px_64px_-16px_rgba(0,0,0,0.5)]">
+              <div className="rounded-[1.95rem] border-[10px] border-wa-muted bg-wa-muted shadow-[0_32px_64px_-16px_rgba(0,0,0,0.5)]">
                 <div className="relative aspect-[9/17.2] overflow-hidden rounded-[1.35rem] bg-black">
                   <Image
                     src={IMG_FRONT_MAIN}
@@ -97,18 +97,18 @@ export default function CallingEasilyHero() {
         <div className="w-full flex-1 text-center md:max-w-xl md:text-start">
           <h2
             id="calling-easily-heading"
-            className="text-[36px] font-semibold leading-[1.12] tracking-tight text-[#111b21] sm:text-[44px] md:text-[52px]"
+            className="text-[36px] font-semibold leading-[1.12] tracking-tight text-wa-bg sm:text-[44px] md:text-[52px]"
           >
             Call easily and privately
           </h2>
-          <p className="mx-auto mt-5 max-w-[520px] text-[17px] leading-[1.5] text-[#111b21]/90 md:mx-0 md:text-[19px]">
+          <p className="mx-auto mt-5 max-w-[520px] text-[17px] leading-[1.5] text-wa-bg/90 md:mx-0 md:text-[19px]">
             Catch up on voice or video calls with those who matter most. Your calls on WhatsApp are always end-to-end
             encrypted.
           </p>
           <div className="mt-8 flex justify-center md:justify-start">
             <Link
               href="#download"
-              className="inline-flex items-center rounded-full bg-[#25D366] px-8 py-3.5 text-base font-medium text-white shadow-sm transition hover:bg-[#20bd5c] focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2 focus:ring-offset-[#FCF5EB]"
+              className="inline-flex items-center rounded-full bg-wa-bg px-8 py-3.5 text-base font-medium text-white shadow-sm transition hover:bg-wa-muted focus:outline-none focus:ring-2 focus:ring-wa-muted focus:ring-offset-2 focus:ring-offset-white"
             >
               <span>Download</span>
               <svg className="ms-2 h-5 w-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>

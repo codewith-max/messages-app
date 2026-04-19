@@ -8,7 +8,7 @@ export default function PrivacySection() {
   const P = page.privacy;
 
   return (
-    <section className="bg-[#FCF5EB] pb-4 md:pb-8 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section className="bg-[#ffffff] pb-4 md:pb-8 px-4 sm:px-6 lg:px-8 overflow-hidden">
       <div className="relative w-full max-w-[1240px] mx-auto h-[335px] mb-12 hidden md:flex items-center justify-center">
         <Image
           src="/image/banner.webp"

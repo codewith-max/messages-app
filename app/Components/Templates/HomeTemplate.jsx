@@ -15,7 +15,7 @@ function SplitTitle({ split }) {
       <>
         {a}
         <br />
-        <span className="text-[#25D366]">{b}</span>
+        <span className="text-wa-muted">{b}</span>
       </>
     );
   }
@@ -56,12 +56,12 @@ const SPLIT_LAYOUT = [
     imageAsMockup: false,
     reverse: true,
     buttonStyle: 'link',
-    backgroundColor: 'bg-[#111b21]',
+    backgroundColor: 'bg-wa-bg',
     titleClassName:
       'text-[40px] sm:text-[48px] md:text-[60px] font-normal leading-[1.2] text-white mb-6 tracking-tight',
     descriptionClassName: 'text-lg md:text-[20px] text-white leading-relaxed mb-6',
     linkClassName: 'text-white hover:text-gray-200 focus:ring-white',
-    linkBorderClassName: 'border-[#25D366] border-b-2 group-hover:border-[#20bd5c]',
+    linkBorderClassName: 'border-wa-bg border-b-2 group-hover:border-wa-muted',
     imageContainerClassName:
       'max-w-[320px] md:max-w-[500px] lg:max-w-[600px] xl:max-w-[700px] translate-y-6 md:translate-y-12',
   },
@@ -99,8 +99,8 @@ const SPLIT_LAYOUT = [
     sectionClassName: 'py-20 px-8 md:px-16 lg:px-30 overflow-hidden',
     titleClassName:
       'text-[32px] sm:text-[40px] md:text-[60px] font-normal leading-[1.2] md:leading-[66px] text-[#1c1e21] mb-6 tracking-tight',
-    linkClassName: 'text-[#25D366] focus:ring-[#25D366] hover:text-[#20bd5c]',
-    linkBorderClassName: 'border-[#25D366] group-hover:border-[#20bd5c]',
+    linkClassName: 'text-wa-muted focus:ring-wa-muted hover:text-wa-muted',
+    linkBorderClassName: 'border-wa-bg group-hover:border-wa-muted',
     imageContainerClassName: 'max-w-[380px] md:max-w-[520px] lg:max-w-[600px] xl:max-w-[350px]',
   },
 ];

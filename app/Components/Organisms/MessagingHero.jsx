@@ -7,7 +7,7 @@ function ChatWallpaper() {
     <div
       className="absolute inset-0 rounded-[1.4rem]"
       style={{
-        backgroundColor: '#efeae2',
+        backgroundColor: '#eef2f4',
         backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c8c4bc' fill-opacity='0.22'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
       }}
     />
@@ -20,7 +20,7 @@ function PinnedRow() {
       <svg className="mt-0.5 h-4 w-4 shrink-0 text-[#8696a0]" fill="currentColor" viewBox="0 0 24 24" aria-hidden>
         <path d="M16 9V4h1c.55 0 1-.45 1-1s-.45-1-1-1H7c-.55 0-1 .45-1 1s.45 1 1 1h1v5c0 1.66-1.34 3-3 3v2h14v-2c-1.66 0-3-1.34-3-3zm-4 10c0 1.1-.9 2-2 2s-2-.9-2-2h4z" />
       </svg>
-      <p className="text-[13px] leading-snug text-[#111b21]">Trevor&apos;s recital is on Sunday, 1pm!</p>
+      <p className="text-[13px] leading-snug text-wa-bg">Trevor&apos;s recital is on Sunday, 1pm!</p>
     </div>
   );
 }
@@ -34,7 +34,7 @@ function ReactionBar() {
       <span>😮</span>
       <span>😢</span>
       <span>🙏</span>
-      <span className="ms-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-[#f0f2f5] text-[12px] font-medium text-[#54656f]">
+      <span className="ms-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-[#eef2f4] text-[12px] font-medium text-[#54656f]">
         +
       </span>
     </div>
@@ -73,7 +73,7 @@ function VoiceBubble() {
           <div className="flex items-center gap-2">
             <button
               type="button"
-              className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#25D366] text-white shadow-sm"
+              className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-wa-bg text-white shadow-sm"
               aria-label="Play voice message"
             >
               <svg className="ms-0.5 h-4 w-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden>
@@ -84,7 +84,7 @@ function VoiceBubble() {
               {Array.from({ length: 28 }).map((_, i) => (
                 <span
                   key={i}
-                  className="w-[3px] rounded-full bg-[#25D366]/75"
+                  className="w-[3px] rounded-full bg-wa-bg/75"
                   style={{ height: `${6 + ((i * 7) % 14)}px` }}
                 />
               ))}
@@ -132,7 +132,7 @@ function Composer() {
       </div>
       <button
         type="button"
-        className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#25D366] text-white shadow-md transition-colors hover:bg-[#20bd5c]"
+        className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-wa-bg text-white shadow-md transition-colors hover:bg-wa-muted"
         aria-label="Record voice message"
       >
         <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden>
@@ -146,18 +146,18 @@ function Composer() {
 export default function MessagingHero() {
   return (
     <section
-      className="border-b border-[#e8e4dc] bg-[#FCF5EB] px-4 pb-14 pt-8 sm:px-6 sm:pb-16 sm:pt-10 md:px-8 lg:pb-20 lg:pt-12"
+      className="border-b border-wa-muted/15 bg-[#ffffff] px-4 pb-14 pt-8 sm:px-6 sm:pb-16 sm:pt-10 md:px-8 lg:pb-20 lg:pt-12"
       aria-labelledby="messaging-hero-heading"
     >
       <div className="mx-auto flex max-w-7xl flex-col items-center gap-12 md:flex-row md:items-center md:gap-14 lg:gap-20">
         <div className="w-full flex-1 text-center md:text-start">
           <h1
             id="messaging-hero-heading"
-            className="text-[40px] font-semibold leading-[1.08] tracking-tight text-[#111b21] sm:text-[48px] md:text-[56px] lg:text-[64px]"
+            className="text-[40px] font-semibold leading-[1.08] tracking-tight text-wa-bg sm:text-[48px] md:text-[56px] lg:text-[64px]"
           >
             Connect your way
           </h1>
-          <p className="mx-auto mt-6 max-w-[540px] text-[17px] leading-[1.55] text-[#111b21]/88 md:mx-0 md:text-[18px]">
+          <p className="mx-auto mt-6 max-w-[540px] text-[17px] leading-[1.55] text-wa-bg/88 md:mx-0 md:text-[18px]">
             On WhatsApp, conversations can be expressive, fun and entirely you. Messaging on any device is
             protected by end-to-end encryption, so you can speak freely and know your personal messages remain
             private and secured.
@@ -165,7 +165,7 @@ export default function MessagingHero() {
           <div className="mt-8 flex justify-center md:justify-start">
             <Link
               href="#download"
-              className="inline-flex items-center rounded-full bg-[#25D366] px-7 py-3.5 text-base font-medium text-white shadow-sm transition-colors hover:bg-[#20bd5c] focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2 focus:ring-offset-[#FCF5EB]"
+              className="inline-flex items-center rounded-full bg-wa-bg px-7 py-3.5 text-base font-medium text-white shadow-sm transition-colors hover:bg-wa-muted focus:outline-none focus:ring-2 focus:ring-wa-muted focus:ring-offset-2 focus:ring-offset-white"
             >
               <span>Download</span>
               <svg className="ms-2 h-5 w-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
@@ -178,7 +178,7 @@ export default function MessagingHero() {
         <div className="relative flex w-full flex-1 justify-center md:justify-end">
           <div className="pointer-events-none absolute -inset-6 rounded-[2.75rem] bg-[#ece5dd]/90 blur-sm md:-inset-10" aria-hidden />
           <div className="relative w-full max-w-[min(100%,360px)]">
-            <div className="relative overflow-hidden rounded-[2rem] border border-white/80 bg-[#f6f0ea] p-3 shadow-[0_32px_60px_-28px_rgba(17,27,33,0.45)] ring-1 ring-[#e8e4dc]">
+            <div className="relative overflow-hidden rounded-[2rem] border border-white/80 bg-[#ffffff] p-3 shadow-[0_32px_60px_-28px_rgba(11,34,42,0.45)] ring-1 ring-wa-muted/15">
               <div className="relative overflow-hidden rounded-[1.45rem] px-3 pb-3 pt-3">
                 <ChatWallpaper />
                 <div className="relative z-10">

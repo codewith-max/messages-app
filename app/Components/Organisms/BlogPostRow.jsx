@@ -16,7 +16,7 @@ export default function BlogPostRow({ date, title, excerpt, href, visual, pills 
             </time>
             <BlogSocialShare />
           </div>
-          <h2 className="mt-4 text-[22px] font-bold leading-snug tracking-tight text-[#111b21] sm:text-[26px] lg:text-[28px]">
+          <h2 className="mt-4 text-[22px] font-bold leading-snug tracking-tight text-wa-bg sm:text-[26px] lg:text-[28px]">
             <Link href={href} className="transition hover:text-[#128C7E]">
               {title}
             </Link>
@@ -24,7 +24,7 @@ export default function BlogPostRow({ date, title, excerpt, href, visual, pills 
           <p className="mt-4 text-[15px] leading-relaxed text-[#3b4a54] sm:text-[16px]">{excerpt}</p>
           <Link
             href={href}
-            className="mt-5 inline-flex items-center gap-1 text-[15px] font-semibold text-[#25D366] transition hover:text-[#20bd5a]"
+            className="mt-5 inline-flex items-center gap-1 text-[15px] font-semibold text-wa-muted transition hover:text-wa-bg"
           >
             Learn more
             <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>

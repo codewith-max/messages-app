@@ -12,17 +12,17 @@ export const metadata = {
 
 export default function HelpCenterPage() {
   return (
-    <div className="min-h-screen bg-white text-[#111b21]">
+    <div className="min-h-screen bg-white text-wa-bg">
       <HelpCenterHeader />
-      <div className="mx-auto flex max-w-[1440px] flex-col md:flex-row">
+      <div className="mx-auto flex max-w-[1440px] flex-col md:flex-row md:items-stretch">
         <HelpCenterSidebar />
         <div className="min-w-0 flex-1 bg-white">
           <HelpCenterSearchSection />
           <HelpCenterTopicCards />
           <HelpCenterArticlesPanel />
+          <HelpCenterSiteFooter />
         </div>
       </div>
-      <HelpCenterSiteFooter />
     </div>
   );
 }

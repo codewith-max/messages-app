@@ -27,7 +27,7 @@ export default function BusinessSuccessStories() {
       <div className="mx-auto max-w-[1200px]">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>
-            <p className="text-[13px] font-semibold uppercase tracking-wider text-[#111b21]/55">{successStories.eyebrow}</p>
+            <p className="text-[13px] font-semibold uppercase tracking-wider text-wa-bg/55">{successStories.eyebrow}</p>
             <h2 id="success-stories-heading" className="mt-2 max-w-[720px] text-[28px] font-semibold leading-tight text-[#073321] sm:text-[34px] md:text-[38px]">
               {successStories.title}
             </h2>
@@ -70,8 +70,8 @@ export default function BusinessSuccessStories() {
                 />
               </div>
               <div className="flex flex-col justify-center px-8 py-10 md:px-12 md:py-14">
-                <h3 className="text-[26px] font-bold text-[#111b21] md:text-[28px]">{active.caseTitle}</h3>
-                <p className="mt-4 text-[17px] leading-relaxed text-[#111b21]/85">{active.caseBody}</p>
+                <h3 className="text-[26px] font-bold text-wa-bg md:text-[28px]">{active.caseTitle}</h3>
+                <p className="mt-4 text-[17px] leading-relaxed text-wa-bg/85">{active.caseBody}</p>
               </div>
             </div>
           </article>

@@ -12,7 +12,7 @@ function SocialLink({ href, label, children }) {
       target="_blank"
       rel="noopener noreferrer"
       aria-label={label}
-      className="flex h-12 w-12 items-center justify-center rounded-full border border-white/40 text-white transition hover:bg-[#25D366] hover:text-black"
+      className="flex h-12 w-12 items-center justify-center rounded-full border border-white/40 text-white transition hover:bg-wa-bg hover:text-black"
     >
       {children}
     </Link>
@@ -78,7 +78,7 @@ function FooterLanguageMenu({ value, onChange }) {
                 className={`flex w-full px-4 py-2.5 text-left text-[15px] transition ${
                   opt.code === value
                     ? 'bg-[#0084ff] font-medium text-white'
-                    : 'text-[#111b21] hover:bg-gray-100'
+                    : 'text-wa-bg hover:bg-gray-100'
                 }`}
                 onClick={() => select(opt.code)}
               >
@@ -93,7 +93,7 @@ function FooterLanguageMenu({ value, onChange }) {
         onClick={() => setOpen((o) => !o)}
         aria-haspopup="listbox"
         aria-expanded={open}
-        className="order-4 inline-flex items-center gap-2.5 self-start rounded-full border border-white bg-[#111b21] px-4 py-2.5 text-sm font-medium text-white transition hover:bg-[#2a3942] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 focus-visible:ring-offset-[#111b21] lg:order-none"
+        className="order-4 inline-flex items-center gap-2.5 self-start rounded-full border border-white bg-wa-bg px-4 py-2.5 text-sm font-medium text-white transition hover:bg-wa-muted focus:outline-none focus-visible:ring-2 focus-visible:ring-wa-muted focus-visible:ring-offset-2 focus-visible:ring-offset-wa-bg lg:order-none"
       >
         <GlobeIcon className="h-5 w-5 shrink-0 opacity-90" />
         <span>{current.label}</span>
@@ -116,7 +116,7 @@ export default function Footer() {
   const { locale, setLocale, footer: copy } = useLocale();
 
   return (
-    <footer className="bg-[#111b21] text-white" lang={locale}>
+    <footer className="bg-wa-bg text-white" lang={locale}>
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 pt-14 md:pt-20 pb-10 md:pb-12">
         <div className="flex flex-col gap-14 lg:flex-row lg:gap-16 xl:gap-20">
           <div className="shrink-0 lg:max-w-[220px]">
@@ -128,7 +128,7 @@ export default function Footer() {
             </Link>
             <Link
               href="#download"
-              className="mt-8 md:mt-10 inline-flex items-center gap-2 rounded-full bg-[#25D366] px-6 py-3.5 text-[15px] font-semibold text-[#111b21] transition hover:bg-[#20bd5c] focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#111b21]"
+              className="mt-8 md:mt-10 inline-flex items-center gap-2 rounded-full bg-wa-bg px-6 py-3.5 text-[15px] font-semibold text-white transition hover:bg-wa-muted focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-wa-bg"
             >
               {copy.download}
               <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth={2.2} viewBox="0 0 24 24" aria-hidden>
@@ -146,7 +146,7 @@ export default function Footer() {
                 <ul className="space-y-3.5">
                   {section.links.map((link, linkIdx) => (
                     <li key={linkIdx}>
-                      <Link href="#" className="text-[16px] md:text-[17px] font-normal text-white transition hover:text-[#25D366]">
+                      <Link href="#" className="text-[16px] md:text-[17px] font-normal text-white transition hover:text-wa-muted">
                         {link}
                       </Link>
                     </li>
@@ -163,10 +163,10 @@ export default function Footer() {
               {year} © WhatsApp LLC.
             </p>
             <div className="order-3 flex flex-wrap gap-x-6 gap-y-2 text-sm lg:order-none">
-              <Link href="#" className="text-white underline-offset-4 transition hover:text-[#25D366] hover:underline">
+              <Link href="#" className="text-white underline-offset-4 transition hover:text-wa-muted hover:underline">
                 {copy.terms}
               </Link>
-              <Link href="#" className="text-white underline-offset-4 transition hover:text-[#25D366] hover:underline">
+              <Link href="#" className="text-white underline-offset-4 transition hover:text-wa-muted hover:underline">
                 {copy.sitemap}
               </Link>
             </div>

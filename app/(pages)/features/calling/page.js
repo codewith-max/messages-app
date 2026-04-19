@@ -8,7 +8,7 @@ import CallingTopHero from '../../../Components/Organisms/CallingTopHero';
 import Footer from '../../../Components/Organisms/Footer';
 import Header from '../../../Components/Organisms/Header';
 import CallingGroupsAutoplaySection from '../../../Components/Organisms/CallingGroupsAutoplaySection';
-import CallingChannelsAutoplaySection from '../../../Components/Organisms/CallingChannelsAutoplaySection';
+import CallingDiscoverMoreSection from '../../../Components/Organisms/CallingDiscoverMoreSection';
 import CallingMetaAiAutoplaySection from '../../../Components/Organisms/CallingMetaAiAutoplaySection';
 import CallingGroupsHero from './CallingGroupsHero';
 
@@ -28,7 +28,7 @@ export default function CallingFeaturePage() {
         <CallingFeaturesShowcase />
         <CallingGroupsHero />
         <CallingGroupsAutoplaySection />
-        <CallingChannelsAutoplaySection />
+        <CallingDiscoverMoreSection />
         <CallingMetaAiAutoplaySection />
         <CallingAdvancedShowcase />
         <CallingKeepTalkingSection />

@@ -42,11 +42,11 @@ function ProductsMenu() {
               <div className="flex items-start gap-3">
                 <NavIcon name={col.icon} />
                 <div className="min-w-0 flex-1">
-                  <p className="text-[15px] font-bold text-[#111b21]">{col.heading}</p>
+                  <p className="text-[15px] font-bold text-wa-bg">{col.heading}</p>
                   <ul className="mt-3 space-y-2.5">
                     {col.links.map((text) => (
                       <li key={text}>
-                        <Link href="#" className="text-[14px] text-[#3b4a54] transition hover:text-[#25D366]">
+                        <Link href="#" className="text-[14px] text-[#3b4a54] transition hover:text-wa-muted">
                           {text}
                         </Link>
                       </li>
@@ -54,11 +54,11 @@ function ProductsMenu() {
                   </ul>
                   {col.subheading ? (
                     <>
-                      <p className="mt-5 text-[13px] font-bold text-[#111b21]">{col.subheading}</p>
+                      <p className="mt-5 text-[13px] font-bold text-wa-bg">{col.subheading}</p>
                       <ul className="mt-2 space-y-2">
                         {col.sublinks.map((text) => (
                           <li key={text}>
-                            <Link href="#" className="text-[13px] text-[#3b4a54] transition hover:text-[#25D366]">
+                            <Link href="#" className="text-[13px] text-[#3b4a54] transition hover:text-wa-muted">
                               {text}
                             </Link>
                           </li>
@@ -87,7 +87,7 @@ function ResourcesMenu() {
             <li key={item.label}>
               <Link
                 href={item.href}
-                className="flex items-center gap-3 rounded-lg px-4 py-3 text-[15px] text-[#111b21] transition hover:bg-[#f0f2f5]"
+                className="flex items-center gap-3 rounded-lg px-4 py-3 text-[15px] text-wa-bg transition hover:bg-[#eef2f4]"
               >
                 <NavIcon name={item.icon} />
                 {item.label}
@@ -112,12 +112,12 @@ function DevelopersMenu() {
               <div className="flex items-start gap-3">
                 <NavIcon name={col.icon} />
                 <div>
-                  <p className="text-[15px] font-bold text-[#111b21]">{col.heading}</p>
+                  <p className="text-[15px] font-bold text-wa-bg">{col.heading}</p>
                   <div className="my-3 h-px bg-[#e9edef]" />
                   <ul className="space-y-3">
                     {col.links.map((text) => (
                       <li key={text}>
-                        <Link href="#" className="text-[14px] text-[#111b21] transition hover:text-[#25D366]">
+                        <Link href="#" className="text-[14px] text-wa-bg transition hover:text-wa-muted">
                           {text}
                         </Link>
                       </li>
@@ -144,7 +144,7 @@ function PartnersMenu() {
             <li key={item.label}>
               <Link
                 href={item.href}
-                className="flex items-center gap-3 rounded-lg px-4 py-3.5 text-[15px] font-medium text-[#111b21] transition hover:bg-[#f0f2f5]"
+                className="flex items-center gap-3 rounded-lg px-4 py-3.5 text-[15px] font-medium text-wa-bg transition hover:bg-[#eef2f4]"
               >
                 <NavIcon name={item.icon} />
                 {item.label}
@@ -175,7 +175,7 @@ function NavItem({ label, menuKey }) {
 
   return (
     <div className="group relative flex items-stretch">
-      <span className="flex cursor-default items-center whitespace-nowrap px-2 py-3 text-[15px] font-medium text-white/95 transition group-hover:text-[#25D366] lg:px-3">
+      <span className="flex cursor-default items-center whitespace-nowrap px-2 py-3 text-[15px] font-medium text-white/95 transition group-hover:text-wa-muted lg:px-3">
         {label}
       </span>
       {menus[menuKey]}
@@ -211,7 +211,7 @@ export default function BusinessSiteHeader() {
           <div className="flex shrink-0 items-center gap-2 py-3 sm:gap-3">
             <button
               type="button"
-              className="flex h-10 w-10 items-center justify-center rounded-full bg-[#25D366] text-[#073321] transition hover:bg-[#20bd5c]"
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-wa-bg text-[#073321] transition hover:bg-wa-muted"
               aria-label="Search"
             >
               <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
@@ -220,7 +220,7 @@ export default function BusinessSiteHeader() {
             </button>
             <Link
               href="#"
-              className="rounded-full bg-[#25D366] px-4 py-2.5 text-[14px] font-semibold text-[#111b21] transition hover:bg-[#20bd5c] sm:px-5"
+              className="rounded-full bg-wa-bg px-4 py-2.5 text-[14px] font-semibold text-white transition hover:bg-wa-muted sm:px-5"
             >
               Get started
             </Link>

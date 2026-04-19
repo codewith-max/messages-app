@@ -16,9 +16,9 @@ function IllustrationPanel() {
         {icons.map((d, i) => (
           <div
             key={i}
-            className="flex h-14 w-14 items-center justify-center rounded-2xl border border-[#25D366]/40 bg-[#25D366]/10"
+            className="flex h-14 w-14 items-center justify-center rounded-2xl border border-wa-muted/40 bg-wa-bg/10"
           >
-            <svg className="h-7 w-7 text-[#25D366]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+            <svg className="h-7 w-7 text-wa-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={d} />
             </svg>
           </div>
@@ -43,9 +43,9 @@ function PhotoPanel() {
 
 function DarkPanel() {
   return (
-    <div className="flex h-full min-h-[200px] flex-col items-center justify-center bg-[#0b141a] px-4 py-8">
+    <div className="flex h-full min-h-[200px] flex-col items-center justify-center bg-wa-bg px-4 py-8">
       <div className="rounded-2xl border border-white/10 bg-[#1f2c34] px-6 py-8 shadow-inner">
-        <svg className="mx-auto h-12 w-12 text-[#25D366]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+        <svg className="mx-auto h-12 w-12 text-wa-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
         </svg>
         <p className="mt-3 text-center text-[12px] font-semibold text-[#e9edef]">Fingerprint required</p>
@@ -72,7 +72,7 @@ export default function PrivacyExploreSection() {
 
   return (
     <section
-      className="border-t border-white/[0.06] bg-[#0b141a] px-4 py-16 sm:px-6 sm:py-20 md:px-8 lg:py-28"
+      className="border-t border-white/[0.06] bg-wa-bg px-4 py-16 sm:px-6 sm:py-20 md:px-8 lg:py-28"
       aria-labelledby="explore-privacy-heading"
     >
       <div className="mx-auto max-w-[1280px]">
@@ -81,7 +81,7 @@ export default function PrivacyExploreSection() {
             <h2 id="explore-privacy-heading" className="text-[38px] font-semibold leading-[1.1] tracking-tight sm:text-[44px] md:text-[52px]">
               {exploreIntro.lines.map((line, i) => (
                 <span key={i} className={i > 0 ? 'mt-1 block' : 'block'}>
-                  <span className={line.accent ? 'text-[#25D366]' : 'text-white'}>{line.text}</span>
+                  <span className={line.accent ? 'text-wa-muted' : 'text-white'}>{line.text}</span>
                 </span>
               ))}
             </h2>
@@ -90,7 +90,7 @@ export default function PrivacyExploreSection() {
               <button
                 type="button"
                 onClick={() => scrollByDir('prev')}
-                className="flex h-12 w-12 items-center justify-center rounded-full border border-white/35 text-white transition hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366]"
+                className="flex h-12 w-12 items-center justify-center rounded-full border border-white/35 text-white transition hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-wa-muted"
                 aria-label="Previous cards"
               >
                 <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -100,7 +100,7 @@ export default function PrivacyExploreSection() {
               <button
                 type="button"
                 onClick={() => scrollByDir('next')}
-                className="flex h-12 w-12 items-center justify-center rounded-full border border-white/35 text-white transition hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366]"
+                className="flex h-12 w-12 items-center justify-center rounded-full border border-white/35 text-white transition hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-wa-muted"
                 aria-label="Next cards"
               >
                 <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -124,7 +124,7 @@ export default function PrivacyExploreSection() {
               >
                 <CardVisual variant={card.variant} />
                 <div className="grid gap-4 p-5 sm:grid-cols-[1fr_1.2fr] sm:items-start sm:gap-6">
-                  <h3 className="text-[20px] font-bold leading-tight text-[#111b21]">{card.title}</h3>
+                  <h3 className="text-[20px] font-bold leading-tight text-wa-bg">{card.title}</h3>
                   <div>
                     <p className="text-[14px] leading-relaxed text-[#3b4a54]">{card.description}</p>
                     <div className="mt-4">
