@@ -3,29 +3,19 @@ import { highlightedArticles, popularArticlesShort } from '../../content/helpCen
 import HelpCenterPhonesVisual from './HelpCenterPhonesVisual';
 
 export default function HelpCenterArticlesPanel() {
+  const allPopularArticles = [...popularArticlesShort, ...highlightedArticles];
+
   return (
-    <section className="border-t border-black/[0.06] bg-white px-4 py-10 sm:px-8 sm:py-12">
-      <div className="mx-auto max-w-6xl">
+    <section className="border-t border-black/[0.06] bg-white px-4 py-10 sm:px-6 sm:py-12 lg:px-8">
+      <div className="max-w-none">
         <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-12">
           <div className="min-w-0 flex-1 space-y-8">
             <div>
               <h2 className="text-[20px] font-bold text-wa-bg sm:text-[22px]">Popular Articles</h2>
               <ul className="mt-4 space-y-2">
-                {popularArticlesShort.map((a) => (
+                {allPopularArticles.map((a) => (
                   <li key={a.title}>
-                    <Link href={a.href} className="text-[15px] font-medium text-wa-muted hover:underline">
-                      {a.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h2 className="text-[18px] font-semibold text-wa-bg sm:text-[20px]">Help articles</h2>
-              <ul className="mt-4 space-y-3">
-                {highlightedArticles.map((a) => (
-                  <li key={a.title}>
-                    <Link href={a.href} className="text-[15px] text-wa-muted hover:underline">
+                    <Link href={a.href} className="text-[16px] font-bold text-[#308755] hover:underline">
                       {a.title}
                     </Link>
                   </li>
