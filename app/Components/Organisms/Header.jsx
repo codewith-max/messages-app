@@ -8,7 +8,7 @@ export default function Header() {
   const pathname = usePathname();
   const isFeaturesPage = pathname === '/features' || pathname?.startsWith('/features/');
   const isPrivacyPage = pathname === '/privacy';
-  const isHelpCenterPage = pathname === '/help-center';
+  const isHelpCenterPage = pathname === '/help-center' || pathname?.startsWith('/help-center/');
   const isBlogPage = pathname === '/blog';
   const isForBusinessPage = pathname === '/for-business';
   const isAppsPage = pathname === '/apps';

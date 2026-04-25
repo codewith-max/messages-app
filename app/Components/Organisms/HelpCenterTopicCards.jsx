@@ -10,7 +10,7 @@ function TopicGrid({ title, topics, className = '' }) {
         {topics.map((t) => (
           <Link
             key={t.id}
-            href={`#${t.id}`}
+            href={t.href ?? `#${t.id}`}
             className="flex flex-col overflow-hidden rounded-2xl bg-[#eef2f4]"
           >
             <HelpTopicIllustration variant={t.icon} className="rounded-t-2xl bg-[#e5e7ea]/80" />
