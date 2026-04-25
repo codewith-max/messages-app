@@ -112,13 +112,13 @@ export default function ManageTwoStepVerificationSettingsArticle() {
           <h3 className="text-[17px] font-bold text-[#111b21]">Related resources:</h3>
           <ul className="mt-2 space-y-1.5">
             <li>
-              <Link className={linkClass} href="/help-center/about-registration-two-step-verification">
+              <Link className={linkClass} href="/help-center/about-two-step-verification">
                 About two-step verification
               </Link>
             </li>
             <li>
               How to{' '}
-              <Link className={linkClass} href="#reg-reset-2sv-pin">
+              <Link className={linkClass} href="/help-center/reset-two-step-verification-pin">
                 reset your two-step verification PIN
               </Link>
             </li>

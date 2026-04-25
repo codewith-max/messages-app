@@ -99,7 +99,7 @@ export default function AutomaticPhoneNumberVerificationArticle() {
             </li>
             <li>
               How to{' '}
-              <Link href="/help-center/how-to-protect-your-account" className={linkClass}>
+              <Link href="/help-center/how-to-recover-compromised-account" className={linkClass}>
                 recover a compromised account
               </Link>
             </li>

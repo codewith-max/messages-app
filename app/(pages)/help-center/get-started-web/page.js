@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import Link from 'next/link';
 import HelpCenterHeader from '../../../Components/Organisms/HelpCenterHeader';
 import HelpCenterSidebar from '../../../Components/Organisms/HelpCenterSidebar';
@@ -48,7 +49,9 @@ export default function GetStartedWebPage() {
         <HelpCenterSidebar />
         <div className="min-w-0 flex-1 bg-white">
           <ArticleSearchRow />
-          <GetStartedWebArticle />
+          <Suspense fallback={<div className="min-h-[200px] px-4 py-8 sm:px-8" aria-hidden />}>
+            <GetStartedWebArticle />
+          </Suspense>
           <HelpCenterSiteFooter />
         </div>
       </div>

@@ -105,13 +105,13 @@ export default function CantCompleteRegistrationArticle() {
             </li>
             <li>
               Can&apos;t{' '}
-              <Link className={linkClass} href="/help-center/register-phone-number">
+              <Link className={linkClass} href="/help-center/cant-register-phone-number">
                 register phone number
               </Link>
             </li>
             <li>
               About{' '}
-              <Link className={linkClass} href="/help-center/register-phone-number">
+              <Link className={linkClass} href="/help-center/about-changing-phones">
                 changing phones
               </Link>
             </li>

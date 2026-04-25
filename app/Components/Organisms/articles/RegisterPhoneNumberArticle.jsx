@@ -150,7 +150,7 @@ export default function RegisterPhoneNumberArticle() {
           </ul>
         </section>
 
-        <section className="mt-8">
+        <section className="mt-8" id="passkey">
           <h2 className="text-[20px] font-bold text-[#111b21]">Secure your account with passkey</h2>
           <p className="mt-3">
             After registering your phone number and setting up your profile, you can create a passkey to help protect

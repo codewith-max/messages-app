@@ -52,6 +52,26 @@ export default function HelpCenterSidebar() {
       setOpenId('get-started');
       setOpenArticleId('get-started:registration');
     }
+    if (pathname === '/help-center/reset-two-step-verification-pin') {
+      setOpenId('get-started');
+      setOpenArticleId('get-started:registration');
+    }
+    if (pathname === '/help-center/cant-request-another-verification-code-without-waiting') {
+      setOpenId('get-started');
+      setOpenArticleId('get-started:registration');
+    }
+    if (pathname === '/help-center/verify-your-number-by-sms') {
+      setOpenId('get-started');
+      setOpenArticleId('get-started:registration');
+    }
+    if (pathname === '/help-center/received-verification-code-without-requesting') {
+      setOpenId('get-started');
+      setOpenArticleId('get-started:registration');
+    }
+    if (pathname === '/help-center/register-account-with-phone-call') {
+      setOpenId('get-started');
+      setOpenArticleId('get-started:registration');
+    }
     if (pathname === '/help-center/automatic-phone-number-verification') {
       setOpenId('get-started');
       setOpenArticleId('get-started:registration');
@@ -88,6 +108,10 @@ export default function HelpCenterSidebar() {
       setOpenId('privacy');
       setOpenArticleId('privacy:security');
     }
+    if (pathname === '/help-center/how-to-recover-compromised-account') {
+      setOpenId('privacy');
+      setOpenArticleId('privacy:security');
+    }
     if (pathname === '/help-center/backup-restore-chats') {
       setOpenId('chats');
       setOpenArticleId('chats:backup-restore');
@@ -99,6 +123,18 @@ export default function HelpCenterSidebar() {
     if (pathname === '/help-center/business-features') {
       setOpenId('whatsapp-business');
       setOpenArticleId('whatsapp-business:wab-setting-up-account');
+    }
+    if (pathname === '/help-center/cant-register-phone-number') {
+      setOpenId('get-started');
+      setOpenArticleId('get-started:registration');
+    }
+    if (pathname === '/help-center/about-changing-phones') {
+      setOpenId('accounts');
+      setOpenArticleId('accounts:acc-accounts');
+    }
+    if (pathname === '/help-center/about-two-step-verification') {
+      setOpenId('privacy');
+      setOpenArticleId('privacy:security');
     }
   }, [pathname]);
 

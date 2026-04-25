@@ -1,14 +1,12 @@
-import { Suspense } from 'react';
-import DownloadUninstallArticle from '../../../Components/Organisms/articles/DownloadUninstallArticle';
+import Link from 'next/link';
 import HelpCenterHeader from '../../../Components/Organisms/HelpCenterHeader';
 import HelpCenterSidebar from '../../../Components/Organisms/HelpCenterSidebar';
 import HelpCenterSiteFooter from '../../../Components/Organisms/HelpCenterSiteFooter';
-import Link from 'next/link';
+import RecoverCompromisedAccountArticle from '../../../Components/Organisms/articles/RecoverCompromisedAccountArticle';
 
 export const metadata = {
-  title: 'How to download or uninstall WhatsApp | Help Center',
-  description:
-    'Download or uninstall WhatsApp on Android and iOS. Get steps for Google Play, the App Store, and removing the app from your device.',
+  title: 'How to recover a compromised account | Help Center',
+  description: 'Recover your WhatsApp account if it is compromised or you lost access.',
 };
 
 function ArticleSearchRow() {
@@ -24,12 +22,7 @@ function ArticleSearchRow() {
             viewBox="0 0 24 24"
             aria-hidden
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-            />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
           </svg>
           <input
             type="search"
@@ -47,7 +40,7 @@ function ArticleSearchRow() {
   );
 }
 
-export default function DownloadUninstallPage() {
+export default function RecoverCompromisedAccountPage() {
   return (
     <div className="min-h-screen bg-white text-wa-bg">
       <HelpCenterHeader />
@@ -55,9 +48,7 @@ export default function DownloadUninstallPage() {
         <HelpCenterSidebar />
         <div className="min-w-0 flex-1 bg-white">
           <ArticleSearchRow />
-          <Suspense fallback={<div className="min-h-[200px] px-4 py-8 sm:px-8" aria-hidden />}>
-            <DownloadUninstallArticle />
-          </Suspense>
+          <RecoverCompromisedAccountArticle />
           <HelpCenterSiteFooter />
         </div>
       </div>

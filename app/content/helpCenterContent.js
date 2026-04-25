@@ -27,18 +27,19 @@ export const sidebarCategories = [
         subItems: [
           { title: 'Parent-Managed Accounts', href: '/help-center/parent-managed-accounts' },
           { title: 'How to register your phone number', href: '/help-center/register-phone-number' },
+          { title: 'How to verify your number by SMS', href: '/help-center/verify-your-number-by-sms' },
           { title: 'About registration and two-step verification', href: '/help-center/about-registration-two-step-verification' },
-          { title: 'How to register your account with a phone call', href: '#reg-register-phone-call' },
+          { title: 'How to register your account with a phone call', href: '/help-center/register-account-with-phone-call' },
           { title: 'About automatic phone number verification', href: '/help-center/automatic-phone-number-verification' },
           { title: "Can't complete registration", href: '/help-center/cant-complete-registration' },
           { title: 'How to manage two-step verification settings', href: '/help-center/manage-two-step-verification-settings' },
-          { title: 'How to reset your two-step verification PIN', href: '#reg-reset-2sv-pin' },
+          { title: 'How to reset your two-step verification PIN', href: '/help-center/reset-two-step-verification-pin' },
           {
             title: "Can't request another verification code without waiting",
-            href: '#reg-cant-request-verification-waiting',
+            href: '/help-center/cant-request-another-verification-code-without-waiting',
           },
           { title: "I'm traveling and I can't get my WhatsApp code", href: '/help-center/traveling-cant-get-whatsapp-code' },
-          { title: 'Received verification code without requesting it', href: '#reg-code-without-requesting' },
+          { title: 'Received verification code without requesting it', href: '/help-center/received-verification-code-without-requesting' },
         ],
       },
       {
@@ -485,7 +486,8 @@ export const sidebarCategories = [
         subItems: [
           { title: 'About end-to-end encryption', href: '#sec-e2e' },
           { title: 'Account security tips', href: '/help-center/account-security-tips' },
-          { title: 'About two-step verification', href: '/help-center/about-registration-two-step-verification' },
+          { title: 'About two-step verification', href: '/help-center/about-two-step-verification' },
+          { title: 'How to recover a compromised account', href: '/help-center/how-to-recover-compromised-account' },
           { title: "How to protect your account if you lose your phone", href: '/help-center/how-to-protect-your-account' },
         ],
       },
@@ -505,7 +507,7 @@ export const sidebarCategories = [
           { title: 'How to request account information', href: '#acc-request-info' },
           { title: 'How to request channels report', href: '#acc-channels-report' },
           { title: 'How to request an ads report', href: '#acc-ads-report' },
-          { title: 'About changing phones', href: '#acc-changing-phones' },
+          { title: 'About changing phones', href: '/help-center/about-changing-phones' },
           { title: 'How to change your phone number', href: '#acc-change-number-how' },
           { title: 'About changing phone numbers', href: '#acc-about-changing-numbers' },
           { title: "Can't change phone number", href: '#acc-cant-change-number' },
@@ -784,7 +786,7 @@ export const highlightedArticles = [
   { title: 'About temporarily banned accounts', href: '#banned' },
   { title: 'About two-step verification', href: '#2sv' },
   { title: 'How to restore your chat history', href: '#restore' },
-  { title: 'Received verification code without requesting it', href: '#verification-code' },
+  { title: 'Received verification code without requesting it', href: '/help-center/received-verification-code-without-requesting' },
   { title: 'About ads in WhatsApp Status and Channels', href: '/help-center/ads-status-channels' },
 ];
 
