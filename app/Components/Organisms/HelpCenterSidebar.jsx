@@ -222,7 +222,7 @@ export default function HelpCenterSidebar() {
                                       <Link
                                         href={s.href}
                                         aria-current={isActive ? 'page' : undefined}
-                                        className={`block rounded-lg px-2 py-1.5 text-[15px] font-semibold leading-7 ${
+                                        className={`block rounded-lg px-2 py-1.5 text-[16px] !font-medium leading-7 ${
                                           isActive ? 'bg-[#e7fce3] text-[#111b21]' : 'text-[#111b21]'
                                         }`}
                                       >
