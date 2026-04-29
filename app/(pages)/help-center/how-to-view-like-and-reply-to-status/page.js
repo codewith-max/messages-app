@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import HelpCenterArticlePageLayout from '../../../Components/Organisms/HelpCenterArticlePageLayout';
-import HowToSaveAndDeleteYourStatusArticle from '../../../Components/Organisms/articles/HowToSaveAndDeleteYourStatusArticle';
+import HowToViewLikeReplyStatusArticle from '../../../Components/Organisms/articles/HowToViewLikeReplyStatusArticle';
 
 export const metadata = {
-  title: 'How to save and delete your status | Help Center',
-  description: 'Learn how to save status updates and delete your status across platforms.',
+  title: 'How to view, like, and reply to status | Help Center',
+  description: 'Learn how to view status updates, like, react, and reply on WhatsApp.',
 };
 
 function ArticleSearchRow() {
@@ -38,10 +38,10 @@ function ArticleSearchRow() {
   );
 }
 
-export default function HowToSaveAndDeleteYourStatusPage() {
+export default function HowToViewLikeAndReplyToStatusPage() {
   return (
     <HelpCenterArticlePageLayout articleSearch={<ArticleSearchRow />}>
-      <HowToSaveAndDeleteYourStatusArticle />
+      <HowToViewLikeReplyStatusArticle />
     </HelpCenterArticlePageLayout>
   );
 }

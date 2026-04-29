@@ -1,10 +1,12 @@
+import { Suspense } from 'react';
 import Link from 'next/link';
 import HelpCenterArticlePageLayout from '../../../Components/Organisms/HelpCenterArticlePageLayout';
-import HowToSaveAndDeleteYourStatusArticle from '../../../Components/Organisms/articles/HowToSaveAndDeleteYourStatusArticle';
+import HowToIntegrateStatusWithThirdPartyAppsArticle from '../../../Components/Organisms/articles/HowToIntegrateStatusWithThirdPartyAppsArticle';
 
 export const metadata = {
-  title: 'How to save and delete your status | Help Center',
-  description: 'Learn how to save status updates and delete your status across platforms.',
+  title: 'How to integrate status with third-party apps | Help Center',
+  description:
+    'Developer guide to Share to Status integrations on Android intents and iOS bridges, including layered media payloads.',
 };
 
 function ArticleSearchRow() {
@@ -38,10 +40,20 @@ function ArticleSearchRow() {
   );
 }
 
-export default function HowToSaveAndDeleteYourStatusPage() {
+function TabsFallback() {
+  return (
+    <div className="min-h-[12rem] max-w-3xl px-4 pb-16 pt-2 text-[15px] text-[#667781] sm:px-8 lg:px-12">
+      Loading platform guide…
+    </div>
+  );
+}
+
+export default function HowToIntegrateStatusWithThirdPartyAppsPage() {
   return (
     <HelpCenterArticlePageLayout articleSearch={<ArticleSearchRow />}>
-      <HowToSaveAndDeleteYourStatusArticle />
+      <Suspense fallback={<TabsFallback />}>
+        <HowToIntegrateStatusWithThirdPartyAppsArticle />
+      </Suspense>
     </HelpCenterArticlePageLayout>
   );
 }

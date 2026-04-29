@@ -1,3 +1,4 @@
+import HelpCenterArticleFeedback from '../Molecules/help-center/HelpCenterArticleFeedback';
 import HelpCenterHeader from './HelpCenterHeader';
 import HelpCenterSidebar from './HelpCenterSidebar';
 import HelpCenterSiteFooter from './HelpCenterSiteFooter';
@@ -20,6 +21,7 @@ export default function HelpCenterArticlePageLayout({ articleSearch = null, chil
           <HelpCenterSiteFooter />
         </div>
       </div>
-    </div>  
+      <HelpCenterArticleFeedback />
+    </div>
   );
 }

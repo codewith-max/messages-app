@@ -59,7 +59,7 @@ export default function AdsStatusChannelsArticle() {
           </p>
         </div>
 
-        <section className="mt-8">
+        <section className="mt-8" id="how-ads-work">
           <h2 className="text-[24px] font-bold leading-tight text-[#111b21]">How ads work</h2>
           <ul className="mt-3 list-disc space-y-1 pl-5">
             <li>
@@ -77,16 +77,16 @@ export default function AdsStatusChannelsArticle() {
           </ul>
         </section>
 
-        <section className="mt-8">
+        <section className="mt-8" id="control-the-ads-you-see">
           <h2 className="text-[24px] font-bold leading-tight text-[#111b21]">Control the ads you see</h2>
           <ul className="mt-3 list-disc space-y-1 pl-5">
-            <li>
+            <li id="ads-preferences">
               How to{' '}
               <Link className={linkClass} href="/help-center">
                 view and adjust your ads preferences on WhatsApp Status or Channels
               </Link>
             </li>
-            <li>
+            <li id="hide-report">
               How to{' '}
               <Link className={linkClass} href="/help-center">
                 hide or report an ad on WhatsApp Status or Channels
