@@ -10,131 +10,42 @@ function articleKey(catId, article) {
   return `${catId}:${article.id ?? article.title}`;
 }
 
+function stripQuery(href = '') {
+  return href.split('?')[0];
+}
+
+function getActiveSidebarState(pathname) {
+  for (const cat of sidebarCategories) {
+    for (const article of cat.articles ?? []) {
+      const aKey = articleKey(cat.id, article);
+
+      if (article.subItems?.length) {
+        for (const subItem of article.subItems) {
+          if (subItem.href?.startsWith('/') && stripQuery(subItem.href) === pathname) {
+            return { openId: cat.id, openArticleId: aKey };
+          }
+        }
+      }
+
+      if (article.href?.startsWith('/') && stripQuery(article.href) === pathname) {
+        return { openId: cat.id, openArticleId: '' };
+      }
+    }
+  }
+
+  return null;
+}
+
 export default function HelpCenterSidebar() {
   const pathname = usePathname();
   const [openId, setOpenId] = useState('');
   const [openArticleId, setOpenArticleId] = useState('');
 
   useEffect(() => {
-    if (pathname === '/help-center/download-uninstall') {
-      setOpenId('get-started');
-      setOpenArticleId('get-started:download-installation');
-    }
-    if (pathname === '/help-center/supported-operating-systems') {
-      setOpenId('get-started');
-      setOpenArticleId('get-started:download-installation');
-    }
-    if (pathname === '/help-center/supported-devices') {
-      setOpenId('get-started');
-      setOpenArticleId('get-started:download-installation');
-    }
-    if (pathname === '/help-center/rooted-phones-custom-roms') {
-      setOpenId('get-started');
-      setOpenArticleId('get-started:download-installation');
-    }
-    if (pathname === '/help-center/ending-whatsapp-kaios') {
-      setOpenId('get-started');
-      setOpenArticleId('get-started:download-installation');
-    }
-    if (pathname === '/help-center/register-phone-number') {
-      setOpenId('get-started');
-      setOpenArticleId('get-started:registration');
-    }
-    if (pathname === '/help-center/about-registration-two-step-verification') {
-      setOpenId('get-started');
-      setOpenArticleId('get-started:registration');
-    }
-    if (pathname === '/help-center/cant-complete-registration') {
-      setOpenId('get-started');
-      setOpenArticleId('get-started:registration');
-    }
-    if (pathname === '/help-center/manage-two-step-verification-settings') {
-      setOpenId('get-started');
-      setOpenArticleId('get-started:registration');
-    }
-    if (pathname === '/help-center/reset-two-step-verification-pin') {
-      setOpenId('get-started');
-      setOpenArticleId('get-started:registration');
-    }
-    if (pathname === '/help-center/cant-request-another-verification-code-without-waiting') {
-      setOpenId('get-started');
-      setOpenArticleId('get-started:registration');
-    }
-    if (pathname === '/help-center/verify-your-number-by-sms') {
-      setOpenId('get-started');
-      setOpenArticleId('get-started:registration');
-    }
-    if (pathname === '/help-center/received-verification-code-without-requesting') {
-      setOpenId('get-started');
-      setOpenArticleId('get-started:registration');
-    }
-    if (pathname === '/help-center/register-account-with-phone-call') {
-      setOpenId('get-started');
-      setOpenArticleId('get-started:registration');
-    }
-    if (pathname === '/help-center/automatic-phone-number-verification') {
-      setOpenId('get-started');
-      setOpenArticleId('get-started:registration');
-    }
-    if (pathname === '/help-center/traveling-cant-get-whatsapp-code') {
-      setOpenId('get-started');
-      setOpenArticleId('get-started:registration');
-    }
-    if (pathname === '/help-center/parent-managed-accounts') {
-      setOpenId('get-started');
-      setOpenArticleId('get-started:registration');
-    }
-    if (pathname === '/help-center/get-started-web') {
-      setOpenId('get-started');
-      setOpenArticleId('get-started:linked-devices');
-    }
-    if (pathname === '/help-center/cant-download-update') {
-      setOpenId('get-started');
-      setOpenArticleId('get-started:get-started-troubleshooting');
-    }
-    if (pathname === '/help-center/change-language') {
-      setOpenId('get-started');
-      setOpenArticleId('get-started:get-started-troubleshooting');
-    }
-    if (pathname === '/help-center/safety-security') {
-      setOpenId('privacy');
-      setOpenArticleId('privacy:safety');
-    }
-    if (pathname === '/help-center/account-security-tips') {
-      setOpenId('privacy');
-      setOpenArticleId('privacy:security');
-    }
-    if (pathname === '/help-center/how-to-protect-your-account') {
-      setOpenId('privacy');
-      setOpenArticleId('privacy:security');
-    }
-    if (pathname === '/help-center/how-to-recover-compromised-account') {
-      setOpenId('privacy');
-      setOpenArticleId('privacy:security');
-    }
-    if (pathname === '/help-center/backup-restore-chats') {
-      setOpenId('chats');
-      setOpenArticleId('chats:backup-restore');
-    }
-    if (pathname === '/help-center/teen-information-center') {
-      setOpenId('privacy');
-      setOpenArticleId('privacy:safety');
-    }
-    if (pathname === '/help-center/business-features') {
-      setOpenId('whatsapp-business');
-      setOpenArticleId('whatsapp-business:wab-setting-up-account');
-    }
-    if (pathname === '/help-center/cant-register-phone-number') {
-      setOpenId('get-started');
-      setOpenArticleId('get-started:registration');
-    }
-    if (pathname === '/help-center/about-changing-phones') {
-      setOpenId('accounts');
-      setOpenArticleId('accounts:acc-accounts');
-    }
-    if (pathname === '/help-center/about-two-step-verification') {
-      setOpenId('privacy');
-      setOpenArticleId('privacy:security');
+    const activeState = getActiveSidebarState(pathname);
+    if (activeState) {
+      setOpenId(activeState.openId);
+      setOpenArticleId(activeState.openArticleId);
     }
   }, [pathname]);
 
@@ -216,7 +127,8 @@ export default function HelpCenterSidebar() {
                             {subOpen ? (
                               <ul className="ml-1 border-l border-black/[0.12] pl-3">
                                 {a.subItems.map((s) => {
-                                  const isActive = s.href.startsWith('/') && pathname === s.href;
+                                  const hrefPath = s.href.split('?')[0];
+                                  const isActive = s.href.startsWith('/') && pathname === hrefPath;
                                   return (
                                     <li key={s.href}>
                                       <Link
@@ -239,15 +151,25 @@ export default function HelpCenterSidebar() {
 
                       return (
                         <li key={aKey}>
+                          {(() => {
+                            const hrefPath = stripQuery(a.href);
+                            const isActive = a.href.startsWith('/') && pathname === hrefPath;
+
+                            return (
                           <Link
                             href={a.href}
-                            className="flex items-center gap-2.5 rounded-lg px-2.5 py-1.5 text-[17px] font-semibold tracking-[0.03em] leading-10 text-[#111b21]"
+                            aria-current={isActive ? 'page' : undefined}
+                            className={`flex items-center gap-2.5 rounded-lg px-2.5 py-1.5 text-[17px] font-semibold tracking-[0.03em] leading-10 text-[#111b21] ${
+                              isActive ? 'bg-[#e7fce3] text-[#111b21]' : ''
+                            }`}
                           >
                             <span className="shrink-0 text-black">
                               <HelpCategoryIcon name={a.icon ?? cat.icon} className="h-4 w-4 [stroke-width:2]" />
                             </span>
                             <span className="min-w-0 flex-1">{a.title}</span>
                           </Link>
+                            );
+                          })()}
                         </li>
                       );
                     })}

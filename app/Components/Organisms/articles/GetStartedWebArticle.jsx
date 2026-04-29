@@ -210,7 +210,7 @@ function IOSContent() {
         <h2 className="text-[30px] font-bold leading-tight text-[#111b21]">Related resources</h2>
         <ul className="mt-3 list-disc space-y-1 pl-5">
           <li>
-            <Link className={linkClass} href="/help-center/get-started-web?platform=web">
+            <Link className={linkClass} href="/help-center/about-linked-devices">
               About linked devices
             </Link>
           </li>
@@ -225,7 +225,7 @@ function IOSContent() {
             </Link>
           </li>
           <li>
-            <Link className={linkClass} href="/help-center">
+            <Link className={linkClass} href="/help-center/how-to-make-a-voice-call?platform=web">
               How to make a voice call
             </Link>
           </li>
@@ -379,7 +379,7 @@ function AndroidContent() {
             </Link>
           </li>
           <li>
-            <Link className={linkClass} href="/help-center">
+            <Link className={linkClass} href="/help-center/how-to-make-a-voice-call?platform=android">
               How to make a voice call
             </Link>
           </li>
@@ -415,7 +415,7 @@ function WebContent() {
           </Link>
         </li>
         <li>
-          <Link className={linkClass} href="/help-center">
+          <Link className={linkClass} href="/help-center/about-whatsapp-web">
             About WhatsApp Web
           </Link>
         </li>
