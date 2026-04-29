@@ -1,7 +1,5 @@
+import HelpCenterArticlePageLayout from '../../../Components/Organisms/HelpCenterArticlePageLayout';
 import CantDownloadUpdateArticle from '../../../Components/Organisms/articles/CantDownloadUpdateArticle';
-import HelpCenterHeader from '../../../Components/Organisms/HelpCenterHeader';
-import HelpCenterSidebar from '../../../Components/Organisms/HelpCenterSidebar';
-import HelpCenterSiteFooter from '../../../Components/Organisms/HelpCenterSiteFooter';
 import Link from 'next/link';
 
 export const metadata = {
@@ -48,16 +46,8 @@ function ArticleSearchRow() {
 
 export default function CantDownloadUpdatePage() {
   return (
-    <div className="min-h-screen bg-white text-wa-bg">
-      <HelpCenterHeader />
-      <div className="mx-auto flex max-w-[1440px] flex-col md:flex-row md:items-stretch">
-        <HelpCenterSidebar />
-        <div className="min-w-0 flex-1 bg-white">
-          <ArticleSearchRow />
-          <CantDownloadUpdateArticle />
-          <HelpCenterSiteFooter />
-        </div>
-      </div>
-    </div>
+        <HelpCenterArticlePageLayout articleSearch={<ArticleSearchRow />}>
+      <CantDownloadUpdateArticle />
+    </HelpCenterArticlePageLayout>
   );
 }

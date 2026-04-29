@@ -5,8 +5,9 @@ export default function HelpCenterSiteFooter() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-black/[0.08] bg-[#eef2f4]">
-      <div className="mx-auto max-w-[1440px] px-4 py-10 sm:px-6 lg:px-8 lg:py-12">
+    <footer className="mt-auto w-full shrink-0 border-t border-black/[0.08] bg-[#eef2f4]">
+      <div className="w-full px-4 py-10 sm:px-6 lg:px-8 lg:py-12">
+        <div className="mx-auto w-full max-w-[980px]">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 lg:gap-12">
           {helpSiteFooter.columns.map((col) => (
             <div key={col.title}>
@@ -37,6 +38,7 @@ export default function HelpCenterSiteFooter() {
           </div>
           <p className="text-[13px] text-[#667781]">© {year} WhatsApp</p>
         </div>
+      </div>
       </div>
     </footer>
   );

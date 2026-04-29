@@ -1,8 +1,6 @@
 import Link from 'next/link';
+import HelpCenterArticlePageLayout from '../../../Components/Organisms/HelpCenterArticlePageLayout';
 import BusinessFeaturesArticle from '../../../Components/Organisms/articles/BusinessFeaturesArticle';
-import HelpCenterHeader from '../../../Components/Organisms/HelpCenterHeader';
-import HelpCenterSidebar from '../../../Components/Organisms/HelpCenterSidebar';
-import HelpCenterSiteFooter from '../../../Components/Organisms/HelpCenterSiteFooter';
 
 export const metadata = {
   title: 'Business Features | Help Center',
@@ -42,16 +40,8 @@ function ArticleSearchRow() {
 
 export default function BusinessFeaturesPage() {
   return (
-    <div className="min-h-screen bg-white text-wa-bg">
-      <HelpCenterHeader />
-      <div className="mx-auto flex max-w-[1440px] flex-col md:flex-row md:items-stretch">
-        <HelpCenterSidebar />
-        <div className="min-w-0 flex-1 bg-white">
-          <ArticleSearchRow />
-          <BusinessFeaturesArticle />
-          <HelpCenterSiteFooter />
-        </div>
-      </div>
-    </div>
+        <HelpCenterArticlePageLayout articleSearch={<ArticleSearchRow />}>
+      <BusinessFeaturesArticle />
+    </HelpCenterArticlePageLayout>
   );
 }

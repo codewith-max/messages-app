@@ -80,7 +80,7 @@ export default function SafetySecurityArticle() {
               </Link>
             </li>
             <li>
-              <Link className={linkClass} href="/help-center">
+              <Link className={linkClass} href="/help-center/how-to-use-whatsapp-responsibly">
                 How to use WhatsApp responsibly
               </Link>
             </li>

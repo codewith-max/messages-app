@@ -1,8 +1,6 @@
 import { Suspense } from 'react';
+import HelpCenterArticlePageLayout from '../../../Components/Organisms/HelpCenterArticlePageLayout';
 import DownloadUninstallArticle from '../../../Components/Organisms/articles/DownloadUninstallArticle';
-import HelpCenterHeader from '../../../Components/Organisms/HelpCenterHeader';
-import HelpCenterSidebar from '../../../Components/Organisms/HelpCenterSidebar';
-import HelpCenterSiteFooter from '../../../Components/Organisms/HelpCenterSiteFooter';
 import Link from 'next/link';
 
 export const metadata = {
@@ -49,18 +47,10 @@ function ArticleSearchRow() {
 
 export default function DownloadUninstallPage() {
   return (
-    <div className="min-h-screen bg-white text-wa-bg">
-      <HelpCenterHeader />
-      <div className="mx-auto flex max-w-[1440px] flex-col md:flex-row md:items-stretch">
-        <HelpCenterSidebar />
-        <div className="min-w-0 flex-1 bg-white">
-          <ArticleSearchRow />
-          <Suspense fallback={<div className="min-h-[200px] px-4 py-8 sm:px-8" aria-hidden />}>
-            <DownloadUninstallArticle />
-          </Suspense>
-          <HelpCenterSiteFooter />
-        </div>
-      </div>
-    </div>
+        <HelpCenterArticlePageLayout articleSearch={<ArticleSearchRow />}>
+      <Suspense fallback={<div className="min-h-[200px] px-4 py-8 sm:px-8" aria-hidden />}>
+                  <DownloadUninstallArticle />
+                </Suspense>
+    </HelpCenterArticlePageLayout>
   );
 }

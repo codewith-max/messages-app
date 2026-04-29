@@ -1,7 +1,5 @@
 import Link from 'next/link';
-import HelpCenterHeader from '../../../Components/Organisms/HelpCenterHeader';
-import HelpCenterSidebar from '../../../Components/Organisms/HelpCenterSidebar';
-import HelpCenterSiteFooter from '../../../Components/Organisms/HelpCenterSiteFooter';
+import HelpCenterArticlePageLayout from '../../../Components/Organisms/HelpCenterArticlePageLayout';
 import RootedPhonesCustomRomsArticle from '../../../Components/Organisms/articles/RootedPhonesCustomRomsArticle';
 
 export const metadata = {
@@ -43,18 +41,8 @@ function ArticleSearchRow() {
 
 export default function RootedPhonesCustomRomsPage() {
   return (
-    <div className="min-h-screen bg-white text-wa-bg">
-      <HelpCenterHeader />
-      <div className="mx-auto flex max-w-[1440px] flex-col md:min-h-[calc(100vh-5rem)] md:flex-row md:items-stretch">
-        <HelpCenterSidebar />
-        <div className="flex min-w-0 flex-1 flex-col bg-white">
-          <ArticleSearchRow />
-          <div className="flex-1">
-            <RootedPhonesCustomRomsArticle />
-          </div>
-          <HelpCenterSiteFooter />
-        </div>
-      </div>
-    </div>
+    <HelpCenterArticlePageLayout articleSearch={<ArticleSearchRow />}>
+      <RootedPhonesCustomRomsArticle />
+    </HelpCenterArticlePageLayout>
   );
 }

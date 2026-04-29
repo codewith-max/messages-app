@@ -1,7 +1,5 @@
 import Link from 'next/link';
-import HelpCenterHeader from '../../../Components/Organisms/HelpCenterHeader';
-import HelpCenterSidebar from '../../../Components/Organisms/HelpCenterSidebar';
-import HelpCenterSiteFooter from '../../../Components/Organisms/HelpCenterSiteFooter';
+import HelpCenterArticlePageLayout from '../../../Components/Organisms/HelpCenterArticlePageLayout';
 import HowToSwitchAccountsOnWhatsappArticle from '../../../Components/Organisms/articles/HowToSwitchAccountsOnWhatsappArticle';
 
 export const metadata = {
@@ -42,16 +40,8 @@ function ArticleSearchRow() {
 
 export default function HowToSwitchAccountsOnWhatsappPage() {
   return (
-    <div className="min-h-screen bg-white text-wa-bg">
-      <HelpCenterHeader />
-      <div className="mx-auto flex max-w-[1440px] flex-col md:flex-row md:items-stretch">
-        <HelpCenterSidebar />
-        <div className="min-w-0 flex-1 bg-white">
-          <ArticleSearchRow />
-          <HowToSwitchAccountsOnWhatsappArticle />
-          <HelpCenterSiteFooter />
-        </div>
-      </div>
-    </div>
+        <HelpCenterArticlePageLayout articleSearch={<ArticleSearchRow />}>
+      <HowToSwitchAccountsOnWhatsappArticle />
+    </HelpCenterArticlePageLayout>
   );
 }

@@ -173,12 +173,12 @@ export default function TeenInformationCenterArticle() {
               </Link>
             </li>
             <li>
-              <Link className={linkClass} href="/help-center/safety-security">
+              <Link className={linkClass} href="/help-center/how-to-stay-safe-on-whatsapp">
                 How to stay safe on WhatsApp
               </Link>
             </li>
             <li>
-              <Link className={linkClass} href="/help-center/safety-security">
+              <Link className={linkClass} href="/help-center/how-to-use-whatsapp-responsibly">
                 How to use WhatsApp responsibly
               </Link>
             </li>

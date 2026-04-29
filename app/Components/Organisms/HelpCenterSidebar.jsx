@@ -50,7 +50,7 @@ export default function HelpCenterSidebar() {
   }, [pathname]);
 
   return (
-    <aside className="w-full shrink-0 border-b border-black/[0.08] shadow-[4px_0_4px_rgba(11,34,42,0.08)] md:w-[380px] md:border-b-0 md:border-r lg:sticky lg:top-20 lg:max-h-[calc(100vh-5rem)] lg:self-start lg:overflow-y-auto lg:border-r lg:border-black/[0.08]">
+    <aside className="w-full shrink-0 border-b border-black/[0.08] shadow-[4px_0_4px_rgba(11,34,42,0.08)] md:w-[300px] md:border-b-0 md:border-r lg:w-[340px] xl:w-[380px] lg:sticky lg:top-20 lg:max-h-[calc(100vh-5rem)] lg:self-start lg:overflow-y-auto lg:border-r lg:border-black/[0.08]">
       <nav className="p-2 md:p-2" aria-label="Help topics">
         <ul className="space-y-0">
           {sidebarCategories.map((cat) => {

@@ -1,13 +1,10 @@
-import { Suspense } from 'react';
 import Link from 'next/link';
-import HelpCenterHeader from '../../../Components/Organisms/HelpCenterHeader';
-import HelpCenterSidebar from '../../../Components/Organisms/HelpCenterSidebar';
-import HelpCenterSiteFooter from '../../../Components/Organisms/HelpCenterSiteFooter';
+import HelpCenterArticlePageLayout from '../../../Components/Organisms/HelpCenterArticlePageLayout';
 import GetStartedWebArticle from '../../../Components/Organisms/articles/GetStartedWebArticle';
 
 export const metadata = {
   title: 'Get Started | Help Center',
-  description: 'Get started with WhatsApp Web.',
+  description: 'Learn how to get started with WhatsApp on different platforms.',
 };
 
 function ArticleSearchRow() {
@@ -43,18 +40,8 @@ function ArticleSearchRow() {
 
 export default function GetStartedWebPage() {
   return (
-    <div className="min-h-screen bg-white text-wa-bg">
-      <HelpCenterHeader />
-      <div className="mx-auto flex max-w-[1440px] flex-col md:flex-row md:items-stretch">
-        <HelpCenterSidebar />
-        <div className="min-w-0 flex-1 bg-white">
-          <ArticleSearchRow />
-          <Suspense fallback={<div className="min-h-[200px] px-4 py-8 sm:px-8" aria-hidden />}>
-            <GetStartedWebArticle />
-          </Suspense>
-          <HelpCenterSiteFooter />
-        </div>
-      </div>
-    </div>
+    <HelpCenterArticlePageLayout articleSearch={<ArticleSearchRow />}>
+      <GetStartedWebArticle />
+    </HelpCenterArticlePageLayout>
   );
 }
