@@ -150,7 +150,7 @@ export const sidebarCategories = [
         href: '#individual-group-chats',
         icon: 'chat',
         subItems: [
-          { title: 'How to reply to a message', href: '#igc-reply-to-message' },
+          { title: 'How to reply to a message', href: '/help-center/how-to-reply-to-a-message?platform=web' },
           { title: 'How to delete chats', href: '#igc-delete-chats' },
           { title: 'How to clear chats', href: '#igc-clear-chats' },
           { title: 'How to pin or unpin a chat', href: '#igc-pin-unpin-chat' },
