@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import HelpCenterArticlePageLayout from '../../../Components/Organisms/HelpCenterArticlePageLayout';
-import AboutListsArticle from '../../../Components/Organisms/articles/AboutListsArticle';
+import HowToForwardMessagesArticle from '../../../Components/Organisms/articles/HowToForwardMessagesArticle';
 
 export const metadata = {
-  title: 'About lists | Help Center',
-  description: 'Learn what lists are in WhatsApp and how they help organize your chats.',
+  title: 'How to forward messages | Help Center',
+  description: 'Learn how to forward messages in WhatsApp chats.',
 };
 
 function ArticleSearchRow() {
@@ -38,10 +38,10 @@ function ArticleSearchRow() {
   );
 }
 
-export default function AboutListsPage() {
+export default function HowToForwardMessagesPage() {
   return (
     <HelpCenterArticlePageLayout articleSearch={<ArticleSearchRow />}>
-      <AboutListsArticle />
+      <HowToForwardMessagesArticle />
     </HelpCenterArticlePageLayout>
   );
 }

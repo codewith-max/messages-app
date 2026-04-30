@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import HelpCenterArticlePageLayout from '../../../Components/Organisms/HelpCenterArticlePageLayout';
-import AboutListsArticle from '../../../Components/Organisms/articles/AboutListsArticle';
+import HowToPinOrUnpinAChatArticle from '../../../Components/Organisms/articles/HowToPinOrUnpinAChatArticle';
 
 export const metadata = {
-  title: 'About lists | Help Center',
-  description: 'Learn what lists are in WhatsApp and how they help organize your chats.',
+  title: 'How to pin or unpin a chat | Help Center',
+  description: 'Learn how to pin chats to the top of your chat list and unpin them on WhatsApp.',
 };
 
 function ArticleSearchRow() {
@@ -38,10 +38,10 @@ function ArticleSearchRow() {
   );
 }
 
-export default function AboutListsPage() {
+export default function HowToPinOrUnpinAChatPage() {
   return (
     <HelpCenterArticlePageLayout articleSearch={<ArticleSearchRow />}>
-      <AboutListsArticle />
+      <HowToPinOrUnpinAChatArticle />
     </HelpCenterArticlePageLayout>
   );
 }

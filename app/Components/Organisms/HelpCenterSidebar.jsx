@@ -14,20 +14,28 @@ function stripQuery(href = '') {
   return href.split('?')[0];
 }
 
+function normalizePath(path = '') {
+  const clean = stripQuery(path);
+  if (!clean || clean === '/') return '/';
+  return clean.endsWith('/') ? clean.slice(0, -1) : clean;
+}
+
 function getActiveSidebarState(pathname) {
+  const normalizedPathname = normalizePath(pathname);
+
   for (const cat of sidebarCategories) {
     for (const article of cat.articles ?? []) {
       const aKey = articleKey(cat.id, article);
 
       if (article.subItems?.length) {
         for (const subItem of article.subItems) {
-          if (subItem.href?.startsWith('/') && stripQuery(subItem.href) === pathname) {
+          if (subItem.href?.startsWith('/') && normalizePath(subItem.href) === normalizedPathname) {
             return { openId: cat.id, openArticleId: aKey };
           }
         }
       }
 
-      if (article.href?.startsWith('/') && stripQuery(article.href) === pathname) {
+      if (article.href?.startsWith('/') && normalizePath(article.href) === normalizedPathname) {
         return { openId: cat.id, openArticleId: '' };
       }
     }
@@ -127,8 +135,7 @@ export default function HelpCenterSidebar() {
                             {subOpen ? (
                               <ul className="ml-1 border-l border-black/[0.12] pl-3">
                                 {a.subItems.map((s) => {
-                                  const hrefPath = s.href.split('?')[0];
-                                  const isActive = s.href.startsWith('/') && pathname === hrefPath;
+                                  const isActive = s.href.startsWith('/') && normalizePath(pathname) === normalizePath(s.href);
                                   return (
                                     <li key={s.href}>
                                       <Link
@@ -152,8 +159,7 @@ export default function HelpCenterSidebar() {
                       return (
                         <li key={aKey}>
                           {(() => {
-                            const hrefPath = stripQuery(a.href);
-                            const isActive = a.href.startsWith('/') && pathname === hrefPath;
+                            const isActive = a.href.startsWith('/') && normalizePath(pathname) === normalizePath(a.href);
 
                             return (
                           <Link

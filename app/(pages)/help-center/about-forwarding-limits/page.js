@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import HelpCenterArticlePageLayout from '../../../Components/Organisms/HelpCenterArticlePageLayout';
-import AboutListsArticle from '../../../Components/Organisms/articles/AboutListsArticle';
+import AboutForwardingLimitsArticle from '../../../Components/Organisms/articles/AboutForwardingLimitsArticle';
 
 export const metadata = {
-  title: 'About lists | Help Center',
-  description: 'Learn what lists are in WhatsApp and how they help organize your chats.',
+  title: 'About forwarding limits | Help Center',
+  description: 'Learn about WhatsApp forwarding limits and what “Forwarded many times” means.',
 };
 
 function ArticleSearchRow() {
@@ -38,10 +38,10 @@ function ArticleSearchRow() {
   );
 }
 
-export default function AboutListsPage() {
+export default function AboutForwardingLimitsPage() {
   return (
     <HelpCenterArticlePageLayout articleSearch={<ArticleSearchRow />}>
-      <AboutListsArticle />
+      <AboutForwardingLimitsArticle />
     </HelpCenterArticlePageLayout>
   );
 }
