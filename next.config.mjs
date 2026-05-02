@@ -1,13 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  turbopack: {
-    ignoreIssue: [
-      {
-        path: '**',
-        title: /Slow filesystem detected/i,
-      },
-    ],
-  },
   async redirects() {
     return [
       {
