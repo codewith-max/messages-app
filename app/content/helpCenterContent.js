@@ -191,16 +191,19 @@ export const sidebarCategories = [
         href: '#chat-notifications',
         icon: 'flag',
         subItems: [
-          { title: 'How to manage your notifications', href: '#cnotif-manage-notifications' },
-          { title: 'How to manage conversation tones', href: '#cnotif-conversation-tones' },
-          { title: 'How to change your ringtone for WhatsApp', href: '#cnotif-ringtone' },
+          { title: 'How to manage your notifications', href: '/help-center/how-to-manage-your-notifications?platform=android' },
+          { title: 'How to manage conversation tones', href: '/help-center/how-to-manage-conversation-tones?platform=android' },
+          { title: 'How to change your ringtone for WhatsApp', href: '/help-center/how-to-change-your-ringtone-for-whatsapp?platform=android' },
           {
             title: 'How to mute or unmute individual or group chat notifications',
-            href: '#cnotif-mute-unmute',
+            href: '/help-center/how-to-mute-or-unmute-individual-or-group-chat-notifications?platform=android',
           },
-          { title: "Can't see or hear notifications", href: '#cnotif-cant-see-hear' },
-          { title: 'Troubleshoot problems with notification badges', href: '#cnotif-badges' },
-          { title: "Can't see notification count", href: '#cnotif-cant-see-count' },
+          { title: "Can't see or hear notifications", href: '/help-center/cant-see-or-hear-notifications?platform=android' },
+          {
+            title: 'Troubleshoot problems with notification badges',
+            href: '/help-center/troubleshoot-problems-with-notification-badges?platform=android',
+          },
+          { title: "Can't see notification count", href: '/help-center/cant-see-notification-count?platform=android' },
         ],
       },
       {
@@ -209,18 +212,35 @@ export const sidebarCategories = [
         href: '#chat-media',
         icon: 'card',
         subItems: [
-          { title: 'How to send media, contacts, or location', href: '#cmed-send-media' },
-          { title: 'Finding media files', href: '#cmed-finding-media' },
-          { title: 'How to forward media', href: '#cmed-forward-media' },
-          { title: 'How to edit photos and videos', href: '#cmed-edit-photos-videos' },
-          { title: 'How to stop WhatsApp from saving media to your phone', href: '#cmed-stop-saving' },
-          { title: 'How to use stickers', href: '#cmed-stickers' },
+          {
+            title: 'How to send media, contacts, or location',
+            href: '/help-center/how-to-send-media-contacts-or-location?platform=android',
+          },
+          { title: 'Finding media files', href: '/help-center/finding-media-files?platform=android' },
+          { title: 'How to forward media', href: '/help-center/how-to-forward-media' },
+          {
+            title: 'How to edit photos and videos',
+            href: '/help-center/how-to-edit-photos-and-videos?platform=ios',
+          },
+          {
+            title: 'About HD photos and videos',
+            href: '/help-center/about-hd-photos-and-videos?platform=ios',
+          },
+          {
+            title: 'How to stop WhatsApp from saving media to your phone',
+            href: '/help-center/how-to-stop-whatsapp-from-saving-media-to-your-phone?platform=android',
+          },
+          { title: 'How to use stickers', href: '/help-center/how-to-use-stickers?platform=android' },
           { title: 'How to create and share custom stickers and sticker packs', href: '#cmed-custom-stickers' },
           { title: 'How to create avatars', href: '#cmed-create-avatars' },
           { title: 'How to use avatars', href: '#cmed-use-avatars' },
           { title: 'How to create GIFs', href: '#cmed-create-gifs' },
           { title: 'How to send GIFs', href: '#cmed-send-gifs' },
           { title: 'How to use emoji', href: '#cmed-emoji' },
+          {
+            title: 'How to configure auto-download',
+            href: '/help-center/how-to-configure-auto-download?platform=android',
+          },
         ],
       },
       {

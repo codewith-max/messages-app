@@ -97,7 +97,7 @@ export default function HelpCenterPlatformTabs({ androidLabel = 'Android', iosLa
             tab === 'ios' ? activeClass : inactiveClass
           }`}
         >
-          <AppleTabIcon className={`h-5 w-5 ${tab === 'ios' ? 'text-[#008069]' : 'text-[#667781]'}`} />
+          <AppleTabIcon className={`h-4 w-4 ${tab === 'ios' ? 'text-[#008069]' : 'text-[#667781]'}`} />
           {iosLabel}
           <span
             className={`absolute bottom-0 left-0 right-0 h-0.5 rounded-full bg-[#008069] transition-opacity ${
