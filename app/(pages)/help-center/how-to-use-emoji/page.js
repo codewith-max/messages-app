@@ -1,10 +1,11 @@
+import { Suspense } from 'react';
 import Link from 'next/link';
 import HelpCenterArticlePageLayout from '../../../Components/Organisms/HelpCenterArticlePageLayout';
-import CantSeeContactProfileInformationArticle from '../../../Components/Organisms/articles/CantSeeContactProfileInformationArticle';
+import HowToUseEmojiArticle from '../../../Components/Organisms/articles/HowToUseEmojiArticle';
 
 export const metadata = {
-  title: "Can't see a contact's profile information | Help Center",
-  description: "Troubleshoot why you can't view a contact's last seen, profile photo, or about info.",
+  title: 'How to use emoji | Help Center',
+  description: 'Send emoji in chats on WhatsApp for Android, iOS, Web, Mac, and Windows.',
 };
 
 function ArticleSearchRow() {
@@ -38,10 +39,12 @@ function ArticleSearchRow() {
   );
 }
 
-export default function CantSeeContactProfileInformationPage() {
+export default function HowToUseEmojiPage() {
   return (
     <HelpCenterArticlePageLayout articleSearch={<ArticleSearchRow />}>
-      <CantSeeContactProfileInformationArticle />
+      <Suspense fallback={null}>
+        <HowToUseEmojiArticle />
+      </Suspense>
     </HelpCenterArticlePageLayout>
   );
 }

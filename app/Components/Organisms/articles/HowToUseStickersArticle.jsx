@@ -141,6 +141,7 @@ export default function HowToUseStickersArticle() {
   const searchParams = useSearchParams();
   const rawPlatform = searchParams.get('platform');
   const platform = tabs.some((t) => t.key === rawPlatform) ? rawPlatform : 'android';
+  const avatarPlatform = platform === 'android' || platform === 'ios' ? platform : 'android';
 
   return (
     <article className="px-4 pb-16 pt-6 sm:px-8 sm:pt-8 lg:px-12">
@@ -165,13 +166,42 @@ export default function HowToUseStickersArticle() {
         <section className="mt-10">
           <h2 className="text-[24px] font-bold leading-tight text-[#111b21]">Create and share custom stickers and sticker packs</h2>
           <p className="mt-3">
-            Learn how to make your own stickers and share sticker packs with others.
+            Learn{' '}
+            <Link className={linkClass} href={`/help-center/how-to-create-and-share-custom-stickers-and-sticker-packs?platform=${platform}`}>
+              how to make your own stickers and share sticker packs
+            </Link>{' '}
+            with others.
           </p>
         </section>
 
         <section className="mt-10">
           <h2 className="text-[24px] font-bold leading-tight text-[#111b21]">Related resources</h2>
           <ul className="mt-3 list-disc space-y-1.5 pl-5 marker:text-[#111b21]">
+            <li>
+              <Link className={linkClass} href={`/help-center/how-to-create-avatars?platform=${avatarPlatform}`}>
+                How to create avatars
+              </Link>
+            </li>
+            <li>
+              <Link className={linkClass} href={`/help-center/how-to-use-avatars?platform=${avatarPlatform}`}>
+                How to use avatars
+              </Link>
+            </li>
+            <li>
+              <Link className={linkClass} href={`/help-center/how-to-create-gifs?platform=${avatarPlatform}`}>
+                How to create GIFs
+              </Link>
+            </li>
+            <li>
+              <Link className={linkClass} href={`/help-center/how-to-send-gifs?platform=${avatarPlatform}`}>
+                How to send GIFs
+              </Link>
+            </li>
+            <li>
+              <Link className={linkClass} href={`/help-center/how-to-use-emoji?platform=${platform}`}>
+                How to use emoji
+              </Link>
+            </li>
             <li>
               <Link className={linkClass} href="/help-center/how-to-send-media-contacts-or-location?platform=android">
                 How to send media, contacts, or location

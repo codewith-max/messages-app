@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import HelpCenterArticlePageLayout from '../../../Components/Organisms/HelpCenterArticlePageLayout';
-import CantSeeContactProfileInformationArticle from '../../../Components/Organisms/articles/CantSeeContactProfileInformationArticle';
+import AboutVoiceChatInAGroupArticle from '../../../Components/Organisms/articles/AboutVoiceChatInAGroupArticle';
 
 export const metadata = {
-  title: "Can't see a contact's profile information | Help Center",
-  description: "Troubleshoot why you can't view a contact's last seen, profile photo, or about info.",
+  title: 'About voice chat in a group | Help Center',
+  description: 'Learn how voice chat works in WhatsApp groups.',
 };
 
 function ArticleSearchRow() {
@@ -38,10 +38,10 @@ function ArticleSearchRow() {
   );
 }
 
-export default function CantSeeContactProfileInformationPage() {
+export default function AboutVoiceChatInAGroupPage() {
   return (
     <HelpCenterArticlePageLayout articleSearch={<ArticleSearchRow />}>
-      <CantSeeContactProfileInformationArticle />
+      <AboutVoiceChatInAGroupArticle />
     </HelpCenterArticlePageLayout>
   );
 }

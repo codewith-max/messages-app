@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import HelpCenterArticlePageLayout from '../../../Components/Organisms/HelpCenterArticlePageLayout';
-import CantSeeContactProfileInformationArticle from '../../../Components/Organisms/articles/CantSeeContactProfileInformationArticle';
+import HowToDeleteVoiceMessagesArticle from '../../../Components/Organisms/articles/HowToDeleteVoiceMessagesArticle';
 
 export const metadata = {
-  title: "Can't see a contact's profile information | Help Center",
-  description: "Troubleshoot why you can't view a contact's last seen, profile photo, or about info.",
+  title: 'How to delete voice messages | Help Center',
+  description: 'Remove voice messages from a chat on mobile or desktop.',
 };
 
 function ArticleSearchRow() {
@@ -38,10 +38,10 @@ function ArticleSearchRow() {
   );
 }
 
-export default function CantSeeContactProfileInformationPage() {
+export default function HowToDeleteVoiceMessagesPage() {
   return (
     <HelpCenterArticlePageLayout articleSearch={<ArticleSearchRow />}>
-      <CantSeeContactProfileInformationArticle />
+      <HowToDeleteVoiceMessagesArticle />
     </HelpCenterArticlePageLayout>
   );
 }

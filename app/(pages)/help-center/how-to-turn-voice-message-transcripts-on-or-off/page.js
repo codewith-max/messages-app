@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import HelpCenterArticlePageLayout from '../../../Components/Organisms/HelpCenterArticlePageLayout';
-import CantSeeContactProfileInformationArticle from '../../../Components/Organisms/articles/CantSeeContactProfileInformationArticle';
+import HowToTurnVoiceMessageTranscriptsOnOrOffArticle from '../../../Components/Organisms/articles/HowToTurnVoiceMessageTranscriptsOnOrOffArticle';
 
 export const metadata = {
-  title: "Can't see a contact's profile information | Help Center",
-  description: "Troubleshoot why you can't view a contact's last seen, profile photo, or about info.",
+  title: 'How to turn voice message transcripts on or off | Help Center',
+  description: 'Manage voice message transcription settings in WhatsApp.',
 };
 
 function ArticleSearchRow() {
@@ -38,10 +38,10 @@ function ArticleSearchRow() {
   );
 }
 
-export default function CantSeeContactProfileInformationPage() {
+export default function HowToTurnVoiceMessageTranscriptsOnOrOffPage() {
   return (
     <HelpCenterArticlePageLayout articleSearch={<ArticleSearchRow />}>
-      <CantSeeContactProfileInformationArticle />
+      <HowToTurnVoiceMessageTranscriptsOnOrOffArticle />
     </HelpCenterArticlePageLayout>
   );
 }

@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import HelpCenterArticleFeedback from '../Molecules/help-center/HelpCenterArticleFeedback';
 import HelpCenterHeader from './HelpCenterHeader';
 import HelpCenterSidebar from './HelpCenterSidebar';
@@ -16,7 +17,9 @@ export default function HelpCenterArticlePageLayout({ articleSearch = null, chil
         <div className="flex min-h-0 min-w-0 flex-1 flex-col bg-white">
           <div className="mx-auto flex w-full min-w-0 flex-1 flex-col px-4 md:px-6 xl:px-10 2xl:px-75">
             {articleSearch}
-            <main className="min-w-0">{children}</main>
+            <main className="min-w-0">
+              <Suspense fallback={null}>{children}</Suspense>
+            </main>
           </div>
           <HelpCenterSiteFooter />
         </div>

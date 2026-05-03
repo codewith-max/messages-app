@@ -1,10 +1,12 @@
+import { Suspense } from 'react';
 import Link from 'next/link';
 import HelpCenterArticlePageLayout from '../../../Components/Organisms/HelpCenterArticlePageLayout';
-import CantSeeContactProfileInformationArticle from '../../../Components/Organisms/articles/CantSeeContactProfileInformationArticle';
+import HowToCreateGifsArticle from '../../../Components/Organisms/articles/HowToCreateGifsArticle';
 
 export const metadata = {
-  title: "Can't see a contact's profile information | Help Center",
-  description: "Troubleshoot why you can't view a contact's last seen, profile photo, or about info.",
+  title: 'How to create GIFs | Help Center',
+  description:
+    'Send Live Photos and short videos as looping GIFs on WhatsApp for Android and iOS.',
 };
 
 function ArticleSearchRow() {
@@ -38,10 +40,12 @@ function ArticleSearchRow() {
   );
 }
 
-export default function CantSeeContactProfileInformationPage() {
+export default function HowToCreateGifsPage() {
   return (
     <HelpCenterArticlePageLayout articleSearch={<ArticleSearchRow />}>
-      <CantSeeContactProfileInformationArticle />
+      <Suspense fallback={null}>
+        <HowToCreateGifsArticle />
+      </Suspense>
     </HelpCenterArticlePageLayout>
   );
 }

@@ -1,10 +1,11 @@
 import Link from 'next/link';
 import HelpCenterArticlePageLayout from '../../../Components/Organisms/HelpCenterArticlePageLayout';
-import CantSeeContactProfileInformationArticle from '../../../Components/Organisms/articles/CantSeeContactProfileInformationArticle';
+import HowToSendVoiceMessagesArticle from '../../../Components/Organisms/articles/HowToSendVoiceMessagesArticle';
 
 export const metadata = {
-  title: "Can't see a contact's profile information | Help Center",
-  description: "Troubleshoot why you can't view a contact's last seen, profile photo, or about info.",
+  title: 'How to send voice messages | Help Center',
+  description:
+    'Record and send voice messages on WhatsApp for Android, iOS, WhatsApp Web, Windows, and Mac.',
 };
 
 function ArticleSearchRow() {
@@ -38,10 +39,10 @@ function ArticleSearchRow() {
   );
 }
 
-export default function CantSeeContactProfileInformationPage() {
+export default function HowToSendVoiceMessagesPage() {
   return (
     <HelpCenterArticlePageLayout articleSearch={<ArticleSearchRow />}>
-      <CantSeeContactProfileInformationArticle />
+      <HowToSendVoiceMessagesArticle />
     </HelpCenterArticlePageLayout>
   );
 }

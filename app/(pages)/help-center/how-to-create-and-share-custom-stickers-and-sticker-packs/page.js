@@ -1,10 +1,12 @@
+import { Suspense } from 'react';
 import Link from 'next/link';
 import HelpCenterArticlePageLayout from '../../../Components/Organisms/HelpCenterArticlePageLayout';
-import CantSeeContactProfileInformationArticle from '../../../Components/Organisms/articles/CantSeeContactProfileInformationArticle';
+import CustomStickersAndStickerPacksArticle from '../../../Components/Organisms/articles/CustomStickersAndStickerPacksArticle';
 
 export const metadata = {
-  title: "Can't see a contact's profile information | Help Center",
-  description: "Troubleshoot why you can't view a contact's last seen, profile photo, or about info.",
+  title: 'How to create and share custom stickers and sticker packs | Help Center',
+  description:
+    'Create custom stickers, AI stickers, sticker packs, sharing, and sticker file requirements on Android and iOS.',
 };
 
 function ArticleSearchRow() {
@@ -38,10 +40,12 @@ function ArticleSearchRow() {
   );
 }
 
-export default function CantSeeContactProfileInformationPage() {
+export default function HowToCreateCustomStickersPage() {
   return (
     <HelpCenterArticlePageLayout articleSearch={<ArticleSearchRow />}>
-      <CantSeeContactProfileInformationArticle />
+      <Suspense fallback={null}>
+        <CustomStickersAndStickerPacksArticle />
+      </Suspense>
     </HelpCenterArticlePageLayout>
   );
 }

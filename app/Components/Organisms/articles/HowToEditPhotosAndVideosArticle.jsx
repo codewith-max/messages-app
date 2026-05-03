@@ -255,6 +255,11 @@ export default function HowToEditPhotosAndVideosArticle() {
                 About HD photos and videos
               </Link>
             </li>
+            <li>
+              <Link className={linkClass} href={`/help-center/how-to-use-emoji?platform=${platform}`}>
+                How to use emoji
+              </Link>
+            </li>
           </ul>
         </section>
       </div>

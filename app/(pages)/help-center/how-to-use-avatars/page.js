@@ -1,10 +1,11 @@
+import { Suspense } from 'react';
 import Link from 'next/link';
 import HelpCenterArticlePageLayout from '../../../Components/Organisms/HelpCenterArticlePageLayout';
-import CantSeeContactProfileInformationArticle from '../../../Components/Organisms/articles/CantSeeContactProfileInformationArticle';
+import HowToUseAvatarsArticle from '../../../Components/Organisms/articles/HowToUseAvatarsArticle';
 
 export const metadata = {
-  title: "Can't see a contact's profile information | Help Center",
-  description: "Troubleshoot why you can't view a contact's last seen, profile photo, or about info.",
+  title: 'How to use avatars | Help Center',
+  description: 'Send avatar stickers and manage your WhatsApp avatar on Android and iOS.',
 };
 
 function ArticleSearchRow() {
@@ -38,10 +39,12 @@ function ArticleSearchRow() {
   );
 }
 
-export default function CantSeeContactProfileInformationPage() {
+export default function HowToUseAvatarsPage() {
   return (
     <HelpCenterArticlePageLayout articleSearch={<ArticleSearchRow />}>
-      <CantSeeContactProfileInformationArticle />
+      <Suspense fallback={null}>
+        <HowToUseAvatarsArticle />
+      </Suspense>
     </HelpCenterArticlePageLayout>
   );
 }

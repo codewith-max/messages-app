@@ -1,10 +1,11 @@
+import { Suspense } from 'react';
 import Link from 'next/link';
 import HelpCenterArticlePageLayout from '../../../Components/Organisms/HelpCenterArticlePageLayout';
-import CantSeeContactProfileInformationArticle from '../../../Components/Organisms/articles/CantSeeContactProfileInformationArticle';
+import HowToSendGifsArticle from '../../../Components/Organisms/articles/HowToSendGifsArticle';
 
 export const metadata = {
-  title: "Can't see a contact's profile information | Help Center",
-  description: "Troubleshoot why you can't view a contact's last seen, profile photo, or about info.",
+  title: 'How to send GIFs | Help Center',
+  description: 'Search and send GIFs, save favorites, and use short clips as loops on Android and iOS.',
 };
 
 function ArticleSearchRow() {
@@ -38,10 +39,12 @@ function ArticleSearchRow() {
   );
 }
 
-export default function CantSeeContactProfileInformationPage() {
+export default function HowToSendGifsPage() {
   return (
     <HelpCenterArticlePageLayout articleSearch={<ArticleSearchRow />}>
-      <CantSeeContactProfileInformationArticle />
+      <Suspense fallback={null}>
+        <HowToSendGifsArticle />
+      </Suspense>
     </HelpCenterArticlePageLayout>
   );
 }
